@@ -1,0 +1,28 @@
+<html>
+    <title>
+      <%= title %>
+    </title>
+    <link rel="stylesheet" href="/css/home.css">
+    <head>
+        <h1> TODO LIST </h1>
+    </head>
+    <body>
+        <p>DISCRIPTION</p>
+        <form action="">
+        <input type="text" name="discription" required placeholder="What Do You Need To do">
+        <p> CATEGORY</p>
+        <select class='choose-category' name="category" aria-placeholder="Choose a category" display none>
+          <option value="" disabled selected hidden> Choose a category</option>
+          <option value="saab">Saab</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </select>
+        <p> DUE DATE</p>
+        <input type="date">
+        <button type="submit"> ADD TASK</button>
+         </form>
+         <button> DELETE TASK</button>
+    </body>
+
+    <script type="text/javascript" src="/js/home.js"> </script>
+</html>
