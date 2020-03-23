@@ -1,16 +1,17 @@
-
+//setting up express
 const express= require('express');
-const app = express();
-const port = 12000;
 
-app.use('/',require('./routes'));
+const app = express();
+//defining port
+const port = 12000;
+//acquiring db 
+const db = require('./config/mongoose');
+app.use(express.urlencoded());
 
 app.set('view engine','ejs');
 app.set('views','./views');
-const db = require('./config/mongoose');
-app.use(express.urlencoded());
 app.use(express.static('./front_end'));
-
+app.use('/',require('./routes'));
 
 app.listen(port, function(err){
     if (err) {

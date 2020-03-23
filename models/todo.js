@@ -1,17 +1,17 @@
 const mongoose=require('mongoose');
 const todo_Schema= new mongoose.Schema({
-    discription:{
+    discription: {
         type: String,
         required: true
     },
-    category:{
+    category: {
         type: String,
         required: true
     },
-    dueDate :{
+    dueDate : {
         type: Date,
         required: true
     }
 });
-    const Todo=mongoose.model('Todo',todo_Schema);
+    const Todo = mongoose.model('Todo',todo_Schema);
     module.exports=Todo;
