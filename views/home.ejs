@@ -7,8 +7,8 @@
         <h1> TODO LIST </h1>
     </head>
     <body>
-        <p>DISCRIPTION</p>
-        <form action="/create-list">
+        <p>DISCRIPTION 123</p>
+        <form action="/create-list" method="POST">
         <input type="text" name="discription" required placeholder="What Do You Need To do">
         <p> CATEGORY</p>
         <select class='choose-category' name="category" aria-placeholder="Choose a category" display none>
@@ -18,12 +18,30 @@
           <option value="audi">Audi</option>
         </select>
         <p> DUE DATE</p>
-        <input type="date">
+        <input type="date" name="dueDate" required>
         <button type="submit"> ADD TASK</button>
          </form>
          <button> DELETE TASK</button>
 
         <!--  -->
+
+          <table>
+              <tr>
+                  <th> Discription</th>
+                  <th> Category</th>
+                  <th> date </th>
+              </tr>
+              <%for(let i of todo_list){%>
+              <tr>
+                  <td> <%= i.discription%>:</td> 
+                  <td> <%=i.category%> </td>
+                  <td> <%=i.dueDate%> </td>
+                    <!--<td id="delete-button"><a href="/delete-contact/?phone= <%=i.phone%>">   <i class="fas fa-times-circle"></i>  </a>  </td>-->  
+                  <%}%>
+              </tr>
+              
+          </table>
+
     </body>
 
     <script type="text/javascript" src="/js/home.js"> </script>
