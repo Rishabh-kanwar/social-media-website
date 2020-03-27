@@ -3,46 +3,63 @@
       <%= title %>
     </title>
     <link rel="stylesheet" href="/css/home.css">
-    <head>
+    <head class="heading">
         <h1> TODO LIST </h1>
     </head>
     <body>
-        <p>DISCRIPTION 123</p>
-        <form action="/create-list" method="POST">
-        <input type="text" name="discription" required placeholder="What Do You Need To do">
-        <p> CATEGORY</p>
-        <select class='choose-category' name="category" aria-placeholder="Choose a category" display none>
-          <option value="" disabled selected hidden> Choose a category</option>
-          <option value="saab">Saab</option>
-          <option value="fiat">Fiat</option>
-          <option value="audi">Audi</option>
-        </select>
-        <p> DUE DATE</p>
-        <input type="date" name="dueDate" required>
-        <button type="submit"> ADD TASK</button>
+        <div class=container-box>
+
+
+          <form action="/create-list" method="POST">
+
+            <div class="discription-box top-bottom">
+               <p class="same-line">DISCRIPTION</p>
+                 <input type="text" name="discription" required placeholder="What Do You Need To do?" class="discription-input">
+               </div>  
+
+               <div class="category-box top-bottom">
+            <p > CATEGORY</p>
+                <select class='choose-category category-design' name="category" aria-placeholder="Choose a category" display none>
+                  <option value="" disabled selected hidden> Choose a category</option>
+                  <option  value="Personal">Personal</option>
+                  <option  value="Work">Work</option>
+                  <option value="school">school</option>
+                  <option value="school">school</option>
+               </select>
+               </div>
+
+             <div class="dueDate-box top-bottom">
+            <p> DUE DATE</p>
+             <input class="category-design" type="date" name="dueDate" required>
+             </div>
+             <div>
+             <button type="submit" class="button-2"> ADD TASK</button>
+             <button style="margin-left: 20px;" class="button-1"> Delete TASK</button>
+            </div>
          </form>
-         <button> DELETE TASK</button>
-
-        <!--  -->
-
-          <table>
-              <tr>
-                  <th> Discription</th>
-                  <th> Category</th>
-                  <th> date </th>
-              </tr>
+<br>
+        <!-- display section  -->
+          <div class="data-display" >
+        <form action="/delete-list" method="GET">
+           <table>
               <%for(let i of todo_list){%>
               <tr>
-                  <td> <%= i.discription%>:</td> 
-                  <td> <%=i.category%> </td>
-                  <td> <%=i.dueDate%> </td>
-                    <!--<td id="delete-button"><a href="/delete-contact/?phone= <%=i.phone%>">   <i class="fas fa-times-circle"></i>  </a>  </td>-->  
+                <td rowspan="2"><input type="checkbox" name=<%=i._id%>  ></td>
+                <td
+                  <td colspan="2" class="discription-design"> <%= i.discription%>:</td> 
+                </tr>
+                  <tr>
+                  <td class="color1 design" > <%=i.category%> </td>
+                  <td id="table-end"> <%=i.dueDate%> </td>
+                  </tr>
+                
                   <%}%>
-              </tr>
-              
-          </table>
-
+           </table>
+         </form>
+         </div>
+      </div>
+           
     </body>
 
-    <script type="text/javascript" src="/js/home.js"> </script>
+    <script type="text/javascript" src="/js/home"> </script>
 </html>
