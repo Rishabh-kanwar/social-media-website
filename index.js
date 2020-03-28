@@ -1,9 +1,15 @@
 //setting up express
 const express= require('express');
-
+// layouts adding layouts
+const expressLayouts=require('express-ejs-layouts');
 const app = express();
 //defining port
 const port = 13000;
+//we have to write it before routers
+app.use(expressLayouts);
+//extract style and script from subpages into the layout
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
 //acquiring db 
 const db = require('./config/mongoose');
 //to pass the form data
