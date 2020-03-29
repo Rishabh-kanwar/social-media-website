@@ -12,6 +12,9 @@ body{
     padding: 0;
     font-family: sans-serif;
 }
+.input-box{
+    display: block;
+}
 .container-box{
     width: 50%;
     margin-left: 25%;
@@ -43,7 +46,8 @@ border: none;
 }
 .data-display{
     position: relative;
-    left: -20px;
+    left: 100px;
+    top: -50px;
 }
 .design{
     height: 40px;
@@ -57,10 +61,10 @@ background-color: white;
 height: 30px;
 width: 200px; 
 }
-#table-end{
+#tabel-end{
  margin-bottom: auto;
  color: rgb(136, 128, 128);
- margin-left: 5px;
+ margin-left: 250px; 
 }
 .same-line {
     display: inline-block;
@@ -86,32 +90,49 @@ option{
     display: inline-block;
 }
 .color1{
-    background-color: lawngreen;
+    background-color: rgb(252, 141, 36);
     margin-right: 10px;
 }
 .color2{
-    background-color: rgb(240, 80, 80);
+    background-color: rgb(240, 84, 84);
+    margin-right: 10px;
 }
 .color3{
     background-color: rgb(250, 74, 226);
+    margin-right: 10px;
 }
 .color4{
     background-color: rgb(255, 174, 0);
+    margin-right: 10px;
 }
 .button-1{
-    margin-top: 10px;
+    margin-top: 40px;
     border: 1px solid;
     padding: 5px;
-    box-shadow: 2px 4px rgb(189, 29, 29);
-    
+    box-shadow: 2px 4px rgb(136, 124, 124);
+    background-color: rgb(204, 80, 121);
+    position: relative;
+    top: -55.4px;
+    left: 170px;
+    margin-right: 500px;
+    height: 50px;
+    width: 170px;
+    cursor: pointer;
+    font-size: 20px;
 }
 .button-2{
-    margin-top: 10px;
+    margin-top: 40px;
     border: 1px solid;
     padding: 5px;
-    box-shadow: 2px 4px rgb(28, 88, 179);
+    background-color: rgb(141, 207, 66);
+    box-shadow: 2px 4px  rgb(136, 124, 124);
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    font-size: 20px;
 
 }
+
 .discription-design{
     font-size: 20px; 
     padding-bottom: 5px; 

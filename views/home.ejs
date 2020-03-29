@@ -1,12 +1,13 @@
 
-      <head class="heading">
-        <h1> TODO LIST </h1>
+     <script src="https://kit.fontawesome.com/4089802227.js" crossorigin="anonymous"></script>
+     <head class="heading">
+        <h1><i class="far fa-list-alt"></i> TODO LIST </h1>
     </head>
       <link rel="stylesheet" href="/css/home.css">
         <div class=container-box>
 
           <form action="/create-list" method="POST">
-
+             <diV class="input-box">
             <div class="discription-box top-bottom">
                <p class="same-line">DISCRIPTION</p>
                  <input type="text" name="discription" required placeholder="What Do You Need To do?" class="discription-input">
@@ -25,27 +26,28 @@
 
              <div class="dueDate-box top-bottom">
             <p> DUE DATE</p>
-             <input class="category-design" type="date" name="dueDate" required>
+             <input class="category-design" type="text" name="dueDate" required placeholder="DD-MM-YYYY">
              </div>
              <div>
-             <button type="submit" class="button-2"> ADD TASK</button>
-             <button style="margin-left: 20px;" class="button-1"> Delete TASK</button>
+             <button type="submit" class="button-2"><i class="far fa-plus-square"></i> ADD TASK</button>
             </div>
+          </diV>
          </form>
-<br>
         <!-- display section  -->
           <div class="data-display" >
-        <form action="/delete-list" method="GET">
+        <form action="/delete-list" method="POST">
+          <button type="submit" style="margin-left: 20px;" class="button-1"><i class="far fa-minus-square"></i>  DELETE TASK</button>
            <table>
               <%for(let i of todo_list){%>
               <tr>
-                <td rowspan="2"><input type="checkbox" name=<%=i._id%>  ></td>
+                <td rowspan="2">
+                  <input type="checkbox" value="<%= i._id %>"  name="check<%= i._id %>">
                 <td
-                  <td colspan="2" class="discription-design"> <%= i.discription%>:</td> 
+                  <td colspan="2" style="width: 500px;" class="discription-design"> <%= i.discription%>:</td> 
                 </tr>
                   <tr>
                   <td class="color1 design" > <%=i.category%> </td>
-                  <td id="table-end"> <%=i.dueDate%> </td>
+                  <td style="float: right;"><i class="fas fa-table"></i> <%=i.dueDate%> </td>
                   </tr>
                 
                   <%}%>
