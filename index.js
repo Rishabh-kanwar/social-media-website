@@ -3,6 +3,8 @@ const express= require('express');
 // layouts adding layouts
 const expressLayouts=require('express-ejs-layouts');
 const app = express();
+//adding cookie parser
+const cookieParser=require('cookie-parser');
 //defining port
 const port = 13000;
 //we have to write it before routers
@@ -12,6 +14,8 @@ app.set('layout extractStyles', true);
 app.set('layout extractScripts', true);
 //acquiring db 
 const db = require('./config/mongoose');
+// adding the cooking parser
+app.use(cookieParser());
 //to pass the form data
 app.use(express.urlencoded());
 //seeting up view engine
