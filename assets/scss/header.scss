@@ -1,0 +1,25 @@
+.header-display{
+    list-style: none;
+    display: inline;
+    li{
+        display: inline;
+        margin-left: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        font-size: 22px;
+    }
+}
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color:  #ffc401da;
+    font-family: sans-serif;
+}
+.heading-style{
+  font-size: 50px;
+   margin-left: 7px;
+}

@@ -1,0 +1,10 @@
+.footer-display {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #ffc401da;
+  font-family: sans-serif;
+  height: 40px;
+  position: absolute;
+  top: 90%;
+}
