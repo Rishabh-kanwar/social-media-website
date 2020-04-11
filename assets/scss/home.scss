@@ -1,0 +1,28 @@
+#feed-posts{
+display: flex;
+flex-wrap: wrap;
+    span{
+    margin-right: 10px;
+    font-size: 40px;
+    margin-left: 10px;
+    i{
+        color: white;
+    }
+    }
+}
+#posts-list-container{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+        margin-left: 30px;
+        text-decoration: none;
+        color: red;
+    }
+    input{
+        border: none;
+        border-bottom: 2px solid black;
+    }
+    button{
+        box-shadow: 2px 4px #ffc401da;
+    }
+}

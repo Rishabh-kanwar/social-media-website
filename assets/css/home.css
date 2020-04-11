@@ -1,0 +1,22 @@
+#feed-posts {
+  display: flex;
+  flex-wrap: wrap; }
+  #feed-posts span {
+    margin-right: 10px;
+    font-size: 40px;
+    margin-left: 10px; }
+    #feed-posts span i {
+      color: white; }
+
+#posts-list-container {
+  display: flex;
+  flex-wrap: wrap; }
+  #posts-list-container a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: red; }
+  #posts-list-container input {
+    border: none;
+    border-bottom: 2px solid black; }
+  #posts-list-container button {
+    box-shadow: 2px 4px #ffc401da; }
