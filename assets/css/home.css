@@ -3,16 +3,18 @@
   flex-wrap: wrap;
   width: 100%; }
 
-.form-of-post textarea {
-  border: none;
-  border-bottom: 2px solid black;
-  margin-top: 10px;
-  margin-bottom: 10px; }
-
-.form-of-post input {
-  position: relative;
-  left: -50px;
-  box-shadow: 2px 4px #ffc401da; }
+.form-of-post {
+  margin-bottom: 120px; }
+  .form-of-post textarea {
+    border: none;
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .form-of-post input {
+    position: relative;
+    left: -50px;
+    box-shadow: 2px 4px #ffc401da;
+    margin-bottom: 50px; }
 
 .posts {
   margin-bottom: 125px; }
@@ -55,7 +57,10 @@
   border-bottom: 2px solid black; }
 
 #posts-list-container button {
-  box-shadow: 2px 4px #ffc401da; }
+  color: #ffc401da;
+  border: none;
+  background-color: white;
+  font-size: 25px; }
 
 #posts-list-container ul {
   list-style: none; }

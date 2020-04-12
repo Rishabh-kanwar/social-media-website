@@ -5,6 +5,8 @@
 }
 
 .form-of-post{
+    margin-bottom: 120px;
+
    textarea{
     border: none;
     border-bottom: 2px solid black;
@@ -15,6 +17,7 @@ input{
     position: relative;
     left: -50px;
     box-shadow: 2px 4px #ffc401da;
+    margin-bottom: 50px;
 }
 
 
@@ -72,7 +75,10 @@ align-items: center;
         border-bottom: 2px solid black;
     }
     button{
-        box-shadow: 2px 4px #ffc401da;
+        color: #ffc401da;
+        border: none;
+        background-color: white;
+        font-size: 25px;
     }
     ul{
         list-style: none;

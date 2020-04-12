@@ -1,17 +1,22 @@
 const User = require('../models/user');
 
 
-
-module.exports.update = function(req, res){
+module.exports.update = async function(req, res){
+    try{
     if(req.user.id == req.params.id){
-        User.findByIdAndUpdate(req.params.id, req.body, function(err, user){
+        await User.findByIdAndUpdate(req.params.id, req.body)
             return res.redirect('back');
-        });
+
     }else{
         return res.status(401).send('Unauthorized');
     }
-}
+  }
 
+ catch(err){
+     console.log('error',err);
+    return;
+    }
+}
 
 module.exports.profile = function(req, res){
     User.findById(req.params.id, function(err,user){
@@ -31,7 +36,7 @@ module.exports.signUp = function(req, res){
 
 
     return res.render('user_sign_up', {
-        title: "Codeial | Sign Up"
+        title: "socio | Sign Up"
     })
 }
 
@@ -43,7 +48,7 @@ module.exports.signIn = function(req, res){
         return res.redirect('/users/profile');
     }
     return res.render('user_sign_in', {
-        title: "Codeial | Sign In"
+        title: "socio | Sign In"
     })
 }
 
@@ -72,11 +77,13 @@ module.exports.create = function(req, res){
 
 // sign in and create a session for the user
 module.exports.createSession = function(req, res){
+    req.flash('success','logged in successfuly');
     return res.redirect('/');
+
 }
 
 module.exports.destroySession = function(req, res){
     req.logout();
-
+    req.flash('success','logged out successfuly');
     return res.redirect('/users/sign-in');
 }

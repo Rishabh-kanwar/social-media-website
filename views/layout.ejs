@@ -1,5 +1,7 @@
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
         <script src="https://kit.fontawesome.com/4089802227.js" crossorigin="anonymous"></script>
         <title>
             <%= title  %>
@@ -13,6 +15,29 @@
 
     <body>
         <%- include('_header'); %>
+        <script>
+            <% if(flash.success && flash.success.length > 0) { %>
+                new Noty({
+                    theme: 'relax',
+                    text: "<%= flash.success %>",
+                    type: 'success',
+                    layout: 'topRight',
+                    timeout: 2500
+                    
+                }).show();    
+            <%} %>
+
+            <% if (flash.error && flash.error.length > 0) {%>
+                new Noty({
+                    theme: 'relax',
+                    text: "<%= flash.error %>",
+                    type: 'error',
+                    layout: 'topRight',
+                    timeout: 2500
+                    
+                }).show();    
+            <%}%>
+        </script>
 
         <%- body %>
 

@@ -7,33 +7,40 @@ module.exports.create =async function(req, res){
         content: req.body.content,
         user: req.user._id
     });
-
+     req.flash('success','post is published');
     return res.redirect('back');
   }
   catch(err){
-     console.log('error',err);
+     req.flash('error',err);
      return;
   }
 
 
 }
 
-module.exports.destroy = function(req,res){
-
-    Post.findById(req.params.id,function(err,post){
+module.exports.destroy = async function(req,res){
+try{
+    let post= await Post.findById(req.params.id);
         if(post.user==req.user.id)
         {
             post.remove();
-            Comment.deleteMany({ post: req.params.id},
-              function(err){
+
+            await Comment.deleteMany({ post: req.params.id})
+            req.flash('success','post is deleted with assosiated comments');
+            
                 return res.redirect('back');
-              });
         }
         else{
+     req.flash('error','You can not delete this post');
             return res.redirect('back');
         }
-    })
-};
+
+    }
+    catch(err){
+        console.log('error',err);
+        return;
+    }
+}
 
 
 

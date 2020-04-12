@@ -6,11 +6,12 @@
     </big>
         <br>
         <small style="color: gray;">
+            <i class="far fa-id-badge"></i>
             <%= post.user.name %>
         </small>
         <% if(locals.user && locals.user.id==post.user.id){%>
             <small>
-                <a href="/posts/destroy/<%=post.id%>"> Delete</a>
+                <a href="/posts/destroy/<%=post.id%>"> <i style="margin-left: 100px;" class="fas fa-trash-alt"></i></a>
             </small>
               <%}%>
     </p>
