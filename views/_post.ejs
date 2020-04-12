@@ -1,10 +1,11 @@
-<li>
+
     <p>
-        <big>
-        <%= post.content %>
+        <big style="font-size: 35px;">
+            <i
+            style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"></i><%= post.content %>
     </big>
         <br>
-        <small>
+        <small style="color: gray;">
             <%= post.user.name %>
         </small>
         <% if(locals.user && locals.user.id==post.user.id){%>
@@ -13,5 +14,4 @@
             </small>
               <%}%>
     </p>
-</li>
 

@@ -2,7 +2,7 @@
     <p>
         <%= comment.content %>
         <br>
-        <small>
+        <small style="color: gray;">
             <%= comment.user.name %>
         </small>
         <% if(locals.user && locals.user.id==comment.user.id){%>

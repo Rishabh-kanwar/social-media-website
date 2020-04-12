@@ -2,9 +2,11 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        background-color:  #ffc401da;
+        background-image: linear-gradient(to bottom right,#ffc401da,#ffc401da);
         font-family: sans-serif;
-        height: 40px;
-        position: absolute;
-        top: 90%;
+        height: 100px;
+        p{
+                font-weight: 400;
+                margin-left: 50px;
+        }
 }
