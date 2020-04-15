@@ -7,6 +7,7 @@ module.exports.create =async function(req, res){
         content: req.body.content,
         user: req.user._id
     });
+
      req.flash('success','post is published');
     return res.redirect('back');
   }
@@ -14,7 +15,6 @@ module.exports.create =async function(req, res){
      req.flash('error',err);
      return;
   }
-
 
 }
 
