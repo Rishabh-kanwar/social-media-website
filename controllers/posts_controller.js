@@ -8,6 +8,15 @@ module.exports.create =async function(req, res){
         user: req.user._id
     });
 
+   // if (req.xhr){
+     //   return res.status(200).json({
+       //     data: {
+         //       post: post
+        //    },
+          //  message: "Post created!"
+       // });
+   // }
+
      req.flash('success','post is published');
     return res.redirect('back');
   }

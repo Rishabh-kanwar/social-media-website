@@ -25,6 +25,8 @@ app.use(express.urlencoded());
 
 app.use(cookieParser());
 
+//so that browser can excess the uploads folder
+app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(express.static('./assets'));
 
 app.use(expressLayouts);
