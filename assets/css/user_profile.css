@@ -1,0 +1,34 @@
+body img {
+  border-radius: 50%;
+  width: 250;
+  height: 250;
+  box-shadow: 5px 2px 40px 5px #ffc401da;
+  position: relative;
+  left: 750px;
+  margin-bottom: 30px;
+  margin-top: 25px; }
+
+body .form-diplay {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  position: relative;
+  left: 25%; }
+  body .form-diplay input {
+    width: 200px;
+    height: 30px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    left: 200px;
+    border: none;
+    border-bottom: 2px solid black; }
+
+body .diplay-data {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  position: relative;
+  left: 25%; }

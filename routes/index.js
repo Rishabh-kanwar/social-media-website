@@ -15,4 +15,8 @@ router.use('/comments', require('./comments'));
 // router.use('/routerName', require('./routerfile));
 
 
+//including the route of the api\
+router.use('/api',require('./api'));
+
+
 module.exports = router;
