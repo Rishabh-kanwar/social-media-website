@@ -6,7 +6,7 @@ const ExtractJWT=require('passport-jwt').ExtractJwt;
 const user=require('../models/user');
 
 let opts={
-    jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken,
+    jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: "socio"
 }
 
