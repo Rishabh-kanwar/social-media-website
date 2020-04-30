@@ -1,5 +1,4 @@
 .all-container {
-  margin-top: 70px;
   display: flex;
   flex-wrap: wrap;
   width: 100%; }
@@ -16,6 +15,16 @@
     left: -50px;
     box-shadow: 2px 4px #ffc401da;
     margin-bottom: 50px; }
+  .form-of-post #post-button {
+    height: 30px;
+    width: 80px;
+    position: relative;
+    left: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    border: 2px solid black;
+    background-color: white;
+    cursor: pointer; }
 
 .posts {
   margin-bottom: 125px; }
@@ -61,7 +70,8 @@
   color: #ffc401da;
   border: none;
   background-color: white;
-  font-size: 25px; }
+  font-size: 25px;
+  cursor: pointer; }
 
 #posts-list-container ul {
   list-style: none; }

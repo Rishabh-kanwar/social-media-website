@@ -4,6 +4,11 @@
     width: 100%;
 }
 
+#feed-posts{
+    
+}
+
+
 .form-of-post{
     margin-bottom: 120px;
 
@@ -18,6 +23,17 @@ input{
     left: -50px;
     box-shadow: 2px 4px #ffc401da;
     margin-bottom: 50px;
+}
+#post-button{
+    height: 30px;
+    width: 80px;
+    position: relative;
+    left: 40px;
+    font-weight: 700;
+    font-size: 20px;
+    border: 2px solid black;
+    background-color: white;
+    cursor: pointer;
 }
 
 
@@ -79,6 +95,7 @@ align-items: center;
         border: none;
         background-color: white;
         font-size: 25px;
+        cursor: pointer;
     }
     ul{
         list-style: none;

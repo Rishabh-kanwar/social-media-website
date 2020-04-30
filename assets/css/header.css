@@ -1,6 +1,7 @@
 .header-display {
   list-style: none;
-  display: inline; }
+  display: inline;
+  height: 42px; }
   .header-display li {
     display: inline;
     margin-left: 20px; }

@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  background-image: linear-gradient(to bottom right, #ffc401da, #ffc401da);
+  background-image: linear-gradient(to bottom right, #ffc0c0, #ffc401da);
   font-family: sans-serif;
   height: 100px; }
   .footer-display p {
