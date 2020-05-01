@@ -111,3 +111,15 @@ module.exports.destroySession = function(req, res){
     req.flash('success','logged out successfuly');
     return res.redirect('/users/sign-in');
 }
+
+module.exports.forgot = function(req, res){
+    User.findById(req.params.id, function(err,user){
+        return res.render('user_profile', {
+            title: 'User Profile',
+            profile_user: user
+        })
+    })
+}
+
+
+
