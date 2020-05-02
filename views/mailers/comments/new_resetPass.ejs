@@ -1,0 +1,20 @@
+<h1> have you forget your password </h1>
+
+<p>Reset your password</p>
+
+<form action="http://127.0.0.1:8000/forgot/reset-pass/<%=reset.token%>" method="POST">
+    <p>
+Enter NEW PASSWORD
+    </p>
+<input style="background-color: white;" type="password" name="password" required>
+<p>
+     CONFIRM PASSWORD
+     </p>
+     <input  type="password" name="confirm-password" required>
+<p>
+<input type="submit">
+</p>
+
+</form>
+
+<p> <h1>thanks</h1></p>
