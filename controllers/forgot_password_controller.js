@@ -56,19 +56,17 @@ module.exports.check = async function(req, res){
 module.exports.change =async function(req, res)
 {
      try{
-    //     console.log(req.body);
-    //     console.log(req.params);
-    //     let reset=await Reset.findOne({token:req.params.token});
-  
-    //     console.log(reset);
-        
-    let reset=await Reset.findOneAndUpdate({token:req.params.token},{isvalid: false});
+         if(req.body.confirm_password==req.body.password)
+         {
+
+    let reset=await Reset.findOne({token:req.params.token});
     console.log(reset);
-    if(!reset.isvalid)
+    if(!reset)
     {
         req.flash('error','The tokken has been used');
         return res.redirect('/users/sign-in');
     }
+    reset.isvalid=false;
     reset = await reset.populate('user', 'name email password').execPopulate();
            if(reset)
            {
@@ -78,9 +76,11 @@ module.exports.change =async function(req, res)
                return res.redirect('/users/sign-in');
            }
          
-        
+         }
+         else{
             req.flash('error','password and confirm password are not equal');
             return res.redirect('/users/sign-in');
+         }
 
        }catch(err){
         console.log('error in sending mail',err);

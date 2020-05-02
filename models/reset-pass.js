@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 
-const resetPassSchema = new mongoose.Schema({
+let resetPassSchema = new mongoose.Schema({
     token: {
         type: String,
         required: true
@@ -18,6 +18,7 @@ const resetPassSchema = new mongoose.Schema({
 },{
     timestamps: true
 });
+resetPassSchema.index({createdAt: 1},{expireAfterSeconds: 1000});
 
 const Reset = mongoose.model('Reset', resetPassSchema);
 module.exports = Reset;
