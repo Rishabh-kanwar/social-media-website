@@ -13,7 +13,7 @@
   .form-of-post input {
     position: relative;
     left: -50px;
-    box-shadow: 2px 4px #ffc401da;
+    box-shadow: 2px 4px 5px 5x #ffc401da;
     margin-bottom: 50px; }
   .form-of-post #post-button {
     height: 30px;
@@ -32,6 +32,7 @@
 #feed-posts {
   margin-top: 20px;
   width: 50%;
+  background-color: red;
   text-align: center;
   align-items: center; }
   #feed-posts .form-of-post {
@@ -49,7 +50,9 @@
       margin-right: 7px; }
 
 #user-friends {
-  width: 25%;
+  width: 24.5%;
+  margin-right: 3px;
+  background-color: blue;
   text-align: center; }
   #user-friends ul {
     list-style: none; }
@@ -75,3 +78,27 @@
 
 #posts-list-container ul {
   list-style: none; }
+
+#features {
+  width: 25.3%;
+  background-color: yellowgreen;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+  #features i {
+    color: #ffc401da;
+    margin-right: 5px; }
+  #features ul {
+    display: block;
+    margin-left: 20%;
+    list-style: none; }
+  #features li a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px; }
+
+.heading {
+  font-size: 30px;
+  display: block;
+  margin-left: 20%; }

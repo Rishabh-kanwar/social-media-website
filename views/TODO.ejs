@@ -1,0 +1,59 @@
+
+     <script src="https://kit.fontawesome.com/4089802227.js" crossorigin="anonymous"></script>
+     <head class="heading">
+        <h1 class="heading"><i class="far fa-list-alt"></i> TODO LIST </h1>
+    </head>
+      <link rel="stylesheet" href="/css/TODO.css">
+        <div class=container-box>
+
+          <form action="/todo/create-list" method="POST">
+             <diV class="input-box">
+            <div class="discription-box top-bottom">
+               <p class="same-line">DISCRIPTION</p>
+                 <input type="text" name="discription" required placeholder="What Do You Need To do?" class="discription-input">
+               </div>  
+
+               <div class="category-box top-bottom">
+            <p > CATEGORY</p>
+                <select class='choose-category category-design' name="category" aria-placeholder="Choose a category" display none style="color: grey;">
+                  <option value="" disabled selected hidden> Choose a category</option>
+                  <option  value="Personal">Personal</option>
+                  <option  value="Work">Work</option>
+                  <option value="school">school</option>
+                  <option value="school">school</option>
+               </select>
+               </div>
+               
+             <div class="dueDate-box top-bottom">
+            <p> DUE DATE</p>
+             <input class="category-design" type="text" name="dueDate" required placeholder="DD-MM-YYYY">
+             </div>
+             <div>
+             <button type="submit" class="button-2"><i class="far fa-plus-square"></i> ADD TASK</button>
+            </div>
+          </diV>
+         </form>
+        <!-- display section  -->
+          <div class="data-display" >
+        <form action="/todo/delete-list" method="POST">
+          <button type="submit" style="margin-left: 20px;" class="button-1"><i class="far fa-minus-square"></i>  DELETE TASK</button>
+           <table>
+              <%for(let i of todo_list){%>
+              <tr>
+                <td rowspan="2">
+                  <input type="checkbox" id="checkbox" value="<%= i._id %>"  name="check<%= i._id %>">
+                <td
+                  <td colspan="2" style="width: 500px;" class="discription-design"> <%= i.discription%>:</td> 
+                </tr>
+                  <tr>
+                  <td class="color1 design" > <%=i.category%> </td>
+                  <td style="float: right;"><i class="fas fa-table"></i> <%=i.dueDate%> </td>
+                  </tr>
+                
+                  <%}%>
+                  
+           </table>
+         </form>
+         </div>
+      </div>
+      <script type="text/javascript" src="/js/home"> </script>

@@ -56,10 +56,41 @@
 
         </div>
         </ul>
+    </section>
+    <section id="features">
+    <p>
+      <h1 class="heading"><i class="fas fa-icons"></i>Features</h1>
+    </p>
+    <br>
+    <p>
+      <ul>
+          <p>
+          <li>
+              <%if (locals.user){%>
+              <a href="/todo/<%=user.id%>">
+                  TODO LIST
+              </a>
+           
+          </li>
+        </p>
+        <p>
+          <li>
+            <a href="http://127.0.0.1:8000/todo">
+                CALCULATOR
+            </a>
+        </li>
+    </p>
+    <p>
+        <li>
+            <a href="http://127.0.0.1:8000/todo">
+                CONTACT LIST
+            </a>
+        </li>
+        <% }%>
+    </p>
+      </ul>
+    </p>
+    </section>
     </div>
-</section>
-
-
-
 
 </div>

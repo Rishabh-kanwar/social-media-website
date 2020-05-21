@@ -32,6 +32,7 @@ app.use(cookieParser());
 //so that browser can excess the uploads folder
 app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(express.static('./assets'));
+app.use(express.static('./front_end1'));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout
@@ -50,7 +51,7 @@ app.set('views', './views');
 app.use(session({
     name: 'codeial',
     // TODO change the secret before deployment in production mode
-    secret: 'blahsomething',
+    secret: 'something',
     saveUninitialized: false,
     resave: false,
     cookie: {
