@@ -19,8 +19,14 @@ const userSchema = new mongoose.Schema({
     },
     avatar:{
         type: String
+    },
+    pong:{
+       type:Number 
+    },
+    snake:{
+         type: Number 
     }
-
+    
 }, {
     timestamps: true
 });

@@ -1,0 +1,25 @@
+table{
+    height: 50%;
+    width: 50%;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;  
+    position: relative;
+    left: 25%;
+    border: 10px solid lightslategray;
+    box-shadow: 10px 10px 7px 7px rgb(151, 140, 140);
+}
+td{
+    background-color: whitesmoke;
+    height: 70px;
+    width: 30px;
+}
+th{  
+    background-color: orange;
+    height: 70px;
+    width: 30px;
+}
+
+.button{
+    cursor: pointer;  
+}

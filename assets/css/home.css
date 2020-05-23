@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   width: 100%; }
 
+.friends {
+  text-align: end;
+  margin-left: 200px; }
+
 .form-of-post {
   margin-bottom: 120px; }
   .form-of-post textarea {
@@ -32,7 +36,6 @@
 #feed-posts {
   margin-top: 20px;
   width: 50%;
-  background-color: red;
   text-align: center;
   align-items: center; }
   #feed-posts .form-of-post {
@@ -51,12 +54,14 @@
 
 #user-friends {
   width: 24.5%;
-  margin-right: 3px;
-  background-color: blue;
-  text-align: center; }
+  margin-right: 3px; }
+  #user-friends h1 {
+    margin-left: 24%; }
   #user-friends ul {
-    list-style: none; }
+    list-style: none;
+    margin-left: 24%; }
     #user-friends ul a {
+      font-size: 20px;
       text-decoration: none;
       color: black; }
 
@@ -80,25 +85,25 @@
   list-style: none; }
 
 #features {
-  width: 25.3%;
-  background-color: yellowgreen;
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap; }
+  width: 25.3%; }
   #features i {
     color: #ffc401da;
     margin-right: 5px; }
   #features ul {
-    display: block;
     margin-left: 20%;
     list-style: none; }
-  #features li a {
-    text-decoration: none;
-    color: black;
-    font-size: 25px; }
+  #features li {
+    height: 30px; }
+    #features li a {
+      text-decoration: none;
+      color: black;
+      font-size: 25px; }
+      #features li a i {
+        color: black;
+        margin-right: 5px; }
 
 .heading {
   font-size: 30px;
   display: block;
-  margin-left: 20%; }
+  margin-left: 20%;
+  font-weight: 700; }

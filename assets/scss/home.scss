@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.friends{
+    text-align: end;
+    margin-left: 200px;
+}
 
 .form-of-post{
     margin-bottom: 120px;
@@ -42,7 +46,6 @@ input{
 #feed-posts{
     margin-top: 20px;
 width: 50%;
-background-color: red;
 text-align: center;
 align-items: center;
 
@@ -68,12 +71,15 @@ align-items: center;
 #user-friends{
     width: 24.5%;
     margin-right: 3px;
-    background-color: blue;
-    text-align: center;
+    h1{
+        margin-left: 24%;
+
+    }
     ul{
         list-style: none;
-
+        margin-left: 24%;
         a{
+            font-size: 20px;
             text-decoration: none;
             color: black;
         }
@@ -103,33 +109,31 @@ align-items: center;
 
 #features{
     width: 25.3%;
-    background-color: yellowgreen;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-
     i{
         color: #ffc401da;
         margin-right: 5px;
     }
     ul{
-        display: block;
         margin-left: 20%;
         list-style: none;
     }
     li{
+        height: 30px;
         a{
+            i{
+                color: black;
+                margin-right: 5px;
+            }
           text-decoration: none;
           color: black;
           font-size: 25px;
         }
     }
-    
 }
 
 .heading{
     font-size: 30px;
     display: block;
     margin-left: 20%;
+    font-weight: 700;
 }

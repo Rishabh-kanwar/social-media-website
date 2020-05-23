@@ -2,13 +2,13 @@
 <div class="all-container">
 
     <section id="user-friends">
-        <h1><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</h1>
+        <h1 class="heading"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</h1>
         
         <%for(u of all_users) {%>
-        <p>
+        <p class="friends">
             <ul>
                 <li>
-        <a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  
+        <a href="/users/profile/<%= u.id%>"><i class="fas fa-user-friends"></i> <%=u.name%> </a>  
         </li> 
         </ul>
         </p> 
@@ -58,38 +58,40 @@
         </ul>
     </section>
     <section id="features">
-    <p>
-      <h1 class="heading"><i class="fas fa-icons"></i>Features</h1>
-    </p>
-    <br>
-    <p>
+      <p class="heading"><i class="fas fa-icons"></i>Features<p>
       <ul>
           <p>
           <li>
               <%if (locals.user){%>
               <a href="/todo/<%=user.id%>">
-                  TODO LIST
+                <i class="far fa-list-alt"></i>TODO LIST
               </a>
-           
           </li>
-        </p>
-        <p>
+        </p>  
           <li>
-            <a href="http://127.0.0.1:8000/todo">
-                CALCULATOR
+              <p>
+            <a href="/calculator">
+                <i class="fas fa-calculator"></i> CALCULATOR
             </a>
         </li>
-    </p>
-    <p>
-        <li>
-            <a href="http://127.0.0.1:8000/todo">
-                CONTACT LIST
-            </a>
-        </li>
+    </p>  
         <% }%>
-    </p>
       </ul>
-    </p>
+        <p class="heading"><i class="fas fa-gamepad"></i>Games</p>
+    <ul>
+        <li>
+            <a href="/games/pong">
+                <i class="fas fa-calculator"></i> Ping pong
+            </a>
+        </li>
+    <P>
+        <li>
+            <a href="/games/snakes">
+                <i class="fas fa-calculator"></i> snakes
+            </a>
+        </li>
+    </P>
+    </ul>
     </section>
     </div>
 
