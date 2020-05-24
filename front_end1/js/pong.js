@@ -80,10 +80,11 @@ function getMousePos(evt){
 
 // when COM or USER scores, we reset the ball
 function resetBall(){
+    ball.speed = 5;
+    setTimeout(console.log('hello'),1000);
     ball.x = canvas.width/2;
     ball.y = canvas.height/2;
     ball.velocityX = -ball.velocityX;
-    ball.speed = 7;
 }
 
 // draw the net
@@ -135,7 +136,7 @@ function update(){
     
     // computer plays for itself, and we must be able to beat it
     // simple AI
-    com.y += ((ball.y - (com.y + com.height/2)))*0.96;
+    com.y += ((ball.y - (com.y + com.height/2)))*0.094;
     
     // when the ball collides with bottom and top walls we inverse the y velocity.
     if(ball.y - ball.radius < 0 || ball.y + ball.radius > canvas.height){
@@ -168,7 +169,7 @@ function update(){
         ball.velocityY = ball.speed * Math.sin(angleRad);
         
         // speed up the ball everytime a paddle hits it.
-        ball.speed += 1;
+        ball.speed += 0.2;
     }
 }
 
