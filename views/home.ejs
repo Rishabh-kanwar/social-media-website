@@ -8,7 +8,8 @@
         <p class="friends">
             <ul>
                 <li>
-        <a href="/users/profile/<%= u.id%>"><i class="fas fa-user-friends"></i> <%=u.name%> </a>  
+             <img src="<%=u.avatar %>" alt="" width="25" height="25"> 
+        <span><a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  </span>
         </li> 
         </ul>
         </p> 
@@ -28,7 +29,7 @@
     <div id="posts-list-container">
         <ul>
             <% for(post of posts){ %>
-                <div class="posts" >
+                <div class="posts">
                              
                 <%- include('_post') -%>
                   
@@ -96,3 +97,6 @@
     </div>
 
 </div>
+
+
+<script type="text/javascript" src="friendsL.js"></script>

@@ -1,3 +1,6 @@
+body {
+  background-color: rgba(255, 196, 1, 0.1); }
+
 .all-container {
   display: flex;
   flex-wrap: wrap;
@@ -53,8 +56,18 @@
       margin-right: 7px; }
 
 #user-friends {
-  width: 24.5%;
-  margin-right: 3px; }
+  width: 23%;
+  background-color: rgba(255, 196, 1, 0.1);
+  box-shadow: 1px 1px 5px 5px rgba(255, 196, 1, 0.7);
+  margin: 9px;
+  height: 370px;
+  overflow-y: auto;
+  margin-top: 12px;
+  margin-left: 15px; }
+  #user-friends img {
+    border-radius: 5px;
+    position: relative;
+    top: 5px; }
   #user-friends h1 {
     margin-left: 24%; }
   #user-friends ul {
@@ -85,7 +98,13 @@
   list-style: none; }
 
 #features {
-  width: 25.3%; }
+  width: 24.5%;
+  background-color: rgba(255, 196, 1, 0.1);
+  box-shadow: 1px 1px 5px 5px rgba(255, 196, 1, 0.7);
+  margin: 9px;
+  padding-bottom: 10px;
+  margin-top: 12px;
+  height: 370px; }
   #features i {
     color: #ffc401da;
     margin-right: 5px; }
@@ -107,3 +126,19 @@
   display: block;
   margin-left: 20%;
   font-weight: 700; }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffc401da; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffc401da; }
