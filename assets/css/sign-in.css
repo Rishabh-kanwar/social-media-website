@@ -24,13 +24,13 @@
     .sign-in-style input button {
       box-shadow: 5px 10px #888888; }
   .sign-in-style p {
-    border-top: 2px solid lightgrey;
     padding-top: 25px;
     position: relative;
-    left: 41.5%; }
+    left: 40%; }
     .sign-in-style p a {
       font-size: 30px;
-      color: #ffc401da;
-      background-color: black;
       border-radius: 7px;
+      color: red;
+      background-color: whitesmoke;
+      border: 2px solid lightgray;
       padding: 4px; }

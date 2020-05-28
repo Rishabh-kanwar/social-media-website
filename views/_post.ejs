@@ -1,12 +1,16 @@
 
-<li id="post-<%= post._id %>">
+<li id="post-<%= post._id %>" style="margin-top: 100px;">
+    
+   <% if(post.pic){%>
+        <img class="post-image" src="<%=post.pic%>" alt="" height="400" width="400">
     <p>
-        <big style="font-size: 35px;">
-            <i
-            style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"></i><%= post.content %>
+        <big style="font-size: 35px;"><span><a href="">like</a></span>
+            <%= post.content %>
+            <span style="font-size: 30px;"><a href=""><i style="color: red;" class="far fa-heart"></i></a></span>
     </big>
         <br>
         <small style="color: gray;">
+            
             <i class="far fa-id-badge"></i>
             <%= post.user.name %>
         </small>
@@ -16,4 +20,45 @@
             </small>
               <%}%>
     </p>
+    
+    <%}else{%>
+        <p>
+            
+            <big style="font-size: 35px;">
+                <i style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"></i><%= post.content %>
+                <span style="font-size: 30px;"><a href=""><i style="color: grey;" class="far fa-thumbs-up"></i></a></span>
+            </big> 
+            <br>
+            <small style="color: gray;">
+                <i class="far fa-id-badge"></i>
+                <%= post.user.name %>
+            </small>
+            <% if(locals.user && locals.user.id==post.user.id){%>
+                <small>
+                    <a class="delete-post-button" href="/posts/destroy/<%=post.id%>"> <i style="margin-left: 100px;" class="fas fa-trash-alt"></i></a>
+                </small>
+                  <%}%>
+        </p>
+        <%}%>
+        <% if (locals.user){ %>
+            <form action="/comments/create" method="POST" id="post-<%=post._id%>-comments-form" >
+                <input type="text" name="content" placeholder="Type Here to add comment..." required>
+                <input type="hidden" name="post" value="<%= post._id %>" >
+                <button type="submit"> <i class="far fa-plus-square"> </i></button>
+            </form>
+        <%} %>
+        <div class="post-comments">
+
+            <div class="post-comments-list">
+                <ul  id="post-comments-<%= post._id %>" >
+                    <% for (comment of post.comments){%>
+
+                      <%- include('_comments') -%>
+
+                    <% } %>
+                </ul>
+
+            </div>
+        </div>  
+        
 </li>

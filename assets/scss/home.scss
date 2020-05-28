@@ -5,6 +5,12 @@ body{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+
+    .post-pic-choose{
+        margin-left: 22%;
+        border-bottom: 3px solid black;
+        padding-bottom: 3px;
+    }
 }
 
 .friends{
@@ -20,6 +26,7 @@ body{
     border-bottom: 2px solid black;
     margin-top: 10px;
     margin-bottom: 10px;
+    background-color: rgba($color: #ffc401da, $alpha: 0.02);
 }
 input{
     position: relative;
@@ -31,7 +38,7 @@ input{
     height: 30px;
     width: 80px;
     position: relative;
-    left: 40px;
+    left: 20px;
     font-weight: 700;
     font-size: 20px;
     border: 2px solid black;
@@ -48,11 +55,17 @@ input{
 
 #feed-posts{
     margin-top: 20px;
-width: 50%;
+width: 57.5%;
 text-align: center;
 align-items: center;
+.post-box{
+margin-top: 100px;
 
-
+    .post-image{
+        box-shadow: 4px 4px 7px 7px lightgray;
+        margin-bottom: 3px;
+    }
+}
 .form-of-post{
     margin-right: 400px;
     margin-left: 40%;
@@ -72,14 +85,16 @@ align-items: center;
     }
 }
 #user-friends{
-    width: 23%;
+    width: 20%;
     background-color: rgba($color: #ffc401da, $alpha: 0.1);
-    box-shadow: 1px 1px 5px 5px rgba($color: #ffc401da, $alpha: 0.7);
+    box-shadow: 1px 1px 5px 5px rgba($color: #ffc401da, $alpha: 0.3);
     margin: 9px;
     height: 370px;
     overflow-y: auto;
     margin-top: 12px;
     margin-left: 15px;
+    position: sticky;
+    top: 90px;
     img{
         border-radius: 5px;
         position: relative;
@@ -122,13 +137,15 @@ align-items: center;
 }
 
 #features{
-    width: 24.5%;
+    width: 20%;
     background-color: rgba($color: #ffc401da, $alpha: 0.1);
-    box-shadow: 1px 1px 5px 5px rgba($color: #ffc401da, $alpha: 0.7);
+    box-shadow: 1px 1px 5px 5px rgba($color: #ffc401da, $alpha: 0.3);
     margin: 9px;
     padding-bottom: 10px;
     margin-top: 12px;
     height: 370px;
+    position: sticky;
+    top: 90px;
     i{
         color: #ffc401da;
        // opacity: 0.5;

@@ -26,6 +26,17 @@ module.exports.create = async function(req, res){
                     console.log('job enqueued', job.id);
     
                 })
+                if (req.xhr){
+                
+    
+                    return res.status(200).json({
+                        data: {
+                            comment: comment
+                        },
+                        message: "Post created!"
+                    });
+                }
+    
                 post.comments.push(comment);
                 post.save();
                 req.flash('success','comment is added');
@@ -49,6 +60,14 @@ module.exports.destroy=async function(req,res){
         comment.remove();
 
         let post=await Post.findByIdAndUpdate(postId,{ $pull: {comments:req.params.id} } )
+        if (req.xhr){
+            return res.status(200).json({
+                data: {
+                    comment_id: req.params.id
+                },
+                message: "Post deleted"
+            });
+        }
      req.flash('success','comment is deleted');
             return res.redirect('back');
 

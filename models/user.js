@@ -20,6 +20,12 @@ const userSchema = new mongoose.Schema({
     avatar:{
         type: String
     },
+    todo: [
+        {
+            type:  mongoose.Schema.Types.ObjectId,
+            ref: 'Todo'
+        }
+    ],
     pong:{
        type:Number 
     },

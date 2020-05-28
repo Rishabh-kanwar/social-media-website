@@ -13,7 +13,16 @@
                 top: 50px;
                 text-decoration: none;
             }
+            .high-score{
+                text-align: center;
+                font-size: 30px;
+                position: relative;
+                left: 800px;
+               }
         </style>
+        <p>
+    <span class="high-score"> HEIGHEST SCORE <span style="font-weight: 800;"> <%=user.snake%>  </span> </span>
+</p>
     <canvas id="snake" width="608" height="608"></canvas>
     <a class="restart" href="/games/snakes">
         <i class="fas fa-redo"></i>

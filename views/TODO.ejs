@@ -6,7 +6,7 @@
       <link rel="stylesheet" href="/css/TODO.css">
         <div class=container-box>
 
-          <form action="/todo/create-list" method="POST">
+          <form action="create-list" method="POST">
              <diV class="input-box">
             <div class="discription-box top-bottom">
                <p class="same-line">DISCRIPTION</p>
@@ -35,7 +35,7 @@
          </form>
         <!-- display section  -->
           <div class="data-display" >
-        <form action="/todo/delete-list" method="POST">
+        <form action="delete-list" method="POST">
           <button type="submit" style="margin-left: 20px;" class="button-1"><i class="far fa-minus-square"></i>  DELETE TASK</button>
            <table>
               <%for(let i of todo_list){%>

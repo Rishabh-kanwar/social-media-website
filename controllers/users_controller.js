@@ -77,30 +77,35 @@ module.exports.signIn = function(req, res){
 }
 
 // get the sign up data
-module.exports.create = function(req, res){
+module.exports.create =async function(req, res){
+    try{
     if (req.body.password != req.body.confirm_password){
         console.log('Hello');
         req.flash('error','password and confirm Password are not equal');
         return res.redirect('/users/sign-up');
     }
 
-    User.findOne({email: req.body.email}, function(err, user){
-        if(err){console.log('error in finding user in signing up'); return}
-         console.log('Hello');
+    let user=await User.findOne({email: req.body.email});
         if (!user){
-            User.create(req.body, function(err, user){
-                if(err){console.log('error in creating user while signing up');
-                return res.redirect('/users/sign-up');
-                       }
+           await User.create({
+               email:req.body.email,
+               password: req.body.password,
+               pong: 0,
+               snake: 0,
+               name: req.body.name
+           })
+                
                 req.flash('success','Your Account has been created');
                 return res.redirect('/users/sign-in');
-            })
         }else{
             req.flash('error','email already exist');
             return res.redirect('back');
         }
 
-    });
+    }catch(err){
+        console.log('error',err);
+
+    }
 }
 
 

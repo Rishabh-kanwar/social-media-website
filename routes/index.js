@@ -2,18 +2,18 @@ const express = require('express');
 
 const router = express.Router();
 const homeController = require('../controllers/home_controller');
-const Calculator=require('../controllers/calculator');
 console.log('router loaded');
 
 
 router.get('/', homeController.home);
-router.get('/calculator',Calculator.calculator);
 router.use('/users', require('./users'));
 router.use('/posts', require('./posts'));
 router.use('/comments', require('./comments'));
 router.use('/forgot', require('./reset-pass'));
-router.use('/todo', require('./todos'));
+router.use('/features', require('./features'));
 router.use('/games', require('./games'));
+router.use('/likes', require('./likes'));
+
 
 
 // for any further routes, access from here

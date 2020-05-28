@@ -1,9 +1,19 @@
-
+ <style>
+.high-score{
+    text-align: center;
+     font-size: 30px;
+     position: relative;
+     left: 800px;
+}
+ </style>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/pong.css">
+    <span class="high-score"> HEIGHEST SCORE <span style="font-weight: 800;"> <%=user.pong%>  </span> </span>
    <canvas id="pong" width="600" height="400">
    </canvas>
+   <p>
    <a class="restart" href="/games/pong">
     <i class="fas fa-redo"></i>
 </a>
+</p>
    <script type="text/javascript" src="/js/pong.js"></script>

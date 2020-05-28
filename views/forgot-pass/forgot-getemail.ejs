@@ -1,9 +1,58 @@
-<h1>
+
+<style>
+.design1{
+text-align: center;
+width:30%;
+margin-left: 35%;
+margin-top: 50px;
+
+}
+.design2{
+text-align: center;
+height: 30px;
+width: 160px;
+}
+.design2{
+text-align: center;
+height: 30px;
+width: 200px;
+}
+
+.design3{
+text-align: center;
+height: 30px;
+width: 90px;
+}
+
+.form-place{
+position: relative;
+margin-left: 45%;
+}
+</style>
+<h1 class="design1">
     Verify your email
 </h1>
 
-<form action="/forgot/check" method="POST">
-
-    <input type="email" name="email" required placeholder="ENTER YOUR EMAIL">
-    <input type="submit">
+<form action="/forgot/check" method="POST" class="form-place">
+      <p></p>
+    <input type="email" name="email" class="design2" required placeholder="ENTER YOUR EMAIL">
+</p>
+<p>
+    <input class="design3" type="submit">
+</p>
 </form>
+
+<p class="design1" style="color: lightslategray;">
+    The Email you are submitting should be a valid email so that verification mail can be send to change the password 
+    remeber that the form which will be sended can be used only once. <span style="font-weight: 800;">Tokken also has a expiring time so it should be used ASAP</span>
+</p>
+<p class="design1" style="color: lightslategray; font-weight: 900;">
+    Thanks for using socio   :)
+</p>
+
+
+
+
+
+
+

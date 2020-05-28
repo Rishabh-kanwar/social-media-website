@@ -8,8 +8,12 @@
         <p class="friends">
             <ul>
                 <li>
+                    <%if(u.avatar){%>
              <img src="<%=u.avatar %>" alt="" width="25" height="25"> 
         <span><a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  </span>
+        <%}else{%>
+            <a href="/users/profile/<%= u.id%>"> <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
+        <%}%>
         </li> 
         </ul>
         </p> 
@@ -20,8 +24,9 @@
     <span> <i class="fas fa-portrait"></i>Posts </span>
     <div class="form-of-post">
     <% if(locals.user){ %>
-    <form action="/posts/create" id="new-post-form" method="POST">
-        <textarea name="content" cols="30" rows="3" placeholder="Type Here..."></textarea>
+    <form action="/posts/create" id="new-post-form" method="POST" enctype="multipart/form-data">
+        <textarea name="content" cols="30" rows="3" placeholder="CAPTION..."></textarea>
+        <input class="post-pic-choose" type="file" name="pic" placeholder="Picture" >
         <input id="post-button" type="submit" value="Post">
     </form>
     <% } %>
@@ -29,30 +34,9 @@
     <div id="posts-list-container">
         <ul>
             <% for(post of posts){ %>
-                <div class="posts">
+                <div class="post">
                              
                 <%- include('_post') -%>
-                  
-                <div class="post-comments">
-
-                    <div class="post-comments-list">
-                        <ul id="post-comments-<%= post._id %>">
-                            <% for (comment of post.comments){%>
-
-                              <%- include('_comments') -%>
-
-                            <% } %>
-                        </ul>
-    
-                    </div>
-                </div>  
-                <% if (locals.user){ %>
-                    <form action="/comments/create" method="POST">
-                        <input type="text" name="content" placeholder="Type Here to add comment..." required>
-                        <input type="hidden" name="post" value="<%= post._id %>" >
-                        <button type="submit"> <i class="far fa-plus-square"> </i></button>
-                    </form>
-                    <%} %>
             <%} %>
 
         </div>
@@ -64,14 +48,14 @@
           <p>
           <li>
               <%if (locals.user){%>
-              <a href="/todo/<%=user.id%>">
+              <a href="/features/todo/<%=user.id%>">
                 <i class="far fa-list-alt"></i>TODO LIST
               </a>
           </li>
         </p>  
           <li>
               <p>
-            <a href="/calculator">
+            <a href="/features/calculator">
                 <i class="fas fa-calculator"></i> CALCULATOR
             </a>
         </li>
@@ -97,6 +81,6 @@
     </div>
 
 </div>
+<script type="text/javascript" src="js/home_posts.js"></script>
+<script type="text/javascript" src="js/home_comments.js"></script>
 
-
-<script type="text/javascript" src="friendsL.js"></script>

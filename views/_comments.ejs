@@ -1,6 +1,7 @@
 <li>
     <p>
         <%= comment.content %>
+        <span style="font-size: 12px; position: relative; left: -40px; top: -2px;"><a href=""><i style="color: grey;" class="far fa-thumbs-up"></i></a></span>
         <br>
         <small style="color: gray;">
             <i class="far fa-id-badge"></i>
@@ -8,7 +9,7 @@
         </small>
         <% if(locals.user && locals.user.id==comment.user.id){%>
             <small>
-                <a href="/comments/destroy/<%=comment.id%>"> <i class="fas fa-trash-alt"></i></a>
+                <a class="delete-comment-button" href="/comments/destroy/<%=comment.id%>"> <i class="fas fa-trash-alt"></i></a>
             </small>
               <%}%>
     </p>    

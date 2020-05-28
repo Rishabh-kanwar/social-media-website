@@ -5,6 +5,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%; }
+  .all-container .post-pic-choose {
+    margin-left: 22%;
+    border-bottom: 3px solid black;
+    padding-bottom: 3px; }
 
 .friends {
   text-align: end;
@@ -16,7 +20,8 @@ body {
     border: none;
     border-bottom: 2px solid black;
     margin-top: 10px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    background-color: rgba(255, 196, 1, 0.02); }
   .form-of-post input {
     position: relative;
     left: -50px;
@@ -26,7 +31,7 @@ body {
     height: 30px;
     width: 80px;
     position: relative;
-    left: 40px;
+    left: 20px;
     font-weight: 700;
     font-size: 20px;
     border: 2px solid black;
@@ -38,9 +43,14 @@ body {
 
 #feed-posts {
   margin-top: 20px;
-  width: 50%;
+  width: 57.5%;
   text-align: center;
   align-items: center; }
+  #feed-posts .post-box {
+    margin-top: 100px; }
+    #feed-posts .post-box .post-image {
+      box-shadow: 4px 4px 7px 7px lightgray;
+      margin-bottom: 3px; }
   #feed-posts .form-of-post {
     margin-right: 400px;
     margin-left: 40%;
@@ -56,14 +66,16 @@ body {
       margin-right: 7px; }
 
 #user-friends {
-  width: 23%;
+  width: 20%;
   background-color: rgba(255, 196, 1, 0.1);
-  box-shadow: 1px 1px 5px 5px rgba(255, 196, 1, 0.7);
+  box-shadow: 1px 1px 5px 5px rgba(255, 196, 1, 0.3);
   margin: 9px;
   height: 370px;
   overflow-y: auto;
   margin-top: 12px;
-  margin-left: 15px; }
+  margin-left: 15px;
+  position: sticky;
+  top: 90px; }
   #user-friends img {
     border-radius: 5px;
     position: relative;
@@ -98,13 +110,15 @@ body {
   list-style: none; }
 
 #features {
-  width: 24.5%;
+  width: 20%;
   background-color: rgba(255, 196, 1, 0.1);
-  box-shadow: 1px 1px 5px 5px rgba(255, 196, 1, 0.7);
+  box-shadow: 1px 1px 5px 5px rgba(255, 196, 1, 0.3);
   margin: 9px;
   padding-bottom: 10px;
   margin-top: 12px;
-  height: 370px; }
+  height: 370px;
+  position: sticky;
+  top: 90px; }
   #features i {
     color: #ffc401da;
     margin-right: 5px; }
