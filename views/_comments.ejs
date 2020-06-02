@@ -1,7 +1,16 @@
 <li>
     <p>
         <%= comment.content %>
-        <span style="font-size: 12px; position: relative; left: -40px; top: -2px;"><a href=""><i style="color: grey;" class="far fa-thumbs-up"></i></a></span>
+        <span style="font-size: 18px;">
+            <% if (locals.user){ %>
+                <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=<%=comment._id%>&type=Comment"
+                    class="toggle-like-button" data-likes="<%= comment.likes.length %>">
+                    <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
+                        <%= comment.likes.length %>
+                </a>
+            <% }else{ %>
+                <%= comment.likes.length %> <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
+            <% } %>
         <br>
         <small style="color: gray;">
             <i class="far fa-id-badge"></i>
@@ -15,4 +24,4 @@
     </p>    
 
 </li>
-    
+  

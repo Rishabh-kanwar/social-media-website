@@ -3,9 +3,9 @@ const mongoose=require('mongoose');
 const likeSchema=new mongoose.Schema({
 user: {
     type:mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+     ref: 'User'
 },
-likeAble: {
+likeable: {
     type:mongoose.Schema.Types.ObjectId,
     require:true,
     refPath: 'onModel'
@@ -13,7 +13,7 @@ likeAble: {
 onModel:{
     type:String,
     require: true,
-    enum:['post','comment']
+    enum:['Post','Comment']
 }
 },{
     timestamps:true

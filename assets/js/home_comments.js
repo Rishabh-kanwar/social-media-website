@@ -38,7 +38,8 @@ class PostComments{
                     $(`#post-comments-${postId}`).prepend(newComment);
 
                     pSelf.deleteComment($('.delete-comment-button',newComment));
-
+                   // enable the functionality of the toggle like button on the new comment
+                    new ToggleLike($(' .toggle-like-button', newComment));
                     new Noty({
                         theme: 'relax',
                         text: "Comment published!",
@@ -49,7 +50,7 @@ class PostComments{
                     }).show();
 
                 }, error: function(error){
-                    console.log(error.responseText);
+                    console.log(error);
                 }
             });
 
@@ -64,7 +65,13 @@ class PostComments{
         return $(`<li id="comment-${comment._id}">
     <p>
         ${comment.content}
-        <span style="font-size: 12px; position: relative; left: -40px; top: -2px;"><a href=""><i style="color: red;" class="far fa-heart"></i></a></span>
+        <span style="font-size: 18px;">
+                <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=${comment._id}&type=comment"
+                class="toggle-like-button" data-likes="${comment.likes.length}">
+                    <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
+                        ${comment.likes.length}
+                </a>
+        </span>
         <br>
         <small style="color: gray;">
             <i class="far fa-id-badge"></i>
@@ -109,3 +116,4 @@ class PostComments{
         });
     }
 }
+

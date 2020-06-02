@@ -2,6 +2,7 @@
     // method to submit the form data for new post using AJAX
     let createPost = function(){
         let newPostForm = $('#new-post-form');
+
         newPostForm.submit(function(e){
             e.preventDefault();
 
@@ -12,10 +13,13 @@
                 success: function(data){
                     let newPost = newPostDom(data.data.post);
                     $('#posts-list-container>ul').prepend(newPost);
-                    deletePost($('.delete-post-button', newPost));
+                    deletePost($(' .delete-post-button', newPost));
 
                     // call the create comment class
                     new PostComments(data.data.post._id);
+
+                    // CHANGE :: enable the functionality of the toggle like button on the new post
+                    new ToggleLike($(' .toggle-like-button', newPost));
 
                     new Noty({
                         theme: 'relax',
@@ -76,7 +80,14 @@
                                      <big style="font-size: 35px;">
                                          <i
                                          style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"></i>${post.content}
-                                         <span style="font-size: 30px;"><a href=""><i style="color: grey;" class="far fa-thumbs-up"></i></a></span>
+                                         <span style="font-size: 30px;">
+                                      
+                                            <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=${post._id}&type=Post"
+                                            class="toggle-like-button" data-likes="${post.likes.length}">
+                                                <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
+                                                    ${post.likes.length}
+                                            </a>
+                                    </span>
                                  </big>
                                      <br>
                                      <small style="color: gray;">
@@ -111,7 +122,7 @@
   
     // method to delete a post from DOM
     let deletePost = function(deleteLink){
-
+console.log("abcbc");
         $(deleteLink).click(function(e){
             e.preventDefault();
                 console.log(deleteLink);
@@ -141,34 +152,23 @@
     }
 
 
-
-
-
-    // loop over all the existing posts on the page (when the window loads for the first time) and call the delete post method on delete link of each, also add AJAX (using the class we've created) to the delete button of each
-    let convertPostsToAjax = function(){
-        $('#posts-list-container>ul>li').each(function(){
+//   loop over all the existing posts on the page (when the window loads for the first time) and call the delete post method on delete link of each, also add AJAX (using the class we've created) to the delete button of each
+      let convertPostsToAjax = function(){
+          
+        $('#posts-list-container>ul>li').each(function(){ 
             let self = $(this);
-            let deleteButton = $(' .delete-post-button', self);
-            deletePost(deleteButton);
+            let deleteButton = $('.delete-post-button', self);
+            console.log(deleteButton)
+            deletePost($('.delete-post-button', self));
 
             // get the post's id by splitting the id attribute
             let postId = self.prop('id').split("-")[1]
             new PostComments(postId);
         });
     }
-
-
-
     createPost();
     convertPostsToAjax();
+
+
+    
 }
-//thori der k liye tum kuch bhi change mt kro
-//ho gya na??
-//lag to raha haa let me check
-//ho gya??
-//thanks yaar
-//but comments me bhi problem aa rahi thi aese he
-//yahi choti choti galtiyan kr rakhi hongi..dekhlo
-//okay thanks btw
-//rate kr dena pls
-//sure

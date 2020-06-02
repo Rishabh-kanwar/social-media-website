@@ -14,11 +14,14 @@ let resetPassSchema = new mongoose.Schema({
     isvalid: {
         type: Boolean,
         required: true
+    },
+    createdAT:{
+       type:Date,
+       default:Date.now,
+       expires: 3000
     }
-},{
-    timestamps: true
+
 });
-resetPassSchema.index({createdAt: 1},{expireAfterSeconds: 1000});
 
 const Reset = mongoose.model('Reset', resetPassSchema);
 module.exports = Reset;

@@ -46,7 +46,7 @@ module.exports.toggleLike = async function(req, res){
             likeable.save();
 
         }
-
+           console.log(deleted);
         return res.json(200, {
             message: "Request successful!",
             data: {
