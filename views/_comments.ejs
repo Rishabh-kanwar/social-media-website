@@ -1,4 +1,4 @@
-<li>
+<li id="comment-<%= comment._id %>">
     <p>
         <%= comment.content %>
         <span style="font-size: 18px;">
@@ -12,13 +12,15 @@
                 <%= comment.likes.length %> <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
             <% } %>
         <br>
-        <small style="color: gray;">
-            <i class="far fa-id-badge"></i>
+        <small>
+            <i style="color: gray;" class="far fa-id-badge"></i>
             <%= comment.user.name %>
         </small>
         <% if(locals.user && locals.user.id==comment.user.id){%>
             <small>
-                <a class="delete-comment-button" href="/comments/destroy/<%=comment.id%>"> <i class="fas fa-trash-alt"></i></a>
+                <a  class="delete-comment-button" href="/comments/destroy/<%=comment.id%>">
+               <i style=" color: red" class="fas fa-trash-alt"></i>
+               </a>
             </small>
               <%}%>
     </p>    

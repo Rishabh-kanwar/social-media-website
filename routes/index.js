@@ -13,11 +13,11 @@ router.use('/forgot', require('./reset-pass'));
 router.use('/features', require('./features'));
 router.use('/games', require('./games'));
 router.use('/likes', require('./likes'));
-
+router.use('/search', require('./search'));
 
 
 // for any further routes, access from here
-// router.use('/routerName', require('./routerfile));
+///router.use('/routerName', require('./routerfile));
 
 
 //including the route of the api\

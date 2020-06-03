@@ -15,7 +15,9 @@ module.exports.create = async function(req, res){
                 content: req.body.content,
                 post: req.body.post,
                 user: req.user._id
-            })
+            });
+            post.comments.push(comment);
+            post.save();
                 // handle error
                 comment = await comment.populate('user', 'name email').execPopulate();
                 //commentsMailer.newComment(comment);
@@ -38,8 +40,6 @@ module.exports.create = async function(req, res){
                     });
                 }
     
-                post.comments.push(comment);
-                post.save();
                 req.flash('success','comment is added');
                 res.redirect('/');
         }
@@ -59,11 +59,10 @@ module.exports.destroy=async function(req,res){
         
         let postId=comment.post;
         comment.remove();
-        
+        let post=await Post.findByIdAndUpdate(postId,{ $pull: {comments:req.params.id} } );
         //destroy the associated likes for this comment
         await Like.deleteMany({likeable: comment._id, onModel: 'Comment'});
         
-        let post=await Post.findByIdAndUpdate(postId,{ $pull: {comments:req.params.id} } )
         if (req.xhr){
             return res.status(200).json({
                 data: {

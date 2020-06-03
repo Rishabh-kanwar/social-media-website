@@ -26,6 +26,12 @@ const userSchema = new mongoose.Schema({
             ref: 'Todo'
         }
     ],
+    friendships: [
+        { 
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Friendship' 
+        }
+    ],
     pong:{
        type:Number 
     },

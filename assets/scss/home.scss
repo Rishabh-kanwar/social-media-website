@@ -86,15 +86,21 @@ margin-top: 100px;
 }
 #user-friends{
     width: 20%;
-    background-color: rgba($color: #ffc401da, $alpha: 0.1);
-    box-shadow: 1px 1px 5px 5px rgba($color: #ffc401da, $alpha: 0.3);
-    margin: 9px;
-    height: 370px;
+    height: 390px;
     overflow-y: auto;
-    margin-top: 12px;
-    margin-left: 15px;
-    position: sticky;
-    top: 90px;
+    overflow-x: hidden;
+
+    .from-design
+    {
+       input{
+           width: 150px;
+       }
+       button{
+           width: 30px;
+       }
+       position: relative;
+       left: 120px;
+    }
     img{
         border-radius: 5px;
         position: relative;
@@ -137,15 +143,8 @@ margin-top: 100px;
 }
 
 #features{
-    width: 20%;
-    background-color: rgba($color: #ffc401da, $alpha: 0.1);
-    box-shadow: 1px 1px 5px 5px rgba($color: #ffc401da, $alpha: 0.3);
-    margin: 9px;
-    padding-bottom: 10px;
-    margin-top: 12px;
-    height: 370px;
-    position: sticky;
-    top: 90px;
+    width: 22.5%;
+    height: 720px;
     i{
         color: #ffc401da;
        // opacity: 0.5;
@@ -187,10 +186,51 @@ margin-top: 100px;
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #ffc401da;
+    background: #ada999da;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #ffc401da;
+    background: #7a7974da;
   }
+
+
+  #all-users{
+    width: 20%;
+    height: 390px;
+    overflow-y: auto;
+    margin-top: -400px;
+    position: absolute;
+    top: 865px;
+    overflow-x: hidden;
+
+    .from-design
+    {
+       input{
+           width: 150px;
+       }
+       button{
+           width: 30px;
+       }
+       position: relative;
+       left: 120px;
+    }
+    img{
+        border-radius: 5px;
+        position: relative;
+        top: 5px;
+    }
+    h1{
+        margin-left: 24%;
+
+    }
+    ul{
+        list-style: none;
+        margin-left: 24%;
+        a{
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

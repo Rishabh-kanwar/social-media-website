@@ -11,9 +11,10 @@ class PostComments{
         this.newCommentForm = $(`#post-${postId}-comments-form`);
 
         this.createComment(postId);
-        let self =this;
+
+        let self = this;
         // call for all the existing comments
-        $('.delete-comment-button',this.postContainer).each(function(){
+        $(' .delete-comment-button', this.postContainer).each(function(){
             self.deleteComment($(this));
         });
     }
@@ -62,29 +63,32 @@ class PostComments{
     newCommentDom(comment){
 
         // I've added a class 'delete-comment-button' to the delete comment link and also id to the comment's li
-        return $(`<li id="comment-${comment._id}">
-    <p>
-        ${comment.content}
-        <span style="font-size: 18px;">
-                <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=${comment._id}&type=comment"
-                class="toggle-like-button" data-likes="${comment.likes.length}">
-                    <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
-                        ${comment.likes.length}
-                </a>
-        </span>
-        <br>
-        <small style="color: gray;">
-            <i class="far fa-id-badge"></i>
-            ${comment.user.name}
-        </small>
-    
+        return $(`<li id="comment-  ${comment._id}">
+        <p>
+            ${comment.content}
+            <span style="font-size: 18px;">
+                
+                    <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=${comment._id}&type=Comment"
+                        class="toggle-like-button" data-likes="${comment.likes.length}">
+                        <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
+                            ${comment.likes.length}
+                    </a>
+            <br>
             <small>
-                <a class="delete-comment-button" href="/comments/destroy/${comment._id}"> <i class="fas fa-trash-alt"></i></a>
+                <i style="color: gray;" class="far fa-id-badge"></i>
+                ${comment.user.name}
             </small>
-            
-    </p>    
-
-</li>`);
+          
+                <small>
+                    <a  class="delete-comment-button" href="/comments/destroy/${comment.id}">
+                   <i style=" color: red" class="fas fa-trash-alt"></i>
+                   </a>
+                </small>
+                
+        </p>    
+    
+    </li>
+      `);
     }
 
 
@@ -96,8 +100,7 @@ class PostComments{
                 type: 'get',
                 url: $(deleteLink).prop('href'),
                 success: function(data){
-                    console.log(data.data.comment_id);
-                    
+                   // console.log("#comment-",data.data.comment_id);
                     $(`#comment-${data.data.comment_id}`).remove();
 
                     new Noty({
