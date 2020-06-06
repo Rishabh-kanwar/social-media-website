@@ -50,15 +50,25 @@ try{
              path: 'user'
       }
     });
+    
     let result=[];
-
-  
-    let users=await User.find({});
+    
+    if(req.user)
+    {
+    let users=await User.findById(req.user._id).populate('friendships');
     return res.render('home',{
         title: 'socio|home',
         posts: posts,
         all_search: result,
-        all_users: users
+        all_users: users.friendships
+    });
+    }
+    let y=[];
+    return res.render('home',{
+        title: 'socio|home',
+        posts: posts,
+        all_search: result,
+        all_users: y 
     });
     }
     catch(err){

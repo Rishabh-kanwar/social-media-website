@@ -8,7 +8,7 @@ const Like = require('../models/like');
 module.exports.create = async function(req, res){
 
     try{
-   let post= await Post.findById(req.body.post)
+   let post= await Post.findById(req.body.post);
 
         if (post){
           let comment=await Comment.create({

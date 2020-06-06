@@ -12,6 +12,7 @@
         <span><a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  </span>
         <%}else{%>
             <a href="/users/profile/<%= u.id%>"> <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
+            <a href="/friends/destroy/<%=u.id%>"> <i style="margin-left: 20px; font-size: 15px; color: red;" class="fas fa-trash-alt"></i></a>
         <%}%>
         </li> 
         </ul>
@@ -49,14 +50,14 @@
           <li>
               <%if (locals.user){%>
               <a href="/features/todo/<%=user.id%>">
-                <i class="far fa-list-alt"></i>TODO LIST
+                <i class="far fa-list-alt"></i>Todo List
               </a>
           </li>
         </p>  
           <li>
               <p>
             <a href="/features/calculator">
-                <i class="fas fa-calculator"></i> CALCULATOR
+                <i class="fas fa-calculator"></i> Calculator
             </a>
         </li>
     </p>  
@@ -72,7 +73,7 @@
     <P>
         <li>
             <a href="/games/snakes">
-                <i class="fas fa-calculator"></i> snakes
+                <i class="fas fa-calculator"></i> Snakes
             </a>
         </li>
     </P>
@@ -81,7 +82,7 @@
    
 
       <section id="all-users">
-        <h1 class="heading"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-th-list"></i>ALL Users</h1>
+        <h1 class="heading"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-th-list"></i>All users</h1>
         <form action="/search" method="POST" id="new-search-form">
             <div class="from-design">
             <input type="text" placeholder="search friends" required name="friend">
@@ -97,9 +98,9 @@
                         <li id="search-list">
                             <%if(u.avatar){%>
                     <img src="<%=u.avatar %>" alt="" width="25" height="25"> 
-                <span><a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  </span>
+                <span><a href="/users/profile/<%=u.id%>"> <%=u.name%> </a>  </span>
                 <%}else{%>
-                    <a href="/users/profile/<%= u.id%>"> <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
+                    <a href="/users/profile/<%=u.id%>"> <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
                 <%}%>
                 </li>
                 <%}%> 
@@ -108,7 +109,7 @@
         </p> 
         
         </section>
-
+        <%- include('_chat_box') -%>
     </div>
 
 </div>
@@ -125,4 +126,11 @@
     });
 </script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="js/chat_engine.js"></script>
 
+<% if (locals.user){ %>
+    <script>
+        new ChatEngine('user-chat-box', '<%= locals.user.email %>')
+    </script>
+    <% } %>

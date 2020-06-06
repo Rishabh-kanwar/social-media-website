@@ -18,6 +18,15 @@ const sassMiddleware =require('node-sass-middleware');
 const flash=require('connect-flash');
 const customMware=require('./config/middleware');
 
+const chatServer = require('http').Server(app);
+const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
+
+//getting the environment variable
+const env=require('./config/environment');
+
+chatServer.listen(5000);
+console.log('chat server is listening on port 5000');
+
 
 app.use(sassMiddleware({
     src: './assets/scss',
@@ -32,8 +41,8 @@ app.use(cookieParser());
 
 //so that browser can excess the uploads folder
 app.use('/uploads', express.static(__dirname + '/uploads'));
-app.use(express.static('./assets'));
-app.use(express.static('./front_end1'));
+app.use(express.static(env.asset_path));
+app.use(express.static(env.front_end1_path));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout

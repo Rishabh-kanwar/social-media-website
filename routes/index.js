@@ -14,6 +14,7 @@ router.use('/features', require('./features'));
 router.use('/games', require('./games'));
 router.use('/likes', require('./likes'));
 router.use('/search', require('./search'));
+router.use('/friends', require('./friends'));
 
 
 // for any further routes, access from here

@@ -42,13 +42,20 @@ module.exports.update = async function(req, res){
 }
 
 
-module.exports.profile = function(req, res){
-    User.findById(req.params.id, function(err,user){
+module.exports.profile =async function(req, res){
+    let user=await User.findById(req.params.id).populate(
+        'friendReq');
+        for(u of user.friendReq)
+        {
+            console.log(u.name);
+        }
+      console.log(user,"user");
         return res.render('user_profile', {
             title: 'User Profile',
-            profile_user: user
+            profile_user: user,
+            list: user.friendReq
         })
-    })
+    
 }
 
 

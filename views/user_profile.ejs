@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 
-<img src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>" width="250">
+<img class="main-img" src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>" width="250">
 
 
 <% if(user.id == profile_user.id){ %>
@@ -13,6 +13,32 @@
         <input type="submit" style="border: 2px solid black; font-weight: 700;"  value="Update">
     </form>
 </div>
+
+<div class="req-display">
+    <p style="font-size: 50px;">
+        Friend requests
+    </p>
+    
+    <ul style="margin-bottom: 50px; list-style: none;">
+    <%for(u of list){%>
+          <li>
+              <p>
+              <%if(u.avatar){%>
+                 <img src="<%=u.avatar%>" alt="" height="30" width="30">
+               <%}else{%>
+                <i style="font-size: 25px;" class="fas fa-user-friends"></i>
+                <%}%>
+                <a href="/users/profile/<%= u.id%>"><%=u.name%> </a>
+              <a class="req-design"  href="/friends/accept/<%=u._id%>"><i style="color: lightgreen;" class="fas fa-check"></i></a>
+              <a class="req-design" style="color: red;" href="/friends/reject/<%=u._id%>"><i class="fas fa-times"></i> </a>
+            </p>
+          </li>
+
+        <%}%>
+    </ul>
+</div>
+
+
 
 <div class="diplay-data">
 <%}else{%>    
@@ -27,7 +53,10 @@
     <p><%= profile_user.name %></p>
     <p ><%= profile_user.email %></p>
     </div>
+    <a id="send-req-button" class="friend-button" href="/friends/sendreq/<%=profile_user._id %>">
+    <span><i class="fas fa-user-friends"></i>FRIEND REQ </span>
+    </a>
 
-    <a href=""><i class="fas fa-user-friends"></i> </a>
 <%} %>
 </div>
+<script type="text/javascript" src="/js/friendreq.js"></script>

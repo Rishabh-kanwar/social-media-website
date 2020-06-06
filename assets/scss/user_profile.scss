@@ -1,9 +1,9 @@
 body{
-   img{
+   .main-img{
        border-radius: 50%;
        width: 250;
        height: 250;
-       box-shadow: 5px 2px 40px 5px #ffc401da;
+       box-shadow: 5px 2px 40px 5px #b6b2a5da;
        position: relative;
        left: 770px;
        margin-bottom: 30px;
@@ -36,5 +36,35 @@ body{
         position: relative;
         left: 25%; 
          
+       }
+       .friend-button{
+        text-align: center;
+        position: relative;
+        left: 42%;
+        font-size: 30px;
+        color: rgb(85, 85, 255);
+        text-decoration: none;
+
+        span{
+            color: rgb(85, 85, 255);
+            padding: 4px;
+            border: 2px solid black;
+            box-shadow: 4px 4px 4px 4px lightgray;
+        }
+       }
+       .req-design{
+           font-size: 30px;
+           margin-left: 10px;
+
+       }
+       .req-display{
+           margin-left: 50px;
+           a{
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+            margin-left: 10px;
+         }
        }
 }
