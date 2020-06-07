@@ -23,18 +23,22 @@ const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
 
 //getting the environment variable
 const env=require('./config/environment');
+const logger=require('morgan');
 
 chatServer.listen(5000);
 console.log('chat server is listening on port 5000');
 
-
+const path=require('path');
+if(env.name=='development')
+{
 app.use(sassMiddleware({
-    src: './assets/scss',
-    dest: './assets/css',
+    src: path.join(__dirname,env.asset_path,'scss'),
+    dest: path.join(__dirname,env.front_end1_path,'css'),
     debug: true,
     outputStyle: 'extended',
     prefix: '/css'
 }));
+}
 app.use(express.urlencoded());
 
 app.use(cookieParser());
@@ -43,6 +47,9 @@ app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 app.use(express.static(env.asset_path));
 app.use(express.static(env.front_end1_path));
+
+//logger
+app.use(logger(env.morgan.mode, env.morgan.options));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout
@@ -61,7 +68,7 @@ app.set('views', './views');
 app.use(session({
     name: 'codeial',
     // TODO change the secret before deployment in production mode
-    secret: 'something',
+    secret: env.session_cookie_key,
     saveUninitialized: false,
     resave: false,
     cookie: {
