@@ -49,7 +49,7 @@ app.use(express.static(env.asset_path));
 app.use(express.static(env.front_end1_path));
 
 //logger
-app.use(logger(env.morgan.mode, env.morgan.options));
+app.use(logger(env.morgan.mode,env.morgan.options));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout

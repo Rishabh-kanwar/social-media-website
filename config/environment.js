@@ -10,7 +10,6 @@ const accessLogStream = rfs.createStream('access.log', {
     interval: '1d',
     path: logDirectory
 });
-// its working now  :O)Kay thanks
 
 const development={
     name: 'development',
@@ -27,10 +26,10 @@ const development={
             user: 'rkanwar4166@gmail.com',
             pass: 'mymother5678'
         },
-        morgan: {
-            mode: 'dev',
-            options: {stream: accessLogStream}
-        }
+    },
+    morgan: {
+        mode: 'dev',
+        options: {stream: accessLogStream}
     },
     google_client_ID: "858103645832-6mh0h2uu2cogbb4a422fn1onfkfh68tp.apps.googleusercontent.com",
     google_client_Secret: "22JQ_7xuTZ2GNzSqHPgNeL4A",
