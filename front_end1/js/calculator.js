@@ -4,7 +4,7 @@ var operand1=0;
 var operand2=null;
 var operator=null;
 display.innerText='0';
-
+console.log('hello');
 
 
 for(var i=0;i<button.length;i++){

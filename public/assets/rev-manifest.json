@@ -9,8 +9,8 @@
   "css/user_profile.css": "css/user_profile-c20a6825a2.css",
   "js/chat_engine.js": "js/chat_engine-b514c9fa66.js",
   "js/friendreq.js": "js/friendreq-656b25d74b.js",
-  "js/home_comments.js": "js/home_comments-3a43a3229c.js",
-  "js/home_posts.js": "js/home_posts-19f3aa0e39.js",
+  "js/home_comments.js": "js/home_comments-be34d08b22.js",
+  "js/home_posts.js": "js/home_posts-1f705fb3e0.js",
   "js/search.js": "js/search-53b50712f7.js",
   "js/toggle_likes.js": "js/toggle_likes-cc4e639552.js"
 }

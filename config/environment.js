@@ -38,7 +38,8 @@ const development={
     jwt_secret: 'socio',
 }
 const production={
-    name: process.env.SOCIO_ENVIRONMENT,
+    // name: process.env.SOCIO_ENVIRONMENT,
+    name:'production',
     asset_path : process.env.SOCIO_ASSET_PATH,
     front_end1_path : process.env.SOCIO_FRONT_END1_PATH,
     session_cookie_key: process.env.SOCIO_SESSION_COOKIE_KEY,
@@ -65,6 +66,6 @@ const production={
 }
 
 
-module.exports=eval(process.env.SOCIO_ENVIRONMENT)==undefined ? development : eval(process.env.SOCIO_ENVIRONMENT) ;
-// module.exports = development;
+// module.exports=eval(process.env.NODE_ENV)==undefined ? development : eval(process.env.NODE_ENV) ;
+  module.exports = development;
 

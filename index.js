@@ -33,7 +33,7 @@ if(env.name=='development')
 {
 app.use(sassMiddleware({
     src: path.join(__dirname,env.asset_path,'scss'),
-    dest: path.join(__dirname,env.front_end1_path,'css'),
+    dest: path.join(__dirname,env.asset_path,'css'),
     debug: true,
     outputStyle: 'extended',
     prefix: '/css'
@@ -102,7 +102,7 @@ app.use('/', require('./routes'));
 
 app.listen(port, function(err){
     if (err){
-        console.log(`Error in running the server: ${err}`);
+        console.log(`Error in running the server: ${err}: ${env.name}`);
     }
 
     console.log(`Server is running on port: ${port}`);

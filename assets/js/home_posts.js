@@ -122,7 +122,7 @@
   
     // method to delete a post from DOM
     let deletePost = function(deleteLink){
-console.log("abcbc");
+        
         $(deleteLink).click(function(e){
             e.preventDefault();
                 console.log(deleteLink);
@@ -132,7 +132,6 @@ console.log("abcbc");
 
                 success: function(data){
 
-                    console.log(data);
 
                     $(`#post-${data.data.post_id}`).remove();
                     new Noty({
@@ -158,7 +157,6 @@ console.log("abcbc");
         $('#posts-list-container>ul>li').each(function(){ 
             let self = $(this);
             let deleteButton = $('.delete-post-button', self);
-            console.log(deleteButton)
             deletePost($('.delete-post-button', self));
 
             // get the post's id by splitting the id attribute

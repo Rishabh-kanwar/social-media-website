@@ -44,7 +44,7 @@ module.exports.update = async function(req, res){
 
 module.exports.profile =async function(req, res){
     let user=await User.findById(req.params.id).populate(
-        'friendReq');
+        'friendReq').populate('friendships');
         for(u of user.friendReq)
         {
             console.log(u.name);
@@ -53,7 +53,8 @@ module.exports.profile =async function(req, res){
         return res.render('user_profile', {
             title: 'User Profile',
             profile_user: user,
-            list: user.friendReq
+            list: user.friendReq,
+            all_users: user.friendships
         })
     
 }

@@ -31,7 +31,7 @@ class PostComments{
                 url: '/comments/create',
                 data: $(self).serialize(),
                 success: function(data){
-                    console.log(data);
+                    
                     let newComment = pSelf.newCommentDom(data.data.comment);
                     console.log(newComment[0]);
 
@@ -63,7 +63,7 @@ class PostComments{
     newCommentDom(comment){
 
         // I've added a class 'delete-comment-button' to the delete comment link and also id to the comment's li
-        return $(`<li id="comment-  ${comment._id}">
+        return $(`<li id="comment-${comment._id}">
         <p>
             ${comment.content}
             <span style="font-size: 18px;">
@@ -80,7 +80,7 @@ class PostComments{
             </small>
           
                 <small>
-                    <a  class="delete-comment-button" href="/comments/destroy/${comment.id}">
+                    <a  class="delete-comment-button" href="/comments/destroy/${comment._id}">
                    <i style=" color: red" class="fas fa-trash-alt"></i>
                    </a>
                 </small>
@@ -100,7 +100,6 @@ class PostComments{
                 type: 'get',
                 url: $(deleteLink).prop('href'),
                 success: function(data){
-                   // console.log("#comment-",data.data.comment_id);
                     $(`#comment-${data.data.comment_id}`).remove();
 
                     new Noty({

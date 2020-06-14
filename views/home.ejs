@@ -12,7 +12,6 @@
         <span><a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  </span>
         <%}else{%>
             <a href="/users/profile/<%= u.id%>"> <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
-            <a href="/friends/destroy/<%=u.id%>"> <i style="margin-left: 20px; font-size: 15px; color: red;" class="fas fa-trash-alt"></i></a>
         <%}%>
         </li> 
         </ul>
