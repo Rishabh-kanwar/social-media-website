@@ -78,8 +78,7 @@
 
                                  <p style="margin-top: 100px;">
                                      <big style="font-size: 35px;">
-                                         <i
-                                         style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"></i>${post.content}
+                                         ${post.content}
                                          <span style="font-size: 30px;">
                                       
                                             <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=${post._id}&type=Post"

@@ -25,6 +25,7 @@ module.exports.update = async function(req, res){
                     user.avatar = User.avatarPath + '/' + req.file.filename;
                 }
                 user.save();
+                req.flash('success', 'Personal Data Updated');
                 return res.redirect('back');
          
             });

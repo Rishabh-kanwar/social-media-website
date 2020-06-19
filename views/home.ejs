@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="<%=assetPath('css/home.css')%>">
 <div class="all-container">
 
     <section id="user-friends">
@@ -112,10 +112,10 @@
     </div>
 
 </div>
-<script type="text/javascript" src="js/home_comments.js"></script>
-<script type="text/javascript" src="js/home_posts.js"></script>
-<script type="text/javascript" src="js/toggle_likes.js"></script>
-<script type="text/javascript" src="js/search.js"></script>
+<script src="<%=assetPath('js/home_comments.js')%>"></script>
+<script src="<%=assetPath('js/home_posts.js')%>"></script>
+<script src="<%=assetPath('js/toggle_likes.js')%>"></script>
+<script src="<%=assetPath('js/search.js')%>"></script>
 
 
 <script>
@@ -126,10 +126,11 @@
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-<script src="js/chat_engine.js"></script>
+<script src="<%=assetPath('js/chat_engine.js')%>"></script>
 
 <% if (locals.user){ %>
     <script>
         new ChatEngine('user-chat-box', '<%= locals.user.email %>')
     </script>
     <% } %>
+    <!-- ssh -i ~/Downloads/socio-prod.pem ubuntu@54.90.3.4 -->

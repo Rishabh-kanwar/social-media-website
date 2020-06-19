@@ -1,8 +1,0 @@
-::1 - - [08/Jun/2020:19:01:26 +0000] "GET / HTTP/1.1" 200 3981 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-::1 - - [08/Jun/2020:19:01:26 +0000] "GET /js/home_comments.js HTTP/1.1" 404 158 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-::1 - - [08/Jun/2020:19:01:26 +0000] "GET /js/toggle_likes.js HTTP/1.1" 404 157 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-::1 - - [08/Jun/2020:19:01:26 +0000] "GET /js/search.js HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-::1 - - [08/Jun/2020:19:01:26 +0000] "GET /js/home_posts.js HTTP/1.1" 404 155 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-::1 - - [08/Jun/2020:19:01:26 +0000] "GET /js/chat_engine.js HTTP/1.1" 404 156 "http://localhost:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-::ffff:127.0.0.1 - - [09/Jun/2020:12:29:42 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
-::ffff:127.0.0.1 - - [09/Jun/2020:12:29:45 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"

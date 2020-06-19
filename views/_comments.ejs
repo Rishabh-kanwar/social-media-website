@@ -18,7 +18,7 @@
         </small>
         <% if(locals.user && locals.user.id==comment.user.id){%>
             <small>
-                <a  class="delete-comment-button" href="/comments/destroy/<%=comment.id%>">
+                <a class="delete-post/comment"  class="delete-comment-button" href="/comments/destroy/<%=comment.id%>">
                <i style=" color: red" class="fas fa-trash-alt"></i>
                </a>
             </small>

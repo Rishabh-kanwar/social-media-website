@@ -4,6 +4,7 @@ const app = express();
 const port = 8000;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
+require('./config/view-helpers')(app);
 // used for session cookie
 const session = require('express-session');
 const passport = require('passport');

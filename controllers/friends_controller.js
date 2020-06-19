@@ -90,6 +90,7 @@ module.exports.reject = async function(req, res){
 }
 
 module.exports.destroy = async function(req, res){
+
     try{
         await User.findByIdAndUpdate(req.user._id,{$pull : { friendships: req.params.id}});
         await User.findByIdAndUpdate(req.params.id,{$pull : { friendships: req.user._id}});
@@ -110,11 +111,11 @@ module.exports.destroy = async function(req, res){
     //     let user = await User.findById(req.params.id);
     //     req.flash('error','Unfriended ',user.name);
     //     return res.redirect('back');
-    // }catch(err)
-    // {
-    //  console.log("error in send deleting the friend",err);
-    // }
-}
+    }catch(err)
+    {
+     console.log("error in send deleting the friend",err);
+    }
 
+}
 
 
