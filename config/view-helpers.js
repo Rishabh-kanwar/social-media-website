@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = (app) => {
     app.locals.assetPath = function(filePath){
         if (env.name == 'development'){
-            return filePath;
+            return '/' + filePath;
         }
 
         //onsole.log('/' + JSON.parse(fs.readFileSync(path.join(__dirname, '../rev-manifest.json')))[filePath]);
