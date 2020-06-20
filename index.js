@@ -1,7 +1,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
-const port = 8000;
+const port = 9000;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 require('./config/view-helpers')(app);
@@ -26,7 +26,7 @@ const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
 const env=require('./config/environment');
 const logger=require('morgan');
 
-chatServer.listen(5000);
+chatServer.listen(7000);
 console.log('chat server is listening on port 5000');
 
 const path=require('path');
