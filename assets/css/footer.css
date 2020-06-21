@@ -1,1 +1,12 @@
-.footer-display{display:flex;flex-wrap:wrap;width:100%;position:sticky;top:90%;background-image:linear-gradient(to bottom right,#ffc0c0,#ffc401da);font-family:sans-serif;height:100px}.footer-display p{font-weight:400;margin-left:50px}
+.footer-display {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  position: sticky;
+  top: 90%;
+  background-image: linear-gradient(to bottom right, #ffc0c0, #ffc401da);
+  font-family: sans-serif;
+  height: 100px; }
+  .footer-display p {
+    font-weight: 400;
+    margin-left: 50px; }

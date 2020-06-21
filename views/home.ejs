@@ -3,6 +3,7 @@
 
     <section id="user-friends">
         <h1 class="heading"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</h1>
+        <div id="friend-container">
         <%for(u of all_users) {%>
         <p class="friends">
             <ul>
@@ -15,7 +16,9 @@
         <%}%>
         </li> 
         </ul>
-        </p> 
+        
+        </p>
+        </div> 
             <%}%>
         </section>
 
@@ -63,6 +66,7 @@
         <% }%>
       </ul>
         <p class="heading"><i class="fas fa-gamepad"></i>Games</p>
+        <% if(locals.user){ %>
     <ul>
         <li>
             <a href="/games/pong">
@@ -77,6 +81,7 @@
         </li>
     </P>
     </ul>
+    <%}%>
     </section>
    
 
