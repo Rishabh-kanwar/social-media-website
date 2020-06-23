@@ -74,46 +74,56 @@
                 }
                          else{
 
-                            return $(`<li id="post-${post._id}" >
-
-                                 <p style="margin-top: 100px;">
-                                     <big style="font-size: 35px;">
-                                         ${post.content}
-                                         <span style="font-size: 30px;">
-                                      
-                                            <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=${post._id}&type=Post"
-                                            class="toggle-like-button" data-likes="${post.likes.length}">
-                                                <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
-                                                    ${post.likes.length}
-                                            </a>
-                                    </span>
-                                 </big>
-                                     <br>
-                                     <small style="color: gray;">
-                                         <i class="far fa-id-badge"></i>
-                                         ${post.user.name}
-                                     </small>
-                                    
-                                         <small>
-                                             <a class="delete-post-button" href="/posts/destroy/${post._id}"> <i style="margin-left: 100px;" class="fas fa-trash-alt"></i></a>
-                                         </small>
-                                          
-                                 </p>
+                            return $(`<li id="post-${post._id}" style="margin-top: 80px;">
+      
+                            <p>
+                                <!-- <i style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"><span style="width: 50%; height: auto;"></i> -->
+                                <big style="font-size: 35px;">
+                                   ${post.content}</span>
+                                </big> 
+                                <br>
+                                <small style="color: gray;">
+                                    <i class="far fa-id-badge"></i>
+                                    ${post.user.name}
+                                </small>
                                
-                                 
-                                
-                                     <form action="/comments/create" method="POST" id="post-${post._id}-comments-form">
-                                         <input type="text" name="content" placeholder="Type Here to add comment..." required>
-                                         <input type="hidden" name="post" value="${post._id}" >
-                                         <button type="submit"> <i class="far fa-plus-square"> </i></button>
-                                     </form>
+                                    <small>
+                                        <a class="delete-post-button" href="/posts/destroy/${post.id}"> <i class="fas fa-trash-alt"></i></a>
+                                    </small>
+                                     
+                            </p>
+                           
+                          
+                                <form action="/comments/create" method="POST" id="post-${post._id}-comments-form" >
+                                    <input type="text" name="content" placeholder="Type Here to add comment..." required>
+                                    <input type="hidden" name="post" value="${post._id}" >
+                                    <button type="submit"> <i class="far fa-comment"></i></button>
+                                </form>
+                        
+                            <span style="font-size: 30px;">
+                               
+                                    <a  href="/likes/toggle/?id=${post._id}&type=Post"
+                                        class="toggle-like-button" data-likes="${post.likes.length}">
+                                        
+                                        <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i> ${post.likes.length}
+                                    </a>
+                              
+                            
+                            
+                    
+                                <div class="post-comments-list">
+                                    <ul  id="post-comments-${post._id}" >
+                                       
+                                    </ul>
+                    
+                                </div>
+                            
+                            
+                    </li>`)
 
-                                     <div class="post-comments-list">
-                                        <ul id="post-comments-${post._id}">
-                                        </ul>
-                                     </div>
-                                    
-                         </li>`)
+
+                         
+
     }
     }
 

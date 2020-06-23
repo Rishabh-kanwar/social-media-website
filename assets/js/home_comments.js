@@ -65,31 +65,36 @@ class PostComments{
         // I've added a class 'delete-comment-button' to the delete comment link and also id to the comment's li
         return $(`<li id="comment-${comment._id}">
         <p>
-            ${comment.content}
-            <span style="font-size: 18px;">
+            <span style="font-weight: 400; font-size: 20px;"> ${comment.content}</span>
+            <br>
+        
+            <small style="margin-top: 5px; color: grey;>
+                <i style="color: gray;" class="far fa-id-badge"></i>
+                ${comment.user.name}
                 
-                    <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=${comment._id}&type=Comment"
+           
+         
+                    <a  style="color: rgb(92, 92, 255); position: relative; left: 0px; bottom: 0px;  font-size: 16px" href="/likes/toggle/?id=${comment._id}&type=Comment"
                         class="toggle-like-button" data-likes="${comment.likes.length}">
                         <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
                             ${comment.likes.length}
                     </a>
-            <br>
-            <small>
-                <i style="color: gray;" class="far fa-id-badge"></i>
-                ${comment.user.name}
+              
+           
             </small>
-          
+           
                 <small>
-                    <a  class="delete-comment-button" href="/comments/destroy/${comment._id}">
-                   <i style=" color: red" class="fas fa-trash-alt"></i>
+                    <a style="margin-left: 10px;" class="delete-comment-button delete-post/comment" href="/comments/destroy/${comment._id}">
+                   <i style=" color: red; font-size: 15px;  background-color: whitesmoke; border: 2px solid lightgray; padding: 2.5px;" class="fas fa-trash-alt"></i>
                    </a>
                 </small>
-                
+                 
         </p>    
-    </li>
-      `);
+    
+    </li>`);
     }
 
+  
 
     deleteComment(deleteLink){
         $(deleteLink).click(function(e){

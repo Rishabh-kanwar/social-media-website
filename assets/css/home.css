@@ -44,10 +44,10 @@ body {
 
 #feed-posts {
   position: relative;
-  right: 8%;
+  right: 4%;
   margin-top: 20px;
   width: 38.5%;
-  text-align: center;
+  text-align: justify;
   align-items: center; }
   #feed-posts .post-box {
     margin-top: 100px; }
@@ -56,7 +56,7 @@ body {
       margin-bottom: 3px; }
   #feed-posts .form-of-post {
     margin-right: 300px;
-    margin-left: 36%;
+    margin-left: 26%;
     margin-top: 15px;
     margin-bottom: 15px; }
   #feed-posts span {
@@ -99,19 +99,43 @@ body {
       color: black; }
 
 #posts-list-container a {
-  margin-left: 30px;
   text-decoration: none;
-  color: red; }
+  color: red;
+  padding: 1.5px; }
+
+#posts-list-container .toggle-like-button {
+  position: relative;
+  left: 220px;
+  bottom: 43px;
+  background-color: whitesmoke;
+  border: 2px solid lightgray;
+  margin-left: 5px;
+  font-size: 20px;
+  padding: 2.5px;
+  color: blue; }
+
+#posts-list-container .delete-post-button {
+  color: red;
+  background-color: whitesmoke;
+  border: 2px solid lightgray;
+  margin-left: 5px;
+  font-size: 20px;
+  padding: 2.5px;
+  position: relative;
+  left: 200px;
+  top: 43px; }
 
 #posts-list-container input {
   border: none;
-  border-bottom: 2px solid black; }
+  border-bottom: 2px solid black;
+  background-color: rgba(255, 196, 1, 0.02); }
 
 #posts-list-container button {
-  color: #ffc401da;
-  border: none;
+  color: black;
   background-color: white;
   font-size: 25px;
+  background-color: whitesmoke;
+  border: 2px solid lightgray;
   cursor: pointer; }
 
 #posts-list-container ul {

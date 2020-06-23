@@ -1,24 +1,21 @@
 
-<li id="post-<%= post._id %>" style="margin-top: 100px;">
+<li id="post-<%= post._id %>" style="margin-top: 80px;">
     
    <% if(post.pic){%>
         <img class="post-image" src="<%=post.pic%>" alt="" height="400" width="400">
     <p>
-        <big style="font-size: 35px;"><span><a href="">like</a></span>
+        <big style="font-size: 30px;"><span><a href="">like</a></span>
             <%= post.content %>
             <span style="font-size: 30px;">
                 <% if (locals.user){ %>
-                    <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=<%=post._id%>&type=Post"
-                        class="toggle-like-button" data-likes="<%= post.likes.length %>">
-                        <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
-                            <%= post.likes.length %>
-                    </a>
+                    
                 <% }else{ %>
                     <%= post.likes.length %><i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
                 <%}%>
             </span>
             <span class="delete-post/comment" style="font-size: 30px;"><a href="likes/toggle/?id=<%=post._id%>&type=Post"><i style="color: red;" class="far fa-heart"></i></a></span>
     </big>
+    
         <br>
         <small style="color: gray;">
             
@@ -27,7 +24,7 @@
         </small>
         <% if(locals.user && locals.user.id==post.user.id){%>
             <small>
-                <a class="delete-post-button" href="/posts/destroy/<%=post.id%>"> <i style="margin-left: 100px;" class="fas fa-trash-alt"></i></a>
+                <a class="delete-post-button" href="/posts/destroy/<%=post.id%>"> <i class="fas fa-trash-alt"></i></a>
             </small>
               <%}%>
     </p>
@@ -37,17 +34,6 @@
             <!-- <i style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"><span style="width: 50%; height: auto;"></i> -->
             <big style="font-size: 35px;">
                <%= post.content %></span>
-                <span style="font-size: 30px;">
-                    <% if (locals.user){ %>
-                        <a style="color: rgb(92, 92, 255); position: relative; left: -30px;" href="/likes/toggle/?id=<%=post._id%>&type=Post"
-                            class="toggle-like-button" data-likes="<%= post.likes.length %>">
-                            
-                            <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i> <%= post.likes.length %>
-                        </a>
-                    <% }else{ %>
-                        <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i> <%=post.likes.length %> 
-                    <% } %>
-                </span>
             </big> 
             <br>
             <small style="color: gray;">
@@ -56,7 +42,7 @@
             </small>
             <% if(locals.user && locals.user.id==post.user.id){%>
                 <small>
-                    <a class="delete-post-button" href="/posts/destroy/<%=post.id%>"> <i style="margin-left: 100px;" class="fas fa-trash-alt"></i></a>
+                    <a class="delete-post-button" href="/posts/destroy/<%=post.id%>"> <i class="fas fa-trash-alt"></i></a>
                 </small>
                   <%}%>
         </p>
@@ -65,10 +51,21 @@
             <form action="/comments/create" method="POST" id="post-<%=post._id%>-comments-form" >
                 <input type="text" name="content" placeholder="Type Here to add comment..." required>
                 <input type="hidden" name="post" value="<%= post._id %>" >
-                <button type="submit"> <i class="far fa-plus-square"> </i></button>
+                <button type="submit"> <i class="far fa-comment"></i></button>
             </form>
         <%} %>
-        <div class="post-comments">
+        <span style="font-size: 30px;">
+            <% if (locals.user){ %>
+                <a  href="/likes/toggle/?id=<%=post._id%>&type=Post"
+                    class="toggle-like-button" data-likes="<%= post.likes.length %>">
+                    
+                    <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i> <%= post.likes.length %>
+                </a>
+            <% }else{ %>
+                <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i> <%=post.likes.length %> 
+            <% } %>
+        </span>
+        
 
             <div class="post-comments-list">
                 <ul  id="post-comments-<%= post._id %>" >
@@ -78,8 +75,7 @@
 
                     <% } %>
                 </ul>
-
             </div>
-        </div>  
+       
         
 </li>
