@@ -1288,3 +1288,7 @@
 [0mPOST /likes/toggle/?id=5ef28b74b9a2f823b9dd97f7&type=Post [32m200[0m 52.426 ms - 57[0m
 [0mPOST /comments/create [32m200[0m 95.777 ms - 325[0m
 [0mPOST /comments/create [32m200[0m 73.125 ms - 325[0m
+[0mGET / [32m200[0m 287.819 ms - 11418[0m
+[0mGET / [36m304[0m 285.571 ms - -[0m
+[0mGET / [36m304[0m 299.762 ms - -[0m
+[0mGET / [36m304[0m 304.433 ms - -[0m
