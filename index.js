@@ -1,6 +1,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
+//hello
 const port = 80;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
@@ -73,7 +74,7 @@ app.use(session({
     saveUninitialized: false,
     resave: false,
     cookie: {
-        maxAge: (1000 * 60 * 100)
+        maxAge: (1001 * 60 * 100)
     },
     store: new MongoStore(
         {
