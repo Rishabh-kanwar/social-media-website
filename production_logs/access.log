@@ -972,3 +972,20 @@
 [0mGET / [32m200[0m 55.423 ms - 5674[0m
 [0mGET / [32m200[0m 78.365 ms - 5384[0m
 [0mGET / [36m304[0m 140.706 ms - -[0m
+[0mGET / [36m304[0m 194.345 ms - -[0m
+::ffff:127.0.0.1 - - [21/Jun/2020:21:52:57 +0000] "GET / HTTP/1.1" 302 72 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [21/Jun/2020:21:52:57 +0000] "GET /users/sign-in HTTP/1.1" 200 2409 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [21/Jun/2020:21:53:02 +0000] "POST /users/create-session HTTP/1.1" 302 46 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [21/Jun/2020:21:53:02 +0000] "GET / HTTP/1.1" 200 5774 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [21/Jun/2020:21:54:09 +0000] "GET / HTTP/1.1" 200 5484 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [21/Jun/2020:21:57:03 +0000] "GET / HTTP/1.1" 304 - "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:29:20 +0000] "GET / HTTP/1.1" 302 72 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:29:20 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:36:52 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:37:02 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:37:14 +0000] "GET /users/sign-up HTTP/1.1" 200 2504 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:37:19 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://127.0.0.1:8000/users/sign-up" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:37:20 +0000] "GET /users/sign-up HTTP/1.1" 304 - "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:37:30 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://127.0.0.1:8000/users/sign-up" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:38:00 +0000] "GET / HTTP/1.1" 302 72 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+::ffff:127.0.0.1 - - [22/Jun/2020:05:38:00 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
