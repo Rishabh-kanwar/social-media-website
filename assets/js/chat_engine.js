@@ -60,7 +60,7 @@ class ChatEngine{
             }));
 
             newMessage.append($('<sub>', {
-                'html': data.user_email
+                'html': `<br>${data.user_email}`
             }));
 
             newMessage.addClass(messageType);

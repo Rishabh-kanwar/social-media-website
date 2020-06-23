@@ -989,3 +989,9 @@
 ::ffff:127.0.0.1 - - [22/Jun/2020:05:37:30 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://127.0.0.1:8000/users/sign-up" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
 ::ffff:127.0.0.1 - - [22/Jun/2020:05:38:00 +0000] "GET / HTTP/1.1" 302 72 "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
 ::ffff:127.0.0.1 - - [22/Jun/2020:05:38:00 +0000] "GET /users/sign-in HTTP/1.1" 304 - "-" "Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1"
+[0mGET / [36m302[0m 108.372 ms - 72[0m
+[0mGET /users/sign-in [32m200[0m 194.912 ms - 2365[0m
+[0mGET /favicon.ico [33m404[0m 9.372 ms - 150[0m
+[0mGET /users/auth/google [36m302[0m 23.173 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F1AEf1_J30N81obzw1QKWgqle0Q6nZ04mnpv5R1H8xrAQGiLjEtB7ISbLugsHnkadPXLUrti4WA_C-gPxud0r0qU&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [36m302[0m 728.970 ms - 46[0m
+[0mGET / [32m200[0m 190.865 ms - 5674[0m
