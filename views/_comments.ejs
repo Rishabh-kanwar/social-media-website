@@ -6,10 +6,16 @@
         <small style="margin-top: 5px; color: grey;>
             <i style="color: gray;" class="far fa-id-badge"></i>
             <%= comment.user.name %>
-            
+            <% if( locals.user &&(locals.user.id==comment.user.id || locals.user.id==post.user.id )){%>
+                <small>
+                    <a style="margin-left: 10px; padding-left: 5px;" class="delete-comment-button delete-post/comment" href="/comments/destroy/<%=comment._id%>">
+                   <i class="fas fa-trash-alt"></i>
+                   </a>
+                </small>
+                  <%}%>
        
             <% if (locals.user){ %>
-                <a  style="color: rgb(92, 92, 255); position: relative; left: 0px; bottom: 0px;  font-size: 16px" href="/likes/toggle/?id=<%=comment._id%>&type=Comment"
+                <a  style="color: rgb(92, 92, 255); position: relative; left: 7px; bottom: 0px;  font-size: 16px" href="/likes/toggle/?id=<%=comment._id%>&type=Comment"
                     class="toggle-like-button" data-likes="<%= comment.likes.length %>">
                     <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
                         <%= comment.likes.length %>
@@ -19,13 +25,6 @@
             <% } %>
        
         </small>
-        <% if( locals.user &&(locals.user.id==comment.user.id || locals.user.id==post.user.id )){%>
-            <small>
-                <a style="margin-left: 10px;" class="delete-comment-button delete-post/comment" href="/comments/destroy/<%=comment._id%>">
-               <i class="fas fa-trash-alt"></i>
-               </a>
-            </small>
-              <%}%>
     </p>    
 
 </li>

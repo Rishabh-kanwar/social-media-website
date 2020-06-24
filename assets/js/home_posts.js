@@ -98,16 +98,18 @@
                                     <button type="submit"> <i class="far fa-comment"></i></button>
                                 </form>
                         
-                            <span style="font-size: 30px;">
+                                <span style="position: relative; bottom: 20px;">
                                
-                                    <a  href="/likes/toggle/?id=${post._id}&type=Post"
+                                <a class="delete-post-button" href="/posts/destroy/${post._id}"> <i class="fas fa-trash-alt"></i></a>
+
+                                    <a style="margin-left: 10px;"  href="/likes/toggle/?id=${post._id}&type=Post"
                                         class="toggle-like-button" data-likes="${post.likes.length}">
                                         
                                         <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i> ${post.likes.length}
                                     </a>
                               
-                                <small>
-                                    <a class="delete-post-button" href="/posts/destroy/${post._id}"> <i class="fas fa-trash-alt"></i></a>
+                                
+                                    
                             
                             
                     
