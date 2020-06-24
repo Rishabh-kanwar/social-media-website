@@ -1,20 +1,20 @@
-<link rel="stylesheet" href="<%=assetPath('css/user_profile.css')%>">
+<!-- <link rel="stylesheet" href="<%=assetPath('css/user_profile.css')%>"> -->
 
 <div class="big-container">
     <% if(user.id == profile_user.id){ %>
 <div class="req-display">
-    <p style="font-size: 40px;">
+    <p style="font-size: 25px; ">
        <i style="color: #ffc401da;" class="fas fa-user-check"></i> Friend requests
     </p>
     
-    <ol style="margin-bottom: 40px; list-style: none;">
+    <ol class="friend-req" style="margin-bottom: 40px;">
     <%for(u of list){%>
           <li>
               <p>
               <%if(u.avatar){%>
-                 <img src="<%=u.avatar%>" alt="" height="30" width="30">
+                 <img class="image-profile-friend" src="<%=u.avatar%>" alt="" height="30" width="30">
                <%}else{%>
-                <i style="font-size: 25px;" class="fas fa-user-friends"></i>
+                <i style="font-size: 23px;" class="fas fa-user-friends"></i>
                 <%}%>
                 <a href="/users/profile/<%= u.id%>"><%=u.name%> </a>
                 <p>
@@ -94,15 +94,14 @@
 <%}%>
 <% if(user.id == profile_user.id){ %>
 <div id="user-friends-profile">
-    <span style="margin-bottom: 100px;"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</span>
+    <span class="heading-friends"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</span>
     <table>
     <%for(u of all_users) {%>
     
         <tr>
-            
                         <%if(u.avatar){%>
                             <td>
-                <img src="<%=u.avatar %>" alt="" width="25" height="25"> 
+                <img class="image-profile-friend" src="<%=u.avatar %>" alt="" width="30" height="30"> 
             <span><a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  </span>
                             </td>
              
@@ -113,7 +112,7 @@
                <%}%>
                <td>
                 <% if(user.id == profile_user.id){ %>
-                <a href="/friends/destroy/<%=u.id%>"> <i style="margin-left: 20px; font-size: 15px; color: red;" class="fas fa-trash-alt"></i></a>
+                <a href="/friends/destroy/<%=u.id%>"> <i style="font-size: 15px; color: red;" class="fas fa-trash-alt"></i></a>
                 <%}%>
                 </td>
                
@@ -124,15 +123,15 @@
 <%}else{%>
  
     <div id="user-friends-profile-other">
-    <span style="margin-bottom: 100px;"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</span>
+    <span style="font-size: 30px;" ><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</span>
     <table>
     <%for(u of all_users) {%>
     
         <tr>
             
-                        <%if(u.avatar){%>
+                <%if(u.avatar){%>
                             <td>
-                <img src="<%=u.avatar %>" alt="" width="25" height="25"> 
+                <img class="image-profile-friend" src="<%=u.avatar %>" alt="" width="25" height="25"> 
             <span><a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  </span>
                             </td>
              
@@ -141,11 +140,7 @@
                 <a href="/users/profile/<%= u.id%>"> <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
                </td>
                <%}%>
-               <td>
-                <% if(user.id == profile_user.id){ %>
-                <a href="/friends/destroy/<%=u.id%>"> <i style="margin-left: 20px; font-size: 15px; color: red;" class="fas fa-trash-alt"></i></a>
-                <%}%>
-                </td>
+              
                
         </tr>
         <%}%>

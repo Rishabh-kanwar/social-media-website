@@ -4,22 +4,24 @@
     <section id="user-friends">
         <h1 class="heading"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</h1>
         <div id="friend-container">
+            <ul>
         <%for(u of all_users) {%>
         <p class="friends">
-            <ul>
-                <li>
-                    <%if(u.avatar){%>
-             <img src="<%=u.avatar %>" alt="" width="25" height="25"> 
+     <li>
+        <%if(u.avatar){%>
+        <img src="<%=u.avatar %>" alt="" width="25" height="25"> 
         <span><a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  </span>
         <%}else{%>
             <a href="/users/profile/<%= u.id%>"> <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
-        <%}%>
-        </li> 
-        </ul>
         
+        <%}%>
+    
+    </li> 
         </p>
-        </div> 
+        
             <%}%>
+        </ul>
+    </div> 
         </section>
 
 <section id="feed-posts">

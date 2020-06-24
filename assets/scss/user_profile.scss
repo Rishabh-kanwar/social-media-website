@@ -3,17 +3,22 @@ body{
 }
 .big-container{
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-
+.image-profile-friend{
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+}
 
 #profile-data{
    .main-img{
-       margin-left: 55%;
+       margin-left: 15%;
+       border:3px solid black;
        border-radius: 50%;
-       width: 250;
-       height: 250;
+       width: 250px;
+       height: 250px;
        box-shadow: 5px 2px 40px 5px #b6b2a5da;
        margin-bottom: 30px;
        margin-top: 25px;
@@ -21,10 +26,8 @@ body{
        .form-diplay{
            display: flex;
            flex-wrap: wrap;
-           width: 50%;
            position: relative;
-           left: 25%; 
-
+           left: 3%;
            input{
                width: 200px;
                height: 30px;
@@ -32,8 +35,6 @@ body{
                margin-right: 15%;
                margin-top: 10px;
                margin-bottom: 10px;
-               position: relative;
-               left: 200px;
                border: none;
                border-bottom: 2px solid black;
            }
@@ -69,22 +70,26 @@ body{
        {
            margin-top: 14px;
            margin-left: 50px;
+           width: 550px;
+           .friend-req{
+            font-size: 20px;
+           }
                 li
                 {
                     margin-bottom: 30px;
+                    font-size: 20px;
                 }
 
                 a
                 {
-                    margin-left: 10px;
+                    margin-left: 7px;
                     color: black;
-                    font-size: 25px;
+                    font-size: 23px;
                     text-decoration: none;
                 }
 
                 .req-design
                 {
-                        font-size: 30px;
                         margin-left: 10px;
                         padding: 4px;
                         background-color: rgb(236, 231, 231);
@@ -92,29 +97,42 @@ body{
                         color: black;
                         text-decoration: none;
                         font-size: 18px;
-                        margin-left: 10px;
+                        margin-left: 5px;
                 }
        }
 
 
 #user-friends-profile
 {
+    .heading-friends{
+        font-size: 25px;
+        position: relative;
+        
+       
+    }
+    .image-profile-friend{
+        border-radius: 50%;
+        border:1px solid black;
+    }
     position: relative;
-    left: 380px;
-    top: 50px;
+    
+    top: 40px;
     font-size: 40px;
     span{
-      margin-top: 50px;
+      margin-top: 30px;
     }
     a{
         color: black;
         text-decoration: none;
     }
    table{
-       margin-top: 50px;
+       width:300px;
+      margin-right: 20px;
+    position: relative;
+       margin-top: 30px;
         td{
             padding: 10px;
-            font-size: 25px;
+            font-size: 23px;
         }
     
    }
@@ -122,19 +140,20 @@ body{
 
 #user-friends-profile-other
 {
-    position: relative;
-    top: 50px;
-    right: 400px;
+    position: absolute;
+    top: 150px;
+    left: 50px;
     font-size: 40px;
     span{
-      margin-top: 50px;
+      margin-top: 20px;
     }
     a{
         color: black;
         text-decoration: none;
     }
    table{
-       margin-top: 50px;
+       margin-top: 30px;
+       margin-right: 0px;
         td{
             padding: 10px;
             font-size: 25px;
@@ -146,7 +165,6 @@ body{
 #profile-data-other{
     position: relative;
     left: 35.7%;
-    width: 500px;
     .main-img{
         margin-left: 25%;
         border-radius: 50%;
