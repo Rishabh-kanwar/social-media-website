@@ -64,9 +64,6 @@ body {
     font-size: 40px;
     margin-left: 10px;
     margin-bottom: 5px; }
-    #feed-posts span i {
-      color: #ffc401da;
-      margin-right: 7px; }
 
 #user-friends {
   width: 30%;
@@ -112,7 +109,16 @@ body {
   margin-left: 5px;
   font-size: 20px;
   padding: 2.5px;
-  color: blue; }
+  color: blue;
+  box-shadow: 3px 3px 3px 3px grey; }
+
+#posts-list-container .delete-comment-button {
+  box-shadow: 3px 3px 3px 3px grey;
+  color: red;
+  font-size: 15px;
+  background-color: whitesmoke;
+  border: 2px solid lightgray;
+  padding: 2.5px; }
 
 #posts-list-container .delete-post-button {
   color: red;
@@ -122,8 +128,9 @@ body {
   font-size: 20px;
   padding: 2.5px;
   position: relative;
-  left: 200px;
-  top: 43px; }
+  left: 225px;
+  top: -43px;
+  box-shadow: 3px 3px 3px 3px grey; }
 
 #posts-list-container input {
   border: none;
@@ -136,6 +143,7 @@ body {
   font-size: 25px;
   background-color: whitesmoke;
   border: 2px solid lightgray;
+  box-shadow: 3px 3px 3px 3px grey;
   cursor: pointer; }
 
 #posts-list-container ul {

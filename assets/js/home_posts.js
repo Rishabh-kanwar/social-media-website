@@ -78,7 +78,7 @@
       
                             <p>
                                 <!-- <i style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"><span style="width: 50%; height: auto;"></i> -->
-                                <big style="font-size: 35px;">
+                                <big style="font-size: 30px;">
                                    ${post.content}</span>
                                 </big> 
                                 <br>
@@ -87,9 +87,7 @@
                                     ${post.user.name}
                                 </small>
                                
-                                    <small>
-                                        <a class="delete-post-button" href="/posts/destroy/${post.id}"> <i class="fas fa-trash-alt"></i></a>
-                                    </small>
+                                   
                                      
                             </p>
                            
@@ -108,6 +106,8 @@
                                         <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i> ${post.likes.length}
                                     </a>
                               
+                                <small>
+                                    <a class="delete-post-button" href="/posts/destroy/${post._id}"> <i class="fas fa-trash-alt"></i></a>
                             
                             
                     

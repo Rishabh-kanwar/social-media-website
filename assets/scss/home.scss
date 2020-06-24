@@ -81,12 +81,8 @@ margin-top: 100px;
     margin-right: 10px;
     font-size: 40px;
     margin-left: 10px;
-   
     margin-bottom: 5px;
-       i{
-            color: #ffc401da;
-            margin-right: 7px;
-        }
+    
     }
 }
 #user-friends{
@@ -146,6 +142,15 @@ margin-top: 100px;
          font-size: 20px;
          padding: 2.5px;
          color: blue;
+         box-shadow: 3px 3px 3px 3px grey;
+    }
+    .delete-comment-button{
+        box-shadow: 3px 3px 3px 3px grey;
+        color: red;
+        font-size: 15px;
+        background-color: whitesmoke;
+        border: 2px solid lightgray;
+        padding: 2.5px;
     }
     .delete-post-button{
         color: red;
@@ -155,8 +160,9 @@ margin-top: 100px;
          font-size: 20px;
          padding: 2.5px;
          position: relative;
-         left: 200px;
-         top: 43px;
+         left: 225px;
+         top: -43px;
+         box-shadow: 3px 3px 3px 3px grey;
     }
     input{
         border: none;
@@ -169,6 +175,7 @@ margin-top: 100px;
         font-size: 25px;
          background-color: whitesmoke;
          border: 2px solid lightgray;
+         box-shadow: 3px 3px 3px 3px grey;
         cursor: pointer;
     }
     ul{
