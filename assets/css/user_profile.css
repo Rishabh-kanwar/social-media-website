@@ -107,7 +107,8 @@ body {
 
 #profile-data-other {
   position: relative;
-  left: 35.7%; }
+  left: 35.7%;
+  width: 500px; }
   #profile-data-other .main-img {
     margin-left: 25%;
     border-radius: 50%;
