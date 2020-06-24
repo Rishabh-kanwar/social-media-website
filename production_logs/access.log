@@ -1651,3 +1651,14 @@
 [0mGET / [32m200[0m 89.229 ms - 26684[0m
 [0mGET / [32m200[0m 92.805 ms - 26687[0m
 [0mGET / [32m200[0m 131.944 ms - 26684[0m
+[0mPOST /search [32m200[0m 24.763 ms - 428[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [32m200[0m 43.941 ms - 2988[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [32m200[0m 62.353 ms - 2953[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [36m304[0m 31.696 ms - -[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [32m200[0m 49.393 ms - 2952[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [32m200[0m 56.312 ms - 2977[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [36m304[0m 40.656 ms - -[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [36m304[0m 44.567 ms - -[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [36m304[0m 28.863 ms - -[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [36m304[0m 54.266 ms - -[0m
+[0mGET /users/profile/5ed976358c3d9c4a23a00074 [36m304[0m 16.346 ms - -[0m
