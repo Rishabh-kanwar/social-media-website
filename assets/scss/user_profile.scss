@@ -40,9 +40,6 @@ body{
            }
        }
        .diplay-data{
-        display: flex;
-        flex-wrap: wrap;
-        width: 50%;
         position: relative;
         left: 25%; 
          
@@ -142,7 +139,7 @@ body{
 {
     position: absolute;
     top: 150px;
-    left: 50px;
+    left: 20px;
     font-size: 40px;
     span{
       margin-top: 20px;
@@ -163,8 +160,9 @@ body{
 }
 
 #profile-data-other{
-    position: relative;
-    left: 35.7%;
+    
+     position: absolute;
+     left: 300px;
     .main-img{
         margin-left: 25%;
         border-radius: 50%;
@@ -197,7 +195,6 @@ body{
         .diplay-data{
          display: flex;
          flex-wrap: wrap;
-         width: 50%;
          position: relative;
          left: 25%; 
           
