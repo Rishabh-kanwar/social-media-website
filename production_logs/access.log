@@ -1667,3 +1667,8 @@
 [0mGET /users/profile/5ed976358c3d9c4a23a00074 [36m304[0m 66.411 ms - -[0m
 [0mGET /users/profile/5ed976358c3d9c4a23a00074 [36m304[0m 28.346 ms - -[0m
 [0mGET /users/profile/5ed976358c3d9c4a23a00074 [36m304[0m 35.043 ms - -[0m
+[0mGET / [36m304[0m 81.395 ms - -[0m
+[0mGET / [36m304[0m 54.619 ms - -[0m
+[0mGET / [36m304[0m 105.686 ms - -[0m
+[0mGET / [36m304[0m 114.549 ms - -[0m
+[0mPOST /posts/create [32m200[0m 18.487 ms - 342[0m
