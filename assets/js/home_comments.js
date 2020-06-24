@@ -85,7 +85,7 @@ class PostComments{
            
                 <small>
                     <a style="margin-left: 10px;" class="delete-comment-button delete-post/comment" href="/comments/destroy/${comment._id}">
-                   <i style=" color: red; font-size: 15px;  background-color: whitesmoke; border: 2px solid lightgray; padding: 2.5px;" class="fas fa-trash-alt"></i>
+                   <i class="fas fa-trash-alt"></i>
                    </a>
                 </small>
                  

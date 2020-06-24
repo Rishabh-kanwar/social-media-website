@@ -81,6 +81,70 @@ try{
 }
 
 
+// module.exports.home1=async function(req,res){
+//     try{
+
+//         if(!req.user)
+//         {
+//             return res.redirect('/users/sign-in');
+//         }
+ 
+//         let users123=await User.findById(req.user._id).populate('friendships');
+//         let Fposts=[];
+//         let posts1234=await Post.find({user: u.id});
+//         for(p of posts1234)
+//         {
+//             Fposts.push(p);
+//         }
+
+//             for(u of users123.friendships)
+//             {
+//                 let posts123=await Post.find({user: u.id});
+//                 for(p of posts123)
+//                 {
+//                 Fposts.push(p);
+//                 }
+//             }
+            
+
+
+//         let posts=await Post.find({})
+//         .sort('-createdAt')
+//         .populate('user')
+//         .populate({
+//             path: 'comments',
+//             populate: {
+//                  path: 'user'
+//           }
+//         });
+        
+//         let result=[];
+        
+//         if(req.user)
+//         {
+//         let users=await User.findById(req.user._id).populate('friendships');
+//         return res.render('home',{
+//             title: 'socio|home',
+//             posts: posts,
+//             all_search: result,
+//             all_users: users.friendships
+//         });
+//         }
+//         let y=[];
+//         return res.render('home',{
+//             title: 'socio|home',
+//             posts: posts,
+//             all_search: result,
+//             all_users: y 
+//         });
+//         }
+//         catch(err){
+//             console.log('error',err);
+//         }
+//     }
+    
+
+
 
 module.exports.search=async function(req,res){
     try{

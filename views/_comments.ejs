@@ -19,7 +19,7 @@
             <% } %>
        
         </small>
-        <% if(locals.user && locals.user.id==comment.user.id){%>
+        <% if( locals.user &&(locals.user.id==comment.user.id || locals.user.id==post.user.id )){%>
             <small>
                 <a style="margin-left: 10px;" class="delete-comment-button delete-post/comment" href="/comments/destroy/<%=comment._id%>">
                <i class="fas fa-trash-alt"></i>
