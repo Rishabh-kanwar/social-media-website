@@ -6,7 +6,7 @@
         <small style="margin-top: 5px; color: grey;>
             <i style="color: gray;" class="far fa-id-badge"></i>
             <%= comment.user.name %>
-            <% if( locals.user &&(locals.user.id==comment.user.id || locals.user.id==post.user.id )){%>
+            <% if( locals.user &&locals.user.id==comment.user.id){%>
                 <small>
                     <a style="margin-left: 10px; padding-left: 5px;" class="delete-comment-button delete-post/comment" href="/comments/destroy/<%=comment._id%>">
                    <i class="fas fa-trash-alt"></i>

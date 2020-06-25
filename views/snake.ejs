@@ -1,27 +1,6 @@
-        <style>
-            canvas{
-                display: block;
-                margin: 0 auto;
-                position: relative;
-                top: 20px;
-            }
-            .restart{
-                color: black;
-                font-size: 50px;
-                position: relative;
-                left: 49%;
-                top: 50px;
-                text-decoration: none;
-            }
-            .high-score{
-                text-align: center;
-                font-size: 30px;
-                position: relative;
-                left: 800px;
-               }
-        </style>
-        <p>
-    <span class="high-score"> HEIGHEST SCORE <span style="font-weight: 800;"> <%=user.snake%>  </span> </span>
+     <link rel="stylesheet" href="/css/snake.css">
+        <p class="high-score">
+    <span > HEIGHEST SCORE <span style="font-weight: 800;"> <%=user.snake%>  </span> </span>
 </p>
     <canvas id="snake" width="608" height="608"></canvas>
     <a class="restart" href="/games/snakes">

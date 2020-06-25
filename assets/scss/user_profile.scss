@@ -137,9 +137,9 @@ body{
 
 #user-friends-profile-other
 {
-    position: absolute;
-    top: 150px;
-    left: 20px;
+    position: relative;
+    top: 50px;
+    right: 20%;
     font-size: 40px;
     span{
       margin-top: 20px;
@@ -161,10 +161,10 @@ body{
 
 #profile-data-other{
     
-     position: absolute;
-     left: 300px;
+     position: relative;
+     left: 20%;
+     align-items: center;
     .main-img{
-        margin-left: 25%;
         border-radius: 50%;
         width: 250;
         height: 250;
@@ -176,8 +176,7 @@ body{
             display: flex;
             flex-wrap: wrap;
             width: 50%;
-            position: relative;
-            left: 25%; 
+           
  
             input{
                 width: 200px;
@@ -203,13 +202,13 @@ body{
          text-align: center;
          position: relative;
          left: 5%;
+         color: black;
          font-size: 30px;
-         color: rgb(85, 85, 255);
          text-decoration: none;
          width: 300px;
  
          span{
-             color: rgb(85, 85, 255);
+          
              padding: 4px;
              border: 2px solid black;
              box-shadow: 4px 4px 4px 4px lightgray;

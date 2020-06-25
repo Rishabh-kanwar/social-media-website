@@ -101,9 +101,9 @@ body {
       font-size: 23px; }
 
 #user-friends-profile-other {
-  position: absolute;
-  top: 150px;
-  left: 20px;
+  position: relative;
+  top: 50px;
+  right: 20%;
   font-size: 40px; }
   #user-friends-profile-other span {
     margin-top: 20px; }
@@ -118,10 +118,10 @@ body {
       font-size: 25px; }
 
 #profile-data-other {
-  position: absolute;
-  left: 300px; }
+  position: relative;
+  left: 20%;
+  align-items: center; }
   #profile-data-other .main-img {
-    margin-left: 25%;
     border-radius: 50%;
     width: 250;
     height: 250;
@@ -131,9 +131,7 @@ body {
   #profile-data-other .form-diplay {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
-    position: relative;
-    left: 25%; }
+    width: 50%; }
     #profile-data-other .form-diplay input {
       width: 200px;
       height: 30px;
@@ -154,12 +152,11 @@ body {
     text-align: center;
     position: relative;
     left: 5%;
+    color: black;
     font-size: 30px;
-    color: #5555ff;
     text-decoration: none;
     width: 300px; }
     #profile-data-other .friend-button span {
-      color: #5555ff;
       padding: 4px;
       border: 2px solid black;
       box-shadow: 4px 4px 4px 4px lightgray; }

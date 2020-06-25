@@ -3,6 +3,7 @@ const Friendship=require('../models/friendship');
 
 module.exports.sendreq = async function(req, res){
     try{
+        let k=1;
         let sended=false;
         let user=await User.findById(req.params.id);
         
@@ -11,8 +12,9 @@ module.exports.sendreq = async function(req, res){
                if(u==req.user.id)
                {
                    console.log(' in friendships');
-                   req.flash('success','you are already friends');
-                   return res.redirect('back');
+                  // req.flash('success','you are already friends');
+                   k=2;
+                //   return res.redirect('back');
                }
         }
         for(u of user.friendReq)
@@ -32,24 +34,26 @@ module.exports.sendreq = async function(req, res){
             user.friendReq.push(req.user._id);
             user.save();
             console.log(user.friendReq,'req');
-            req.flash('success','friend req sent');
-            return res.redirect('back');
+          //  req.flash('success','friend req sent');
+            k=1;
+            //return res.redirect('back');
         }
 
         else{
             await User.findByIdAndUpdate(req.params.id,{$pull : { friendReq: req.user._id}});
-            req.flash('error','friend request sended is deleted');
-            return res.redirect('back');
+            //req.flash('error','friend request sended is deleted');
+            k=0;
+           // return res.redirect('back');
         }
-    //   if(req.xhr)
-    //   {
-    //     return res.json(200, {
-    //         message: "Request successful!",
-    //         data: {
-    //             sended: sended
-    //         }
-    //     })
-    //   }
+      if(req.xhr)
+      {
+        return res.json(200, {
+            message: "Request successful!",
+            data: {
+                status: k
+            }
+        })
+      }
     
         
     }catch(err)
