@@ -22,11 +22,11 @@
                     }
                     else if(data.data.status==1){
                         k='friend request sent';
-                        sendReqButton.html(`<span style="color: red;"><i class="fas fa-user-friends"></i>DELETE REQ </span>`);
+                        sendReqButton.html(`<span style="color: red;"><i class="fas fa-user-friends"></i> delete-req </span>`);
                     }
                     else{
                         k='already friends';
-                        sendReqButton.html(`<span style="color: blue;"><i class="fas fa-user-friends"></i> Friends </span>`);
+                        sendReqButton.html(`<span style="color: blue;"><i class="fas fa-user-friends"></i> Already Friends </span>`);
                     }
                      
                     new Noty({

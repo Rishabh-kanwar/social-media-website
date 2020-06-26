@@ -15,6 +15,15 @@ module.exports.sendreq = async function(req, res){
                   // req.flash('success','you are already friends');
                    k=2;
                 //   return res.redirect('back');
+                if(req.xhr)
+                {
+                  return res.json(200, {
+                      message: "Request successful!",
+                      data: {
+                          status: k
+                      }
+                  })
+                }
                }
         }
         for(u of user.friendReq)
@@ -37,6 +46,15 @@ module.exports.sendreq = async function(req, res){
           //  req.flash('success','friend req sent');
             k=1;
             //return res.redirect('back');
+            if(req.xhr)
+            {
+              return res.json(200, {
+                  message: "Request successful!",
+                  data: {
+                      status: k
+                  }
+              })
+            }
         }
 
         else{
@@ -44,16 +62,17 @@ module.exports.sendreq = async function(req, res){
             //req.flash('error','friend request sended is deleted');
             k=0;
            // return res.redirect('back');
+           if(req.xhr)
+           {
+             return res.json(200, {
+                 message: "Request successful!",
+                 data: {
+                     status: k
+                 }
+             })
+           }
         }
-      if(req.xhr)
-      {
-        return res.json(200, {
-            message: "Request successful!",
-            data: {
-                status: k
-            }
-        })
-      }
+     
     
         
     }catch(err)
