@@ -3,10 +3,10 @@
   flex-wrap: wrap;
   width: 100%;
   position: sticky;
-  top: 90vh;
+  top: 92vh;
   background-image: linear-gradient(to bottom right, #ffc0c0, #ffc401da);
   font-family: sans-serif;
-  height: 10vh; }
+  height: 9vh; }
   .footer-display p {
     font-weight: 400;
     margin-left: 50px; }

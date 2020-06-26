@@ -1,6 +1,6 @@
 #user-chat-box {
   position: fixed;
-  bottom: 110px;
+  bottom: 10vh;
   right: 12px;
   border: 1px dashed grey;
   height: 350px;
