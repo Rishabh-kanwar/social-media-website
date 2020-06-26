@@ -2597,3 +2597,13 @@
 [0mGET /users/profile/5ef3c2f2c1efcd57476e1a8d [36m304[0m 59.995 ms - -[0m
 [0mGET / [36m304[0m 193.062 ms - -[0m
 [0mGET /users/profile/5ed976218c3d9c4a23a00072 [36m304[0m 90.613 ms - -[0m
+[0mGET / [36m302[0m 49.515 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 111.984 ms - -[0m
+[0mGET /favicon.ico [33m404[0m 10.528 ms - 150[0m
+[0mGET /users/sign-in [36m304[0m 19.223 ms - -[0m
+[0mGET /users/sign-in [36m304[0m 5.963 ms - -[0m
+[0mGET /users/sign-in [36m304[0m 8.483 ms - -[0m
+[0mGET /users/sign-in [36m304[0m 22.148 ms - -[0m
+[0mGET /users/sign-in [36m304[0m 14.227 ms - -[0m
+[0mGET /users/sign-in [36m304[0m 12.803 ms - -[0m
+[0mGET /users/sign-in [36m304[0m 15.739 ms - -[0m
