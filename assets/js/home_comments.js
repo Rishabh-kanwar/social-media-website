@@ -71,10 +71,12 @@ class PostComments{
             <small style="margin-top: 5px; color: grey;>
                 <i style="color: gray;" class="far fa-id-badge"></i>
                 ${comment.user.name}
-                
-           
+                 
+                <a style="margin-left: 10px;" class="delete-comment-button delete-post/comment" href="/comments/destroy/${comment._id}">
+                <i class="fas fa-trash-alt"></i>
+                </a>
          
-                    <a  style="color: rgb(92, 92, 255); position: relative; left: 0px; bottom: 0px;  font-size: 16px" href="/likes/toggle/?id=${comment._id}&type=Comment"
+                    <a  style="color: rgb(92, 92, 255); position: relative; left: 10px; bottom: 0px;  font-size: 16px" href="/likes/toggle/?id=${comment._id}&type=Comment"
                         class="toggle-like-button" data-likes="${comment.likes.length}">
                         <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
                             ${comment.likes.length}
@@ -83,12 +85,7 @@ class PostComments{
            
             </small>
            
-                <small>
-                    <a style="margin-left: 10px;" class="delete-comment-button delete-post/comment" href="/comments/destroy/${comment._id}">
-                   <i class="fas fa-trash-alt"></i>
-                   </a>
-                </small>
-                 
+               
         </p>    
     
     </li>`);
