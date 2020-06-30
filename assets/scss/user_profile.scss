@@ -29,6 +29,7 @@ body{
            position: relative;
            left: 3%;
            input{
+               background-color: rgba($color: #ffc401da, $alpha: 0.03); 
                width: 200px;
                height: 30px;
                margin-left: 15%;
@@ -49,14 +50,14 @@ body{
         position: relative;
         left: 42%;
         font-size: 30px;
-        color: rgb(85, 85, 255);
+        color: white;
         text-decoration: none;
+        box-shadow: 5px 5px 5px 5px gray;
 
         span{
-            color: rgb(85, 85, 255);
+            color: white;
             padding: 4px;
             border: 2px solid black;
-            box-shadow: 4px 4px 4px 4px lightgray;
         }
        }
     }
@@ -207,12 +208,12 @@ body{
          font-size: 30px;
          text-decoration: none;
          width: 300px;
+         box-shadow: 5px 5px 7px 7px grey;
  
          span{
           
              padding: 4px;
              border: 2px solid black;
-             box-shadow: 4px 4px 4px 4px lightgray;
          }
         }
         

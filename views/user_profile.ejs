@@ -42,7 +42,7 @@
         <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
         <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required>
         <input type="file" name="avatar" placeholder="profile-picture" >
-        <input type="submit" style="border: 2px solid black; font-weight: 700;"  value="Update" style="cursor: pointer;">
+        <input type="submit" style="background-color: white; border: 2px solid black; font-weight: 700;"  value="Update" style="cursor: pointer;">
     </form>
 </div>
 
@@ -85,7 +85,14 @@
                 <p ><%= profile_user.email %></p>
                 </div>
                 <a id="send-req-button" class="friend-button" href="/friends/sendreq/<%=profile_user._id %>">
-                <span><i class="fas fa-user-friends"></i>FRIEND REQ </span>
+                    <%console.log('value of k ',k)%>
+                    <%if(k==0){%>
+                        <span style="color: white; background-color: green;"> Send req</span>
+                        <%}else if(k==1){%>
+                            <span style="color: white; background-color: red;"> unsend req</span>
+                            <%}else if(k==2){%>
+                                <span style="color: white; background-color: blue;"> Friends</span>
+                                <%}%>
                 </a>
             
            
@@ -94,7 +101,7 @@
 <%}%>
 <% if(user.id == profile_user.id){ %>
 <div id="user-friends-profile">
-    <span class="heading-friends"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</span>
+    <span class="heading-friends"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"> </i>Friends</span>
     <table>
     <%for(u of all_users) {%>
     

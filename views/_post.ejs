@@ -4,7 +4,7 @@
    <% if(post.pic){%>
         <img class="post-image" src="<%=post.pic%>" alt="" height="400" width="400">
     <p>
-        <big style="font-size: 30px;"><span><a href="">like</a></span>
+        <big style="font-size: 30px;">
             <%= post.content %>
             <span style="font-size: 30px;">
                 <% if (locals.user){ %>
@@ -15,10 +15,9 @@
             </span>
             <span class="delete-post/comment" style="font-size: 30px;"><a href="likes/toggle/?id=<%=post._id%>&type=Post"><i style="color: red;" class="far fa-heart"></i></a></span>
     </big>
-    
+
         <br>
         <small style="color: gray;">
-            
             <i class="far fa-id-badge"></i>
             <%= post.user.name %>
         </small>
@@ -29,7 +28,7 @@
         <p>
             <!-- <i style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"><span style="width: 50%; height: auto;"></i> -->
             <big style="font-size: 30px;">
-               <%= post.content %></span>
+               <%= post.content %> 
             </big> 
             <br style="height: 5px;">
             <small style="color: gray;">

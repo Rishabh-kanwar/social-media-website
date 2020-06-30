@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Post=require('../models/post');
 const fs = require('fs');
 const path = require('path');
 
@@ -43,6 +44,24 @@ module.exports.update = async function(req, res){
 }
 
 
+// module.exports.profile =async function(req, res){
+//     let user=await User.findById(req.params.id).populate(
+//         'friendReq').populate('friendships');
+//         for(u of user.friendReq)
+//         {
+//             console.log(u.name);
+//         }
+//       console.log(user,"user");
+//         return res.render('user_profile', {
+//             title: 'User Profile',
+//             profile_user: user,
+//             list: user.friendReq,
+//             all_users: user.friendships
+           
+//         })
+    
+// }
+//new profile setting up for value of k
 module.exports.profile =async function(req, res){
     let user=await User.findById(req.params.id).populate(
         'friendReq').populate('friendships');
@@ -50,15 +69,44 @@ module.exports.profile =async function(req, res){
         {
             console.log(u.name);
         }
+       
+        let k=0;
+        for(u of user.friendships)
+        {
+               if(u._id==req.user.id)
+               {
+                   k=2;
+                   break;
+               }
+        }
+        if(k!=2)
+        {
+                for(u._id of user.friendReq)
+                {
+                    if(u._id==req.user.id)
+                    {
+                        console.log('break');
+                        k=1;
+                        break;
+                    }
+                }
+        }
+    
+ 
+
+
+
       console.log(user,"user");
         return res.render('user_profile', {
             title: 'User Profile',
             profile_user: user,
             list: user.friendReq,
-            all_users: user.friendships
+            all_users: user.friendships,
+            k:k
         })
     
 }
+
 
 
 // render the sign up page

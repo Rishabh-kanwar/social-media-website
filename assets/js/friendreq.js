@@ -17,16 +17,16 @@
                     let k='';
                     if(data.data.status==0)
                     {
-                        sendReqButton.html(`<span  style="color: green;"><i class="fas fa-user-friends"></i>send-req</span>`);
+                        sendReqButton.html(`<span  style="color: white; background-color: green">Send req</span>`);
                         k='friend request sended is deleted';
                     }
                     else if(data.data.status==1){
                         k='friend request sent';
-                        sendReqButton.html(`<span style="color: red;"><i class="fas fa-user-friends"></i> delete-req </span>`);
+                        sendReqButton.html(`<span style="color: white; background-color: red;"> unsend-req </span>`);
                     }
                     else{
                         k='already friends';
-                        sendReqButton.html(`<span style="color: blue;"><i class="fas fa-user-friends"></i> Already Friends </span>`);
+                        sendReqButton.html(`<span style="color: blue;">Already Friends </span>`);
                     }
                      
                     new Noty({
