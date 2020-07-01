@@ -8,11 +8,18 @@
         <%for(u of all_users) {%>
         <p class="friends">
      <li>
+
+         <%if(u.online){%>
+         <span <i style="font-size: 15px; color: green;" class="fas fa-circle"></i></span>
+         <%}else{%>
+            <span <i style="font-size: 15px; color:red;" class="fas fa-circle"></i></span>
+            <%}%>
+
         <%if(u.avatar){%>
         <img src="<%=u.avatar %>" alt="" width="25" height="25"> 
-        <span><a href="/users/profile/<%= u.id%>"> <%=u.name%> </a>  </span>
+        <span><a  class="chat-button" href="/chat/<%= u.id%>" > <%=u.name%> </a>  </span>
         <%}else{%>
-            <a href="/users/profile/<%= u.id%>"> <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
+            <a  class="chat-button" href="/chat/<%= u.id%>" > <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
         
         <%}%>
     
@@ -135,9 +142,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 <script src="<%=assetPath('js/chat_engine.js')%>"></script>
 
-<% if (locals.user){ %>
+<!-- <% if (locals.user){ %>
     <script>
         new ChatEngine('user-chat-box', '<%= locals.user.email %>')
     </script>
-    <% } %>
+    <% } %> -->
     <!-- ssh -i ~/Downloads/socio-prod.pem ubuntu@54.90.3.4 -->

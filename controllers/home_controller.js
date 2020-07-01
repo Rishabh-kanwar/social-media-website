@@ -1,5 +1,6 @@
 const Post = require('../models/post');
-const User=require('../models/user')
+const User=require('../models/user');
+const Friendship=require('../models/friendship');
 //module.exports.home = function(req, res){
     // console.log(req.cookies);
     // res.cookie('user_id', 25);
@@ -60,6 +61,8 @@ try{
     if(req.user)
     {
     let users=await User.findById(req.user._id).populate('friendships');
+     
+    let users123=await User.findByIdAndUpdate(req.user._id,{ online: true});
     return res.render('home',{
         title: 'socio|home',
         posts: posts,
@@ -166,7 +169,45 @@ module.exports.search=async function(req,res){
     }
 
 
+// creating the controller for the chat engine
 
+module.exports.chat=async function(req,res){
+    try{
+
+        let users=await User.findById(req.user._id);
+
+        let friend= await Friendship.findOne({
+            from_user :req.user._id,
+            to_user : req.params.id
+        }).populate('to_user').populate('from_user');
+      
+        if(friend==null)
+        {
+        friend= await Friendship.findOne({
+            from_user :req.params.id,
+            to_user: req.user._id
+        }).populate('to_user').populate('from_user');
+        }
+        console.log('friend chat',friend);
+        console.log('friend user chat',friend.from_user);
+
+
+        if (req.xhr){
+            console.log("searching all users")
+              return res.status(200).json({
+                  data: {
+                      friend:friend,
+                      myid: users.email
+                  },
+                  message: "setting up private chat"
+              });
+          }
+          
+        }
+        catch(err){
+            console.log('error',err);
+        }
+    }
 
 
 

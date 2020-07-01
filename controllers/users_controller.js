@@ -65,10 +65,6 @@ module.exports.update = async function(req, res){
 module.exports.profile =async function(req, res){
     let user=await User.findById(req.params.id).populate(
         'friendReq').populate('friendships');
-        for(u of user.friendReq)
-        {
-            console.log(u.name);
-        }
        
         let k=0;
         for(u of user.friendships)
@@ -81,7 +77,7 @@ module.exports.profile =async function(req, res){
         }
         if(k!=2)
         {
-                for(u._id of user.friendReq)
+                for(u of user.friendReq)
                 {
                     if(u._id==req.user.id)
                     {
@@ -92,11 +88,6 @@ module.exports.profile =async function(req, res){
                 }
         }
     
- 
-
-
-
-      console.log(user,"user");
         return res.render('user_profile', {
             title: 'User Profile',
             profile_user: user,
@@ -149,6 +140,7 @@ module.exports.create =async function(req, res){
                password: req.body.password,
                pong: 0,
                snake: 0,
+               online: false,
                name: req.body.name
            })
                 
@@ -173,10 +165,15 @@ module.exports.createSession = function(req, res){
 
 }
 
-module.exports.destroySession = function(req, res){
+module.exports.destroySession = async function(req, res){
+    try{
+    let users123=await User.findByIdAndUpdate(req.user._id,{ online: false});
     req.logout();
     req.flash('success','logged out successfuly');
     return res.redirect('/users/sign-in');
+    }catch(err){
+        console.log('error while logging out',err);
+    }
 }
 
 module.exports.forgot = function(req, res){

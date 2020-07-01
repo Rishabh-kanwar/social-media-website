@@ -1,9 +1,11 @@
+
 class ChatEngine{
-    constructor(chatBoxId, userEmail){
+    constructor(friendId,chatBoxId, userEmail){
         this.chatBox = $(`#${chatBoxId}`);
         this.userEmail = userEmail;
+        this.friendId=friendId;
 
-        this.socket = io.connect('http://socioo.in:5000');
+        this.socket = io.connect('http://127.0.0.1:5000');
 
         if (this.userEmail){
             this.connectionHandler();
@@ -21,7 +23,7 @@ class ChatEngine{
 
             self.socket.emit('join_room', {
                 user_email: self.userEmail,
-                chatroom: 'socio'
+                chatroom: self.friendId
             });
 
             self.socket.on('user_joined', function(data){
@@ -38,7 +40,7 @@ class ChatEngine{
                 self.socket.emit('send_message', {
                     message: msg,
                     user_email: self.userEmail,
-                    chatroom: 'socio'
+                    chatroom: self.friendId
                 });
             }
         });
@@ -68,4 +70,34 @@ class ChatEngine{
             $('#chat-messages-list').append(newMessage);
         })
     }
+}
+
+
+{
+let createchat = function(){
+    let chatButton = $('.chat-button');
+    console.log(chatButton.length);
+    console.log(chatButton.attr('href'));
+       
+           //console.log('hello rish1234');
+        chatButton.click(function(e){
+            e.preventDefault();
+            console.log('hello rish1234');
+            $.ajax({
+                type: 'get',
+                url: $(this).attr('href'),
+               
+                success: function(data){
+                    console.log(data);
+                    new ChatEngine(data.data.friend._id,'user-chat-box',data.data.myid);
+
+                }, error: function(error){
+                    console.log(error);
+                }
+            });
+        });
+       
+    }
+    createchat();
+
 }

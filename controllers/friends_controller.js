@@ -88,7 +88,7 @@ module.exports.accept= async function(req, res){
        let user1=await User.findById(req.params.id);
         let friend= await Friendship.create({
             to_user: req.user._id,
-            from_user: req.params._id
+            from_user: req.params.id
           });
           user.friendships.push(req.params.id);
           user.save();
@@ -117,20 +117,20 @@ module.exports.destroy = async function(req, res){
     try{
         await User.findByIdAndUpdate(req.user._id,{$pull : { friendships: req.params.id}});
         await User.findByIdAndUpdate(req.params.id,{$pull : { friendships: req.user._id}});
-    //    let friend= await Friendship.findOne({
-    //         from_user :req.user._id,
-    //         to_user : req.params.id
-    //     });
+       let friend= await Friendship.findOne({
+            from_user :req.user._id,
+            to_user : req.params.id
+        });
       
-        // if(friend==null)
-        // {
-        // friend= await Friendship.findOne({
-        //     from_user :req.params.id,
-        //     to_user: req.user._id
-        // });
-        // }
-    // console.log(friend,'delete me bro');
-    // await Friendship.findByIdAndDelete(friend._id);
+        if(friend==null)
+        {
+        friend= await Friendship.findOne({
+            from_user :req.params.id,
+            to_user: req.user._id
+        });
+        }
+        console.log(friend,'delete me bro');
+        await Friendship.findByIdAndDelete(friend._id);
         let user = await User.findById(req.params.id);
          req.flash('error','Unfriended ',user.name);
         return res.redirect('back');

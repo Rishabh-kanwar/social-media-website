@@ -43,6 +43,9 @@ const userSchema = new mongoose.Schema({
     },
     snake:{
          type: Number 
+    },
+    online:{
+        type:Boolean
     }
     
 }, {
