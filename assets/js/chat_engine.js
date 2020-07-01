@@ -5,7 +5,7 @@ class ChatEngine{
         this.userEmail = userEmail;
         this.friendId=friendId;
 
-        this.socket = io.connect('http://127.0.0.1:5000');
+        this.socket = io.connect('http://socioo.in:5000');
 
         if (this.userEmail){
             this.connectionHandler();
