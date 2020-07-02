@@ -271,3 +271,6 @@
 [0mGET /favicon.ico [33m404[0m 4.278 ms - 150[0m
 [0mGET /favicon.ico [33m404[0m 62.034 ms - 150[0m
 [0mGET /favicon.ico [33m404[0m 15.331 ms - 150[0m
+[0mGET / [32m200[0m 111.880 ms - 5882[0m
+[0mGET /favicon.ico [33m404[0m 7.013 ms - 150[0m
+[0mGET /chat/5efc6b29e17d013bb4a6668c [32m200[0m 30.620 ms - 791[0m
