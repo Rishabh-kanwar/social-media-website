@@ -8,6 +8,7 @@ class ChatEngine{
         this.socket = io.connect('http://socioo.in:5000');
 
         if (this.userEmail){
+
             this.connectionHandler();
         }
 
@@ -28,9 +29,23 @@ class ChatEngine{
 
             self.socket.on('user_joined', function(data){
                 console.log('a user joined!', data);
+
+                let msg = `${data.user_email} is online to chat`;
+
+                if (msg != ''){
+                    self.socket.emit('send_message', {
+                        message: msg,
+                        user_email: self.userEmail,
+                        chatroom: self.friendId
+                    });
+                }
             })
 
         });
+
+
+       
+
 
         // send a message on clicking the send message button
         $('#send-message').click(function(){
@@ -47,8 +62,8 @@ class ChatEngine{
 
         self.socket.on('receive_message', function(data){
             console.log('message received', data.message);
-
-
+                
+           
             let newMessage = $('<li>');
 
             let messageType = 'other-message';
@@ -90,7 +105,14 @@ let createchat = function(){
                 success: function(data){
                     console.log(data);
                     new ChatEngine(data.data.friend._id,'user-chat-box',data.data.myid);
-
+                    $(this).attr('href',"#");
+                    new Noty({
+                        theme: 'relax',
+                        text: `Entered the chat room`,
+                        type: 'success',
+                        layout: 'topRight',
+                        timeout: 1500
+                    }).show();
                 }, error: function(error){
                     console.log(error);
                 }

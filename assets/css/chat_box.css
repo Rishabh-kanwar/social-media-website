@@ -21,14 +21,16 @@
       #user-chat-box #chat-messages-list .other-message span {
         display: inline-block;
         padding: 15px;
-        background-color: #ffa0a0; }
+        background-color: #ffa0a0;
+        border-radius: 10px; }
     #user-chat-box #chat-messages-list .self-message {
       text-align: right;
       padding: 5px; }
       #user-chat-box #chat-messages-list .self-message span {
         display: inline-block;
         padding: 15px;
-        background-color: #a0dcff; }
+        background-color: #a0dcff;
+        border-radius: 10px; }
   #user-chat-box #chat-message-input-container {
     height: 24%;
     width: 100%;
