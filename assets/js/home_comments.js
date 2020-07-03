@@ -31,11 +31,10 @@ class PostComments{
                 url: '/comments/create',
                 data: $(self).serialize(),
                 success: function(data){
-                    
+                    $('#comment-data').val("");
+                    console.log('hello rish');                   
                     let newComment = pSelf.newCommentDom(data.data.comment);
                     console.log(newComment[0]);
-                    $('#comment-data').val("");
-                    
                     $(`#post-comments-${postId}`).prepend(newComment);
 
                     pSelf.deleteComment($('.delete-comment-button',newComment));

@@ -6,6 +6,9 @@ body {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between; }
+  .all-container .post-comments-list {
+    position: relative;
+    bottom: 20px; }
   .all-container #post-pic-choose {
     position: relative;
     left: 0px;
@@ -63,7 +66,6 @@ body {
     margin-bottom: 15px; }
   #feed-posts span {
     margin-right: 10px;
-    font-size: 40px;
     margin-left: 10px;
     margin-bottom: 5px; }
 

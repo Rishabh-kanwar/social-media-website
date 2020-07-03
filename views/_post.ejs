@@ -2,13 +2,13 @@
 <li id="post-<%= post._id %>" style="margin-top: 80px;">
     
    <% if(post.pic){%>
-        <img class="post-image" style=" box-shadow: 4px 4px 7px 7px gray;" src="<%=post.pic%>" alt="" height="350" width="350">
+        <img class="post-image" style=" box-shadow: 4px 4px 7px 7px gray;" src="<%=post.pic%>" alt="" height="320" width="330">
     <p>
         <big style="font-size: 30px;">
             <%= post.content %>
             <span style="font-size: 30px;">     
         </big>
-        <br style="height: 5px;">
+        <br>
         <small style="color: gray;">
             <i class="far fa-id-badge"></i>
             <%= post.user.name %>
@@ -21,7 +21,7 @@
             <big style="font-size: 30px;">
                <%= post.content %> 
             </big> 
-            <br style="height: 5px;">
+            <br>
             <small style="color: gray;">
                 <i class="far fa-id-badge"></i>
                 <%= post.user.name%>
@@ -37,14 +37,15 @@
         <%} %>
         <span style="position: relative; bottom: 20px;">
             <%if(locals.user && locals.user.id==post.user.id){%>
-                <a class="delete-post-button" href="/posts/destroy/<%=post.id%>"> <i style="color: red;" class="fas fa-trash-alt"></i></a>
+                 <span style="position: relative; top: 20px; right: 15px;">
+                <a class="delete-post-button" href="/posts/destroy/<%=post.id%>"> <i style="color: red;;" class="fas fa-trash-alt"></i></a>
             
                 <a style="margin-left: 10px;" href="/likes/toggle/?id=<%=post._id%>&type=Post"
                     class="toggle-like-button" data-likes="<%= post.likes.length %>">
                     
                     <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i> <%= post.likes.length %>
                 </a>
-        
+                 </span>
             <% }else{ %>
                 
                 <a style="margin-left: 10px; position: relative; bottom: 23px;" href="/likes/toggle/?id=<%=post._id%>&type=Post"

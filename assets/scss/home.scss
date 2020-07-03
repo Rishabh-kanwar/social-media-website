@@ -7,6 +7,11 @@ body{
     width: 100%;
     justify-content: space-between;
 
+    .post-comments-list{
+           position: relative;
+           bottom: 20px;
+    }
+
     #post-pic-choose{
         position: relative;
         left: 0px;
@@ -81,7 +86,7 @@ margin-top: 100px;
 }
     span{
     margin-right: 10px;
-    font-size: 40px;
+    //font-size: 40px;
     margin-left: 10px;
     margin-bottom: 5px;
     
