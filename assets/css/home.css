@@ -6,8 +6,10 @@ body {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between; }
-  .all-container .post-pic-choose {
-    margin-left: 22%;
+  .all-container #post-pic-choose {
+    position: relative;
+    left: 0px;
+    margin-top: 15px;
     border-bottom: 3px solid black;
     padding-bottom: 3px; }
 
@@ -52,7 +54,7 @@ body {
   #feed-posts .post-box {
     margin-top: 100px; }
     #feed-posts .post-box .post-image {
-      box-shadow: 4px 4px 7px 7px lightgray;
+      box-shadow: 4px 4px 7px 7px gray;
       margin-bottom: 3px; }
   #feed-posts .form-of-post {
     margin-right: 300px;

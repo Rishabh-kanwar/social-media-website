@@ -7,8 +7,10 @@ body{
     width: 100%;
     justify-content: space-between;
 
-    .post-pic-choose{
-        margin-left: 22%;
+    #post-pic-choose{
+        position: relative;
+        left: 0px;
+        margin-top: 15px;
         border-bottom: 3px solid black;
         padding-bottom: 3px;
     }
@@ -67,7 +69,7 @@ align-items: center;
 margin-top: 100px;
 
     .post-image{
-        box-shadow: 4px 4px 7px 7px lightgray;
+        box-shadow: 4px 4px 7px 7px gray;
         margin-bottom: 3px;
     }
 }
@@ -332,3 +334,4 @@ margin-top: 100px;
             }
 
 
+            // https://ninjasfiles.s3.amazonaws.com/2f10a79a5778c68e2fe447bd23dfeb9b_raj_srivastava_image_15937790540596253723618165792576.jpg

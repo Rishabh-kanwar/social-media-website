@@ -1,6 +1,7 @@
 const Post = require('../models/post');
 const User=require('../models/user');
 const Friendship=require('../models/friendship');
+
 //module.exports.home = function(req, res){
     // console.log(req.cookies);
     // res.cookie('user_id', 25);

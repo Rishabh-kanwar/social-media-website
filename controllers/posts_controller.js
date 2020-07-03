@@ -1,6 +1,8 @@
 const Post = require('../models/post')
 const Comment=require('../models/comment');
 const Like = require('../models/like');
+const fs = require('fs');
+const path = require('path');
 
 module.exports.create =async function(req, res){
   try{
@@ -66,6 +68,9 @@ module.exports.destroy = async function(req, res){
   try{
       let post = await Post.findById(req.params.id);
       if (post.user == req.user.id){
+        if (post.pic){
+          fs.unlinkSync(path.join(__dirname, '..',post.pic));
+      }
           post.remove();
           
           //delete the associated likes for the post and all its comments' likes too
@@ -76,6 +81,7 @@ module.exports.destroy = async function(req, res){
           await Comment.deleteMany({post: req.params.id});
           console.log('hello',req.params.id);
           
+
           if (req.xhr){
             console.log("deleting post via AJAX")
               return res.status(200).json({

@@ -37,7 +37,7 @@
     <% if(locals.user){ %>
     <form action="/posts/create" id="new-post-form" method="POST" enctype="multipart/form-data">
         <textarea id="post-data" name="content" cols="30" rows="3" placeholder="CAPTION..."></textarea>
-        <!-- <input class="post-pic-choose" type="file" name="pic" placeholder="Picture" > -->
+        <input id="post-pic-choose" type="file" name="pic" placeholder="Picture" >
         <input id="post-button" type="submit" value="Post">
     </form>
     <% } %>

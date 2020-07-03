@@ -1,15 +1,15 @@
-
 class ChatEngine{
     constructor(friendId,chatBoxId, userEmail){
         this.chatBox = $(`#${chatBoxId}`);
         this.userEmail = userEmail;
         this.friendId=friendId;
 
-        this.socket = io.connect('http://www.socioo.in:5000');
+        this.socket = io.connect('http://socioo.in/:5000');
 
         if (this.userEmail){
             this.connectionHandler();
         }
+        
     }
 
 
@@ -96,7 +96,7 @@ let createchat = function(){
     let chatButton = $('.chat-button');
     console.log(chatButton.length);
     console.log(chatButton.attr('href'));
-       
+        
            //console.log('hello rish1234');
         chatButton.click(function(e){
             e.preventDefault();
@@ -104,13 +104,14 @@ let createchat = function(){
             $.ajax({
                 type: 'get',
                 url: $(this).attr('href'),
-               
+
                 success: function(data){
                     console.log(data);
+                    
                     new ChatEngine(data.data.friend._id,'user-chat-box',data.data.myid);
                     new Noty({
                         theme: 'relax',
-                        text: `Entered the chat room with`,
+                        text: `Entered the chat room`,
                         type: 'success',
                         layout: 'topRight',
                         timeout: 1500
