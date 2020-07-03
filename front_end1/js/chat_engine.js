@@ -5,7 +5,7 @@ class ChatEngine{
         this.userEmail = userEmail;
         this.friendId=friendId;
 
-        this.socket = io.connect('http://socioo.in:5000');
+        this.socket = io.connect('http://www.socioo.in:5000');
 
         if (this.userEmail){
             this.connectionHandler();
@@ -45,6 +45,7 @@ class ChatEngine{
         // send a message on clicking the send message button
         $('#send-message').click(function(){
             let msg = $('#chat-message-input').val();
+            $('#chat-message-input').val("");
 
             if (msg != ''){
                 self.socket.emit('send_message', {

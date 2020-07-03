@@ -34,7 +34,7 @@ class PostComments{
                     
                     let newComment = pSelf.newCommentDom(data.data.comment);
                     console.log(newComment[0]);
-
+                    $('#comment-data').val("");
                     
                     $(`#post-comments-${postId}`).prepend(newComment);
 
@@ -54,7 +54,6 @@ class PostComments{
                     console.log(error);
                 }
             });
-
 
         });
     }
@@ -76,7 +75,7 @@ class PostComments{
                 <i class="fas fa-trash-alt"></i>
                 </a>
          
-                    <a  style="color: rgb(92, 92, 255); position: relative; left: 10px; bottom: 0px;  font-size: 16px" href="/likes/toggle/?id=${comment._id}&type=Comment"
+                    <a style="color: rgb(92, 92, 255); position: relative; left: 10px; bottom: 0px;  font-size: 16px" href="/likes/toggle/?id=${comment._id}&type=Comment"
                         class="toggle-like-button" data-likes="${comment.likes.length}">
                         <i style=" color: rgb(92, 92, 255);" class="far fa-thumbs-up"></i>
                             ${comment.likes.length}

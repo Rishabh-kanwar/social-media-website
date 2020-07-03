@@ -10,6 +10,7 @@
                 data: newsearchForm.serialize(),
                
                 success: function(data){
+                    $('#search-data').val("");
                     $('#search-container>ul').empty();
                     for(u of data.data.result)
                     {
