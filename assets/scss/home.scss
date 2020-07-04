@@ -6,6 +6,40 @@ body{
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+  
+    .chat-button{ 
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: black;
+                    .tooltiptext {
+                    visibility: hidden;
+                    width: 0px;
+                    background-color:lightgray;
+                    color:black;
+                    text-align: center;
+                    border-radius: 6px;
+                    padding: 6px 5px;
+                
+                    /* Position the tooltip */
+                    
+                    }
+         }
+      
+.chat-button{
+
+        &:hover{
+            .tooltiptext {
+            font-size: 13px;
+            margin-left : 10px;
+            visibility: visible;
+            z-index: 1;
+            font-weight: bold;
+            width: 120px;
+            }
+        }
+    
+}
+
 
     .post-comments-list{
            position: relative;
@@ -127,11 +161,6 @@ margin-top: 100px;
     ul{
         list-style: none;
         margin-left: 7%;
-        a{
-            font-size: 20px;
-            text-decoration: none;
-            color: black;
-        }
     }
 }
 #posts-list-container{

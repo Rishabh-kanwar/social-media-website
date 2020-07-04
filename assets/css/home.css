@@ -6,6 +6,26 @@ body {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between; }
+  .all-container .chat-button {
+    font-size: 20px;
+    text-decoration: none;
+    color: black; }
+    .all-container .chat-button .tooltiptext {
+      visibility: hidden;
+      width: 0px;
+      background-color: lightgray;
+      color: black;
+      text-align: center;
+      border-radius: 6px;
+      padding: 6px 5px;
+      /* Position the tooltip */ }
+  .all-container .chat-button:hover .tooltiptext {
+    font-size: 13px;
+    margin-left: 10px;
+    visibility: visible;
+    z-index: 1;
+    font-weight: bold;
+    width: 120px; }
   .all-container .post-comments-list {
     position: relative;
     bottom: 20px; }
@@ -95,10 +115,6 @@ body {
   #user-friends ul {
     list-style: none;
     margin-left: 7%; }
-    #user-friends ul a {
-      font-size: 20px;
-      text-decoration: none;
-      color: black; }
 
 #posts-list-container a {
   text-decoration: none;

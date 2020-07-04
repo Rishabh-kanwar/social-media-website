@@ -10,3 +10,26 @@
   .footer-display p {
     font-weight: 400;
     margin-left: 50px; }
+
+.form-placing {
+  color: white;
+  font-weight: 700;
+  position: relative;
+  left: 90%; }
+
+.form-link {
+  position: relative;
+  left: 90%;
+  color: black;
+  margin-top: -20px;
+  font-size: 35px; }
+
+.all-rights {
+  color: white;
+  position: relative;
+  bottom: 10px;
+  left: 50px; }
+
+.creator {
+  position: relative;
+  bottom: 15px; }

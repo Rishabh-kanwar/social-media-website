@@ -63,7 +63,7 @@ let storage = multer.diskStorage({
 
 
 // static
-let maxSize = 10 * 1000 * 1000;
+let maxSize = 10 * 1024 * 1024;
 userSchema.statics.uploadedAvatar = multer({storage:  storage,limits: { fileSize: maxSize }}).single('avatar');
 userSchema.statics.avatarPath = AVATAR_PATH;
 

@@ -44,8 +44,8 @@ let storage = multer.diskStorage({
 
 
 // static
-let maxSize = 10 * 1000 * 1000;
-postSchema.statics.uploadedPic = multer({storage:  storage,limits: { fileSize: maxSize }}).single('pic');
+let maxSize = 10 * 1024 * 1024;
+postSchema.statics.uploadedPic = multer({storage:  storage,limits:{fileSize: maxSize}}).single('pic');
 postSchema.statics.picPath = PIC_PATH;
 
 

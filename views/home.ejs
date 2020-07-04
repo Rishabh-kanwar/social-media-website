@@ -17,9 +17,13 @@
 
         <%if(u.avatar){%>
         <img src="<%=u.avatar %>" alt="" width="25" height="25"> 
-        <span><a  class="chat-button" href="/chat/<%= u.id%>" > <%=u.name%> </a>  </span>
+        <span><a  class="chat-button" href="/chat/<%= u.id%>" > <%=u.name%>
+         <span class="tooltiptext">Click to start chat</span>
+        </a>  </span>
         <%}else{%>
-            <a  class="chat-button" href="/chat/<%= u.id%>" > <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> </a>
+            <a  class="chat-button" href="/chat/<%= u.id%>" > <i style="margin-right: 3px;" class="fas fa-user-friends"></i><%=u.name%> 
+                <span class="tooltiptext">Click to start chat</span>
+            </a>
         
         <%}%>
     
