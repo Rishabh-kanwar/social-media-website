@@ -222,3 +222,17 @@
 [0mPOST /posts/create [32m200[0m 21.482 ms - 344[0m
 [0mGET /posts/destroy/5f002480492db054c4e12f57 [32m200[0m 28.486 ms - 72[0m
 [0mGET /posts/destroy/5f00241f492db054c4e12f56 [32m200[0m 29.493 ms - 72[0m
+[0mPOST /posts/create [32m200[0m 61.215 ms - 344[0m
+[0mPOST /posts/create [32m200[0m 20.759 ms - 344[0m
+[0mGET /chat/5efc6b29e17d013bb4a6668c [32m200[0m 35.746 ms - 791[0m
+[0mGET /chat/5efc6b29e17d013bb4a6668c [36m304[0m 67.646 ms - -[0m
+[0mGET / [32m200[0m 291.193 ms - 45090[0m
+[0mGET /chat/5efc6b29e17d013bb4a6668c [32m200[0m 32.376 ms - 791[0m
+[0mGET /chat/5efc6b29e17d013bb4a6668c [36m304[0m 34.027 ms - -[0m
+[0mGET / [36m304[0m 177.847 ms - -[0m
+[0mPOST /posts/create [32m200[0m 33.764 ms - 344[0m
+[0mGET /posts/destroy/5f00261250682656e46fb899 [32m200[0m 28.857 ms - 72[0m
+[0mGET /posts/destroy/5f00277050682656e46fb89a [32m200[0m 34.067 ms - 72[0m
+[0mGET /posts/destroy/5f0027fb335c4557ee621e3e [32m200[0m 61.147 ms - 72[0m
+[0mPOST /posts/create [32m200[0m 30.069 ms - 344[0m
+[0mGET /posts/destroy/5f00281d335c4557ee621e3f [32m200[0m 31.192 ms - 72[0m
