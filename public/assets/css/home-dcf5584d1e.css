@@ -6,9 +6,15 @@ body {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between; }
-  .all-container .post-pic-choose {
-    margin-left: 22%;
-    border-bottom: 3px solid black;
+  .all-container .post-comments-list {
+    position: relative;
+    bottom: 20px; }
+  .all-container #post-pic-choose {
+    position: relative;
+    left: 0px;
+    margin-top: 15px;
+    width: 260px;
+    border-bottom: 2px solid black;
     padding-bottom: 3px; }
 
 .friends {
@@ -44,29 +50,25 @@ body {
 
 #feed-posts {
   position: relative;
-  right: 8%;
+  right: 4%;
   margin-top: 20px;
   width: 38.5%;
-  text-align: center;
+  text-align: left;
   align-items: center; }
   #feed-posts .post-box {
     margin-top: 100px; }
     #feed-posts .post-box .post-image {
-      box-shadow: 4px 4px 7px 7px lightgray;
+      box-shadow: 4px 4px 7px 7px gray;
       margin-bottom: 3px; }
   #feed-posts .form-of-post {
     margin-right: 300px;
-    margin-left: 36%;
+    margin-left: 26%;
     margin-top: 15px;
     margin-bottom: 15px; }
   #feed-posts span {
     margin-right: 10px;
-    font-size: 40px;
     margin-left: 10px;
     margin-bottom: 5px; }
-    #feed-posts span i {
-      color: #ffc401da;
-      margin-right: 7px; }
 
 #user-friends {
   width: 30%;
@@ -74,6 +76,9 @@ body {
   overflow-y: auto;
   overflow-x: visible;
   text-align: left; }
+  #user-friends #friend-container {
+    overflow-y: auto;
+    height: 300px; }
   #user-friends .from-design {
     position: relative;
     left: 120px; }
@@ -84,7 +89,7 @@ body {
   #user-friends img {
     border-radius: 5px;
     position: relative;
-    top: 5px; }
+    top: 3px; }
   #user-friends h1 {
     margin-left: 15%; }
   #user-friends ul {
@@ -96,19 +101,54 @@ body {
       color: black; }
 
 #posts-list-container a {
-  margin-left: 30px;
   text-decoration: none;
-  color: red; }
+  color: red;
+  padding: 1.5px; }
+
+#posts-list-container .toggle-like-button {
+  position: relative;
+  left: 220px;
+  bottom: 43px;
+  background-color: whitesmoke;
+  border: 2px solid lightgray;
+  margin-left: 5px;
+  font-size: 20px;
+  padding: 2.5px;
+  color: blue;
+  box-shadow: 3px 3px 3px 3px grey; }
+
+#posts-list-container .delete-comment-button {
+  box-shadow: 3px 3px 3px 3px grey;
+  color: red;
+  font-size: 15px;
+  background-color: whitesmoke;
+  border: 2px solid lightgray;
+  padding: 2.5px; }
+
+#posts-list-container .delete-post-button {
+  color: red;
+  background-color: whitesmoke;
+  border: 2px solid lightgray;
+  margin-left: 5px;
+  font-size: 20px;
+  padding: 2.5px;
+  position: relative;
+  left: 225px;
+  top: -43px;
+  box-shadow: 3px 3px 3px 3px grey; }
 
 #posts-list-container input {
   border: none;
-  border-bottom: 2px solid black; }
+  border-bottom: 2px solid black;
+  background-color: rgba(255, 196, 1, 0.02); }
 
 #posts-list-container button {
-  color: #ffc401da;
-  border: none;
+  color: black;
   background-color: white;
   font-size: 25px;
+  background-color: whitesmoke;
+  border: 2px solid lightgray;
+  box-shadow: 3px 3px 3px 3px grey;
   cursor: pointer; }
 
 #posts-list-container ul {
@@ -164,14 +204,17 @@ body {
   top: 865px; }
   #all-users #search-container {
     overflow-y: auto;
-    overflow-x: auto; }
+    height: 300px; }
   #all-users .from-design {
     position: relative;
     left: 120px; }
     #all-users .from-design input {
       width: 150px;
       position: relative;
-      left: -50px; }
+      left: -50px;
+      background-color: rgba(255, 196, 1, 0.03);
+      border: none;
+      border-bottom: 2px solid black; }
     #all-users .from-design button {
       width: 30px;
       position: relative;
@@ -190,3 +233,48 @@ body {
       font-size: 20px;
       text-decoration: none;
       color: black; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  margin-top: 6vh;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; }
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }

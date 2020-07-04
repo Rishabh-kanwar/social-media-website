@@ -208,3 +208,17 @@
 [0mGET / [36m304[0m 141.341 ms - -[0m
 [0mGET / [36m304[0m 145.483 ms - -[0m
 [0mGET / [36m304[0m 134.252 ms - -[0m
+[0mGET / [36m302[0m 25.830 ms - 72[0m
+[0mGET /users/sign-in [32m200[0m 20.448 ms - 2365[0m
+[0mPOST /users/create-session [36m302[0m 45.203 ms - 46[0m
+[0mGET / [32m200[0m 116.398 ms - 41530[0m
+[0mPOST /posts/create [32m200[0m 46.289 ms - 344[0m
+[0mGET / [32m200[0m 154.884 ms - 43165[0m
+[0mPOST /posts/create [32m200[0m 27.755 ms - 344[0m
+[0mGET /posts/destroy/5f0023e3492db054c4e12f55 [32m200[0m 54.948 ms - 72[0m
+[0mGET /posts/destroy/5f0023d9492db054c4e12f54 [32m200[0m 51.737 ms - 72[0m
+[0mPOST /posts/create [32m200[0m 28.478 ms - 344[0m
+[0mGET / [32m200[0m 169.387 ms - 43165[0m
+[0mPOST /posts/create [32m200[0m 21.482 ms - 344[0m
+[0mGET /posts/destroy/5f002480492db054c4e12f57 [32m200[0m 28.486 ms - 72[0m
+[0mGET /posts/destroy/5f00241f492db054c4e12f56 [32m200[0m 29.493 ms - 72[0m
