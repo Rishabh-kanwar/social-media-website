@@ -236,3 +236,23 @@
 [0mGET /posts/destroy/5f0027fb335c4557ee621e3e [32m200[0m 61.147 ms - 72[0m
 [0mPOST /posts/create [32m200[0m 30.069 ms - 344[0m
 [0mGET /posts/destroy/5f00281d335c4557ee621e3f [32m200[0m 31.192 ms - 72[0m
+[0mGET / [32m200[0m 277.852 ms - 41240[0m
+[0mPOST /posts/create [32m200[0m 34.772 ms - 344[0m
+[0mGET / [32m200[0m 395.929 ms - 43165[0m
+[0mPOST /posts/create [32m200[0m 39.623 ms - 344[0m
+[0mGET /posts/destroy/5f003011bc12bd5be339c2f7 [32m200[0m 29.640 ms - 72[0m
+[0mGET /posts/destroy/5f002b23911fcb59fc8ef2cb [32m200[0m 71.472 ms - 72[0m
+[0mPOST /posts/create [32m200[0m 37.412 ms - 344[0m
+::ffff:127.0.0.1 - - [04/Jul/2020:07:42:04 +0000] "GET / HTTP/1.1" 302 72 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
+::ffff:127.0.0.1 - - [04/Jul/2020:07:42:04 +0000] "GET /users/sign-in HTTP/1.1" 200 2409 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
+::ffff:127.0.0.1 - - [04/Jul/2020:07:42:07 +0000] "POST /users/create-session HTTP/1.1" 302 46 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
+::ffff:127.0.0.1 - - [04/Jul/2020:07:42:07 +0000] "GET / HTTP/1.1" 200 5922 "http://127.0.0.1:8000/users/sign-in" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
+::ffff:127.0.0.1 - - [04/Jul/2020:07:42:17 +0000] "POST /posts/create HTTP/1.1" 200 345 "http://127.0.0.1:8000/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
+[0mGET /users/profile/5edc08032646154bb583d827 [36m302[0m 9.704 ms - 72[0m
+[0mGET /users/sign-in [32m200[0m 29.345 ms - 2365[0m
+[0mGET /users/sign-in [36m304[0m 13.188 ms - -[0m
+[0mPOST /users/create-session [36m302[0m 34.585 ms - 46[0m
+[0mGET / [32m200[0m 105.368 ms - 43455[0m
+[0mGET /users/profile/5efc6b3be17d013bb4a6668d [36m304[0m 44.737 ms - -[0m
+[0mPOST /users/update/5efc6b3be17d013bb4a6668d [36m302[0m 30.296 ms - 164[0m
+[0mGET /users/profile/5efc6b3be17d013bb4a6668d [32m200[0m 20.433 ms - 3941[0m
