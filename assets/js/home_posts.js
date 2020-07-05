@@ -53,7 +53,7 @@
         if(post.pic)
         {
         return $(`<li id="post-${post._id}" style="margin-top: 100px;">
-                <img class="post-image" src="${post.pic}" style=" box-shadow: 4px 4px 7px 7px gray; alt="" height="350" width="350">
+                <img class="post-image" src="${post.pic}" style=" box-shadow: 4px 4px 7px 7px gray; alt="" height="330" width="330">
                 <p>
                 <!-- <i style="color: #ffc401da; margin-right: 7px;" class="far fa-clone"><span style="width: 50%; height: auto;"></i> -->
                 <big style="font-size: 30px;">
