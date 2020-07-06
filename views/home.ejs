@@ -2,7 +2,7 @@
 <div class="all-container">
 
     <section id="user-friends">
-        <h1 class="heading"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</h1>
+        <h1 class="heading"><i style="color: cornflowerblue; margin-right: 7px;" class="fas fa-user-friends"></i>Friends</h1>
         <div id="friend-container">
             <ul>
         <%for(u of all_users) {%>
@@ -36,7 +36,7 @@
         </section>
 
 <section id="feed-posts">
-    <span style="margin-left: 33%; font-size: 40px;"> <i style="color: #ffc401da; margin-right: 7px;" class="fas fa-portrait"></i>Posts </span>
+    <span style="margin-left: 33%; font-size: 40px;"> <i style="color: rgb(255, 57, 90); margin-right: 7px;" class="fas fa-portrait"></i>Posts </span>
     <div class="form-of-post">
     <% if(locals.user){ %>
     <form action="/posts/create" id="new-post-form" method="POST" enctype="multipart/form-data">
@@ -59,7 +59,7 @@
     </div>
     </section>
     <section id="features">
-      <p class="heading"><i class="fas fa-icons"></i>Features<p>
+      <p class="heading"><i style="color:  cornflowerblue;" class="fas fa-icons"></i>Features<p>
       <ul>
           <p>
           <li>
@@ -78,7 +78,7 @@
     </p>  
         <% }%>
       </ul>
-        <p class="heading"><i class="fas fa-gamepad"></i>Games</p>
+        <p class="heading"><i style=" color:  cornflowerblue;"class="fas fa-gamepad"></i>Games</p>
         <% if(locals.user){ %>
     <ul>
         <li>
@@ -99,11 +99,11 @@
    
 
       <section id="all-users">
-        <h1 class="heading"><i style="color: #ffc401da; margin-right: 7px;" class="fas fa-th-list"></i>All users</h1>
+        <h1 class="heading"><i style="color: cornflowerblue; margin-right: 7px;" class="fas fa-th-list"></i>All users</h1>
         <form action="/search" method="POST" id="new-search-form">
             <div class="from-design">
             <input id="search-data" type="text" placeholder="search friends" required name="friend">
-            <button type="submit"> <i class="fas fa-search"></i></button>
+            <button style="border:2px solid cornflowerblue" type="submit"> <i style="padding: 3px 0;" class="fas fa-search"></i></button>
         </div>
         </form>
         <!--  abhi bus controllers se variable bhejke replace karna haa bus -->

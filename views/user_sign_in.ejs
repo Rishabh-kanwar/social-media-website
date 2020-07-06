@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="<%= assetPath('css/sign-in.css') %>">
 <div class="sign-in-style">
-<h1 >Sign In</h1>
+<h1 style="text-shadow: 2.5px 2.5px orange; margin-left: 10px;">Sign In</h1>
     <form action="/users/create-session" method="POST">
         <input type="email" name="email" placeholder="Email"  required>
         <input type="password" name="password" placeholder="Password"  required>
         <input style= "border: 3px solid black; font-weight: 900;" type="submit" value="Sign In">
         <br>
-       <a style="background-color: whitesmoke; padding: 2px; border: 2px solid black;" href="/forgot/get-email">Forgot password ?</a>   
+       <a style="background-color: whitesmoke; padding: 3px;" href="/forgot/get-email">Forgot password ?</a>   
     </form>
 
     <p>
