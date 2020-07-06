@@ -637,3 +637,7 @@
 [0mGET /users/profile/5efc6b3be17d013bb4a6668d [36m304[0m 32.035 ms - -[0m
 [0mGET /users/profile/5efc6b3be17d013bb4a6668d [36m304[0m 40.413 ms - -[0m
 [0mGET / [36m304[0m 60.695 ms - -[0m
+[0mGET /users/sign-out [36m302[0m 72.164 ms - 72[0m
+[0mGET /users/sign-in [32m200[0m 19.345 ms - 3061[0m
+[0mGET /users/sign-in [32m200[0m 20.572 ms - 2770[0m
+[0mGET /users/sign-in [36m304[0m 22.513 ms - -[0m
