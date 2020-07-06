@@ -549,3 +549,4 @@
 [0mGET /users/sign-in [36m304[0m 7.635 ms - -[0m
 [0mGET /users/sign-up [36m304[0m 3.292 ms - -[0m
 [0mGET /users/sign-in [32m200[0m 11.589 ms - 2736[0m
+::ffff:127.0.0.1 - - [06/Jul/2020:10:45:26 +0000] "GET /users/sign-in HTTP/1.1" 200 2780 "http://127.0.0.1:8000/users/sign-up" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36"
