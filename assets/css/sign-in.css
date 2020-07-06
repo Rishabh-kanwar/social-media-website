@@ -1,3 +1,6 @@
+body {
+  background-image: url(../images/background.jpg); }
+
 .sign-in-style {
   width: 50%;
   display: flex;
@@ -5,7 +8,8 @@
   left: 25%;
   flex-wrap: wrap;
   text-align: center;
-  align-items: center; }
+  align-items: center;
+  color: white; }
   .sign-in-style h1 {
     font-size: 40px;
     display: block;
@@ -19,10 +23,11 @@
     margin-left: 40%;
     height: 35px;
     border: none;
-    border-bottom: 3px solid black;
-    background-color: rgba(255, 196, 1, 0.03); }
+    border-bottom: 3px solid white;
+    background-color: whitesmoke;
+    border: 2px solid black; }
     .sign-in-style input button {
-      box-shadow: 5px 10px #888888; }
+      border: 2px solid lightgray; }
   .sign-in-style p {
     padding-top: 25px;
     position: relative;
