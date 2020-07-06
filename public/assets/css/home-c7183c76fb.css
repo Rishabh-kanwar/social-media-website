@@ -230,7 +230,8 @@ body {
       left: -50px;
       background-color: rgba(255, 196, 1, 0.03);
       border: none;
-      border-bottom: 2px solid black; }
+      border: 2px solid black;
+      padding: 3px 0; }
     #all-users .from-design button {
       width: 30px;
       position: relative;
