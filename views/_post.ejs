@@ -3,7 +3,10 @@
     
    <% if(post.pic){%>
         <img class="post-image" style=" box-shadow: 4px 4px 7px 7px gray;" src="<%=post.pic%>" alt="" height="330" width="330">
-    <p>
+    
+    
+    
+        <p>
         <big style="font-size: 30px;">
             <%= post.content %>
             <span style="font-size: 30px;">     
@@ -30,14 +33,14 @@
         <%}%>
         <% if (locals.user){ %>
             <form action="/comments/create" method="POST" id="post-<%=post._id%>-comments-form" >
-                <input id="comment-data" type="text" name="content" placeholder="Type Here to add comment..." required>
+                <input class="comment-data" type="text" name="content" placeholder="Type Here to add comment..." required>
                 <input type="hidden" name="post" value="<%= post._id %>" >
                 <button type="submit"> <i class="far fa-comment"></i></button>
             </form>
         <%} %>
         <span style="position: relative; bottom: 20px;">
             <%if(locals.user && locals.user.id==post.user.id){%>
-                 <span style="position: relative; top: 20px; right: 15px;">
+                 <span style="position: relative; top: 20px; right: -5px;">
                 <a class="delete-post-button" href="/posts/destroy/<%=post.id%>"> <i style="color: red;;" class="fas fa-trash-alt"></i></a>
             
                 <a style="margin-left: 10px;" href="/likes/toggle/?id=<%=post._id%>&type=Post"

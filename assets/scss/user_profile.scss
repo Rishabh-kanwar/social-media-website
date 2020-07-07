@@ -68,12 +68,13 @@ body{
        {
            margin-top: 14px;
            margin-left: 50px;
-           width: 550px;
+           width: 585px;
            .friend-req{
             font-size: 20px;
            }
                 li
                 {
+                    margin-left: -15px;
                     margin-bottom: 30px;
                     font-size: 20px;
                 }
@@ -124,7 +125,8 @@ body{
         text-decoration: none;
     }
    table{
-       width:300px;
+       width:320px;
+       margin-left: -10px;
       margin-right: 20px;
     position: relative;
        margin-top: 30px;

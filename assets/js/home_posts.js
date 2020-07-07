@@ -71,12 +71,12 @@
             
         
                 <form action="/comments/create" method="POST" id="post-${post._id}-comments-form" >
-                    <input id="comment-data" type="text" name="content" placeholder="Type Here to add comment..." required>
+                    <input class="comment-data" type="text" name="content" placeholder="Type Here to add comment..." required>
                     <input type="hidden" name="post" value="${post._id}" >
                     <button type="submit"> <i class="far fa-comment"></i></button>
                 </form>
         
-                <span style="position: relative; right: 5px;">
+                <span style="position: relative; right: -5px;">
                 
                 <a class="delete-post-button" href="/posts/destroy/${post._id}"> <i class="fas fa-trash-alt"></i></a>
 
@@ -123,12 +123,12 @@
                            
                           
                                 <form action="/comments/create" method="POST" id="post-${post._id}-comments-form" >
-                                    <input id="comment-data" type="text" name="content" placeholder="Type Here to add comment..." required>
+                                    <input class="comment-data" type="text" name="content" placeholder="Type Here to add comment..." required>
                                     <input type="hidden" name="post" value="${post._id}" >
                                     <button type="submit"> <i class="far fa-comment"></i></button>
                                 </form>
                         
-                                <span style="position: relative; right: 5px;">
+                                <span style="position: relative;right: -5px;">
                                
                                 <a class="delete-post-button" href="/posts/destroy/${post._id}"> <i class="fas fa-trash-alt"></i></a>
 

@@ -16,6 +16,7 @@ body{
                     .tooltiptext {
                     visibility: hidden;
                     width: 0px;
+                    font-size: 1px;
                     background-color:lightgray;
                     color:black;
                     text-align: center;
@@ -124,13 +125,13 @@ margin-top: 100px;
     span{
     margin-right: 10px;
     //font-size: 40px;
-    margin-left: 10px;
+    //margin-left: 10px;
     margin-bottom: 5px;
     
     }
 }
 #user-friends{
-    width: 30%;
+    width: 32%;
     height: 390px;
     overflow-y: auto;
     overflow-x: visible;
@@ -163,6 +164,9 @@ margin-top: 100px;
     ul{
         list-style: none;
         margin-left: 7%;
+        li{
+            margin-bottom: 15px;
+        }
     }
 }
 #posts-list-container{
@@ -261,31 +265,31 @@ margin-top: 100px;
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #cac5c5;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #ada999da;
+    background: #8a877ada;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #7a7974da;
+    background: #424240da;
   }
 
 
   #all-users{
     width: 30%;
-    height: 370px;
+    height: 420px;
     overflow: hidden;
     margin-top: -400px;
     position: absolute;
-    top: 865px;
+    top: 900px;
      
     #search-container{
         overflow-y: auto;
-        height: 300px;
+        height: 350px;
     }
     .from-design
     {
