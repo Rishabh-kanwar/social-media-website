@@ -109,6 +109,9 @@ let createchat = function(){
                     console.log(data);
                     
                     new ChatEngine(data.data.friend._id,'user-chat-box',data.data.myid);
+
+                    $('#friend-name').text(`chatting with ${data.data.friendName}`);
+
                     new Noty({
                         theme: 'relax',
                         text: `Entered the chat room`,

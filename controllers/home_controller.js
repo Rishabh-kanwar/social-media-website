@@ -191,14 +191,26 @@ module.exports.chat=async function(req,res){
         }
         console.log('friend chat',friend);
         console.log('friend user chat',friend.from_user);
+          
+        let friendName='';
+         if(friend.to_user._id!=req.user._id)
+         {
+            friendName=friend.to_user.name;
+         }
+         else
+         {
+            friendName=friend.from_user.name;
+         }
 
+        
 
         if (req.xhr){
             console.log("searching all users")
               return res.status(200).json({
                   data: {
                       friend:friend,
-                      myid: users.email
+                      myid: users.email,
+                      friendName :friendName
                   },
                   message: "setting up private chat"
               });

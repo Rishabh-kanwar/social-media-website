@@ -13,7 +13,7 @@ body {
     .all-container .chat-button .tooltiptext {
       visibility: hidden;
       width: 0px;
-      font-size: 1px;
+      font-size: 0.1px;
       background-color: lightgray;
       color: black;
       text-align: center;

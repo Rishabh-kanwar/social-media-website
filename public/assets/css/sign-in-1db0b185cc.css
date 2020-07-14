@@ -7,14 +7,14 @@ body {
   position: relative;
   left: 25%;
   flex-wrap: wrap;
-  text-align: center;
   align-items: center;
   color: white; }
   .sign-in-style h1 {
     font-size: 40px;
     display: block;
-    text-align: center;
-    width: 100%; }
+    width: 100%;
+    position: relative;
+    left: 42%; }
   .sign-in-style form {
     width: 100%; }
     .sign-in-style form a {
@@ -26,6 +26,7 @@ body {
       border-bottom: 3px solid white;
       background-color: whitesmoke;
       border: 3px solid blue;
+      text-align: center;
       border-radius: 10px;
       position: relative;
       left: 18px; }

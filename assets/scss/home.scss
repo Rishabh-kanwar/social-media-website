@@ -16,7 +16,7 @@ body{
                     .tooltiptext {
                     visibility: hidden;
                     width: 0px;
-                    font-size: 1px;
+                    font-size: 0.1px;
                     background-color:lightgray;
                     color:black;
                     text-align: center;
@@ -131,6 +131,8 @@ margin-top: 100px;
     }
 }
 #user-friends{
+    position: sticky;
+    top: 7.6vh;
     width: 32%;
     height: 390px;
     overflow-y: auto;
@@ -227,6 +229,8 @@ margin-top: 100px;
 }
 
 #features{
+    position: sticky;
+    top: 7.6vh;
     width: 24%;
     height: 720px;
     i{
@@ -284,8 +288,10 @@ margin-top: 100px;
     height: 420px;
     overflow: hidden;
     margin-top: -400px;
-    position: absolute;
+    position: fixed;
     top: 900px;
+    overflow: hidden;
+
      
     #search-container{
         overflow-y: auto;
