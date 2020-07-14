@@ -91,6 +91,8 @@ body {
     margin-bottom: 5px; }
 
 #user-friends {
+  position: sticky;
+  top: 7.6vh;
   width: 32%;
   height: 390px;
   overflow-y: auto;
@@ -173,6 +175,8 @@ body {
   list-style: none; }
 
 #features {
+  position: sticky;
+  top: 7.6vh;
   width: 24%;
   height: 720px; }
   #features i {
@@ -218,8 +222,9 @@ body {
   height: 420px;
   overflow: hidden;
   margin-top: -400px;
-  position: absolute;
-  top: 900px; }
+  position: fixed;
+  top: 900px;
+  overflow: hidden; }
   #all-users #search-container {
     overflow-y: auto;
     height: 350px; }

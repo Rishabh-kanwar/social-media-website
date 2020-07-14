@@ -3,16 +3,27 @@
   bottom: 10vh;
   right: 12px;
   border: 1px dashed grey;
-  height: 350px;
+  height: 360px;
   width: 270px;
   background: white;
   padding: 5px;
   box-shadow: 3px 3px 4px 4px lightgrey;
   border: 4px solid black; }
+  #user-chat-box #friend-name {
+    width: 280px;
+    height: 30px;
+    border: 4px solid black;
+    margin-top: -10px;
+    margin-left: -10px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: cornflowerblue;
+    color: white; }
   #user-chat-box #chat-messages-list {
     list-style: none;
     padding: 10px;
-    height: 70%;
+    height: 63%;
     background-color: white;
     overflow: auto; }
     #user-chat-box #chat-messages-list .other-message {
