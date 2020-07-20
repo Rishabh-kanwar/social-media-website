@@ -110,7 +110,7 @@ let createchat = function(){
                     
                     new ChatEngine(data.data.friend._id,'user-chat-box',data.data.myid);
 
-                    $('#friend-name').text(`chatting with ${data.data.friendName}`);
+                    $('#friend-name').text(`${data.data.friendName}`);
 
                     new Noty({
                         theme: 'relax',

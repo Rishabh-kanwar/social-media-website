@@ -3,13 +3,20 @@
 
     <ul class="header-display">
         <% if (locals.user){ %>
-            <li>
-                <a href="/">Home</a>
-            </li>
+           
             <li>
                 <a href="/users/profile/<%= user.id%>">
-                     Profile
+                    <% if (user.avatar){%>
+                        <img src="<%=user.avatar%>" class="photo-id" height="40" width="40" alt="">
+                        <%=user.name.split(" ")[0];%>
+                        <%}else{%>
+                    <img height="40" width="40" class="photo-id" src="https://cdn3.iconfinder.com/data/icons/users-yellow/60/50_-Blank_Profile-_user_people_group_team-512.png" alt="">
+                    <%=user.name.split(" ")[0]%>
+                    <%}%>
                 </a>
+            </li>
+            <li>
+                <a href="/">Home</a>
             </li>
             <li>
                 <a href="/users/sign-out">Sign Out</a>

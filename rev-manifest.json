@@ -1,7 +1,7 @@
 {
-  "css/chat_box.css": "css/chat_box-11c09ac2fc.css",
+  "css/chat_box.css": "css/chat_box-f24265e259.css",
   "css/footer.css": "css/footer-a7c0380105.css",
-  "css/header.css": "css/header-c5997331ba.css",
+  "css/header.css": "css/header-32c8247955.css",
   "css/home.css": "css/home-d62651c173.css",
   "css/layout.css": "css/layout-a76e0814b7.css",
   "css/sign-in.css": "css/sign-in-1db0b185cc.css",
@@ -12,7 +12,7 @@
   "images/wback6.jpg": "images/wback6-7a2405789b.jpg",
   "js/friendreq.js": "js/friendreq-f3d521a11b.js",
   "js/home_comments.js": "js/home_comments-0d9f768de7.js",
-  "js/home_posts.js": "js/home_posts-dddf9333be.js",
+  "js/home_posts.js": "js/home_posts-bb87ad4d83.js",
   "js/search.js": "js/search-e9caa0980b.js",
   "js/toggle_likes.js": "js/toggle_likes-cc4e639552.js"
 }

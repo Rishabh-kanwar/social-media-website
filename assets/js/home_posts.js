@@ -8,6 +8,7 @@
             e.preventDefault();
 
            formData=new FormData(plain_form);
+           $('#post-data').val("");
 
             $.ajax({
                 type: 'post',
@@ -18,10 +19,9 @@
                 processData: false,
                 data: formData,
                 success: function(data){
+                    $('#post-pic-choose').val("");
                     let newPost = newPostDom(data.data.post);
                     $('#posts-list-container>ul').prepend(newPost);
-                    $('#post-data').val("");
-                    $('#post-pic-choose').val("");
                     deletePost($(' .delete-post-button', newPost));
 
                     // call the create comment class
