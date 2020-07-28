@@ -6,11 +6,12 @@
     let sendReqButton = $('#send-req-button');
 
         sendReqButton.click(function(e){
+            
             e.preventDefault();
         
             $.ajax({
                 type: 'get',
-                url: sendReqButton.prop('href'),
+                url: sendReqButton.attr('href'),
                
                 success: function(data){
                     console.log(data);
