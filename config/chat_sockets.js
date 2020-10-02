@@ -1,7 +1,7 @@
 
 module.exports.chatSockets = function(socketServer){
     let io = require('socket.io')(socketServer);
-
+    
     io.sockets.on('connection', function(socket){
         console.log('new connection received', socket.id);
 
@@ -12,9 +12,15 @@ module.exports.chatSockets = function(socketServer){
         
         socket.on('join_room', function(data){
             console.log('joining request rec.', data);
-
+             
+           
+            // for(a of users)
+            // {
+            // if(data.userEmail == )
+            // }
+        
             socket.join(data.chatroom);
-
+                
             io.in(data.chatroom).emit('user_joined', data);
         });
 

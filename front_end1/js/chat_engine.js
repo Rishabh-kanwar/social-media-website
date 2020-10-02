@@ -3,9 +3,7 @@ class ChatEngine{
         this.chatBox = $(`#${chatBoxId}`);
         this.userEmail = userEmail;
         this.friendId=friendId;
-
         this.socket = io.connect('http://socioo.in:5000');
-
         if (this.userEmail){
             this.connectionHandler();
         }
@@ -15,21 +13,24 @@ class ChatEngine{
 
     connectionHandler(){
         let self = this;
-
+        
+    
+    
         this.socket.on('connect', function(){
             console.log('connection established using sockets...!');
-
-
             self.socket.emit('join_room', {
                 user_email: self.userEmail,
                 chatroom: self.friendId
             });
+
+           
 
             self.socket.on('user_joined', function(data){
                 console.log('a user joined!', data);
 
 
                 let msg = `${self.userEmail}  joined the chat`;
+          
 
             if (msg != ''){
                 self.socket.emit('send_message', {
@@ -39,6 +40,25 @@ class ChatEngine{
                 });
             }
             })
+
+
+
+            // self.socket.on('user_left', function(data){
+            //     console.log('a user joined!', data);
+
+            //     let msg = `${self.userEmail}  left the chat`;
+
+            // if (msg != ''){
+            //     self.socket.emit('send_message', {
+            //         message: msg,
+            //         user_email: self.userEmail,
+            //         chatroom: self.friendId
+            //     });
+            // }
+            // })
+
+
+
 
         });
 
@@ -97,18 +117,46 @@ let createchat = function(){
     console.log(chatButton.length);
     console.log(chatButton.attr('href'));
         
-           //console.log('hello rish1234');
+           
         chatButton.click(function(e){
             e.preventDefault();
-            console.log('hello rish1234');
+            
             $.ajax({
                 type: 'get',
                 url: $(this).attr('href'),
 
                 success: function(data){
                     console.log(data);
+                    //location.reload();
+                    $(`#hello_everyone`).html(`
+                     <div id="${data.data.friend._id}">
+                    <div id="user-chat-box">
+                         <div id="friend-name" > 
+                            Click on friends name to chat
+                         </div>
+                    <ul id="chat-messages-list">
+                        <li class="other-message">
+                            <span>Other Message</span>
+                        </li>
+
+                        <li class="self-message">
+                            <span>
+                                Self Message
+                            </span>    
+                        </li>
+            
+                    </ul>
+
+                    <div id="chat-message-input-container">
+                        <input id="chat-message-input" placeholder="Type message here">
+                        <button id="send-message">Send</button>
+                    </div>
+                    </div> 
+                </div>`);
+                    
                     
                     new ChatEngine(data.data.friend._id,'user-chat-box',data.data.myid);
+                    
 
                     $('#friend-name').text(`${data.data.friendName}`);
 
@@ -127,6 +175,13 @@ let createchat = function(){
         });
        
     }
+
+     
+  
+
+
+
+
     createchat();
 
 }
